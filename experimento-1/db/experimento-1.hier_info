@@ -1,0 +1,13 @@
+|coin_counter_module
+coin_100 => total_coins[3].IN0
+coin_500 => total_coins[2]~reg0.CLK
+coin_500 => total_coins[3]~reg0.CLK
+reset => total_coins[3].IN1
+reset => total_coins[2]~reg0.ACLR
+reset => total_coins[3]~reg0.ACLR
+total_coins[0] <= <GND>
+total_coins[1] <= <GND>
+total_coins[2] <= total_coins[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+total_coins[3] <= total_coins[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

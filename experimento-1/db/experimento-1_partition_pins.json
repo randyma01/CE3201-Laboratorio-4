@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "water",
+					"strict" : false
+				},
+				{
+					"name" : "coffee",
+					"strict" : false
+				},
+				{
+					"name" : "sugar",
+					"strict" : false
+				},
+				{
+					"name" : "milk",
+					"strict" : false
+				},
+				{
+					"name" : "result",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

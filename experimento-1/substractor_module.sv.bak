@@ -1,0 +1,65 @@
+module substractor_module
+(
+    input logic [3:0] coffee_type,
+    input logic total_coins,
+    input logic cancel_button,
+    output logic change,
+    output logic enable_timer
+);
+
+    // cancel process //
+    always @(cancel_button)
+        if (cancel_button)
+            assign change = total_coins;
+
+    // select coffee //
+    begin
+        case (coffee_type)
+
+            // expresso  //
+            2'b00: 
+                begin
+                    if (300 <= total_coins)
+                        assign change = total_coins - 300;
+                        assign enable_timer = 1
+                    else
+                        assign change = total_coins
+                        assign enable_timer = 0
+                end
+            
+            // with milk //
+             2'b01: 
+                begin
+                    if (400 <= total_coins)
+                        assign change = total_coins - 400;
+                        assign enable_timer = 1
+                    else
+                        assign change = total_coins
+                        assign enable_timer = 0
+                end
+
+            // capuccino //
+             2'b10: 
+                begin
+                    if (500 <= total_coins)
+                        assign change = total_coins - 500;
+                        assign enable_timer = 1
+                    else
+                        assign change = total_coins
+                        assign enable_timer = 0
+                end
+
+            // mocaccino //
+             2'b11: 
+                begin
+                    if (700 <= total_coins)
+                        assign change = total_coins - 700;
+                        assign enable_timer = 1
+                    else
+                        assign change = total_coins
+                        assign enable_timer = 0
+                end
+        endcase
+    end
+
+endmodule
