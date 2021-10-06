@@ -1,0 +1,55 @@
+# Reading pref.tcl
+# do experimento-1_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:11:23 on Oct 06,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv 
+# -- Compiling module coin_counter_module
+# 
+# Top level modules:
+# 	coin_counter_module
+# End time: 00:11:24 on Oct 06,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:11:24 on Oct 06,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module_tb.sv 
+# -- Compiling module coin_counter_module_tb
+# 
+# Top level modules:
+# 	coin_counter_module_tb
+# End time: 00:11:24 on Oct 06,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  coin_counter_module_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" coin_counter_module_tb 
+# Start time: 00:11:24 on Oct 06,2021
+# Loading sv_std.std
+# Loading work.coin_counter_module_tb
+# Loading work.coin_counter_module
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'total_coins'. The port definition is at: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /coin_counter_module_tb/DUT File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module_tb.sv Line: 8
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# x
+# 0
+# 0
+# 0
+# End time: 00:11:47 on Oct 06,2021, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 1
