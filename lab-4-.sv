@@ -14,116 +14,172 @@ module coffee_machine
 	output logic completado
 )
 
-
 endmodule
 
 //------------------------------------------------------------------//
 //--------------------------Coins Counter---------------------------//
 //------------------------------------------------------------------//
-module counter_coins_module
+module coin_counter_module
 (
     input logic coin_100, // buton 1
     input logic coin_500, // buton 2
     input logic reset, // switch 9
-    output logic total_coins
+    output logic [3:0] total_coins
 );
 
-    always_ff@(posedge coin_100 or posedge coin_500 negedge reset)
+    always_ff@(posedge coin_100 or posedge coin_500 or negedge reset)
   
     begin
-        if (reset)
+        if (!reset)
             total_coins = 0;
-        else if (1000 <= total_coins)
-            total_coins = 0;
-        else
-            if (coin_100)
-                total_coins = total_coins + 100;
-            else
-                total_coins = total_coins + 500;
+			else if (coin_100)
+				total_coins = total_coins + 4'd1;
+			else if (coin_500)
+				total_coins = total_coins + 4'd5;
     end
+	 
+endmodule
+
+//------------------------------------------------------------------//
+//------------------------Coins Comparator--------------------------//
+//------------------------------------------------------------------//
+module coin_comparator_module
+(
+    input logic [3:0] total_coins,
+	output logic reset,
+);
+ 
+    assign reset = (total_coins == 4'd10);
 
 endmodule
+
 
 //------------------------------------------------------------------//
 //------------------Coffee Selector + Coins Change------------------//
 //------------------------------------------------------------------//
 module substractor_module
 (
-    input logic [3:0] coffee_type,
-    input logic total_coins,
-    input logic cancel_button,
-    output logic change,
+    input logic [2:0] coffee_type,
+    input logic [3:0] total_coins,
+    output logic [3:0] change,
     output logic enable_timer
 );
 
-    // cancel process //
-    always @(cancel_button)
-        if (cancel_button)
-            assign change = total_coins;
-
-    // select coffee //
+	// temporal variables //
+	logic [3:0] temp_change;
+	logic temp_et;
+	
+	always @(coffee_type, total_coins)
     begin
-        case (coffee_type)
-
-            // expresso  //
-            2'b00: 
-                begin
-                    if (300 <= total_coins)
-                        assign change = total_coins - 300;
-                        assign enable_timer = 1
-                    else
-                        assign change = total_coins
-                        assign enable_timer = 0
-                end
-            
-            // with milk //
-             2'b01: 
-                begin
-                    if (400 <= total_coins)
-                        assign change = total_coins - 400;
-                        assign enable_timer = 1
-                    else
-                        assign change = total_coins
-                        assign enable_timer = 0
-                end
-
-            // capuccino //
-             2'b10: 
-                begin
-                    if (500 <= total_coins)
-                        assign change = total_coins - 500;
-                        assign enable_timer = 1
-                    else
-                        assign change = total_coins
-                        assign enable_timer = 0
-                end
-
-            // mocaccino //
-             2'b11: 
-                begin
-                    if (700 <= total_coins)
-                        assign change = total_coins - 700;
-                        assign enable_timer = 1
-                    else
-                        assign change = total_coins
-                        assign enable_timer = 0
-                end
-        endcase
-    end
-
-endmodule
+	   case (coffee_type)
+		
+			// expresso //
+		  0 : 
+				begin
+					 if (total_coins >= 4'd3)
+						begin
+							temp_change = total_coins - 4'd3;
+							temp_et = 1;
+						end
+                     else
+					    begin
+							temp_change = total_coins;
+							temp_et = 0;
+						end
+				end
+				
+			
+			// coffee & milk //		
+			1 : 
+				begin
+					 if (total_coins >= 4'd4)
+							begin
+								temp_change = total_coins - 4'd4;
+								temp_et = 1;
+							end
+                 else
+							begin
+								temp_change = total_coins;
+								temp_et = 0;
+							end
+				end
+				
+			// capuccino //		
+			2 : 
+				begin
+					 if (total_coins >= 4'd5)
+							begin
+								temp_change = total_coins - 4'd5;
+								temp_et = 1;
+							end
+                 else
+							begin
+								temp_change = total_coins;
+								temp_et = 0;
+							end
+				end
+				
+			// mocaccino //		
+			2 : 
+				begin
+					 if (total_coins >= 4'd7)
+							begin
+								temp_change = total_coins - 4'd7;
+								temp_et = 1;
+							end
+                 else
+                        begin
+                            temp_change = total_coins;
+                            temp_et = 0;
+                        end
+				end
+				
+		  // default //
+		  default : 
+				begin
+					temp_change = total_coins;
+					temp_et = 0;
+				end 
+       endcase
+	  end
+	  
+	  assign change = temp_change;
+	  assign enable_timer = temp_et;
+	  
+endmodule 
 
 //------------------------------------------------------------------//
 //---------------------------Comparator-----------------------------//
 //------------------------------------------------------------------//
+entradas tiempo del timer, tiempo del TPTC
+
+//------------------------------------------------------------------//
+//---------------------------TPTC-----------------------------//
+//------------------------------------------------------------------//
+entradas estado de la mquina, tipo de cafe
+salida tiempo de ingrediente
 
 //------------------------------------------------------------------//
 //---------------------------Time Counter---------------------------//
 //------------------------------------------------------------------//
+//CUENTA SEGUNDOS 
+module counter #(parameter N=8)
+    (
+    input clk, rst, en,
+    output[N-1:0] Q
+    );
+
+    always_ff @(negedge clk or posedge rst)
+        if(rst) Q = 8'h00;
+        else
+            if (en) Q = Q + 1'b1;
+
+endmodule
 
 //------------------------------------------------------------------//
 //-------------------------------FSM--------------------------------//
 //------------------------------------------------------------------//
+
 module fsm_module
 (
     input logic clock,

@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/simulation/modelsim
 vcoin_counter_module
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1633500684
+!s110 1633623570
 !i10b 1
-!s100 <N`^@B0ZNa1TSho=D=a2D3
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IjfAN5;`o8Z`=nT`<G4_lk2
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+!s100 :A_WD8N1;`]PUmeM^HP=C1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQ@ll?NibIQ?PzM2Y@_3<g1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1633500599
+w1633623478
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv
 !i122 0
 L0 1 24
-Z5 OV;L;2020.1;71
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1633500683.000000
+Z5 !s108 1633623570.000000
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv|
 !i113 1
@@ -37,24 +37,24 @@ Z7 !s92 -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3
 Z8 tCvgOpt 0
 vcoin_counter_module_tb
 R1
-R2
+!s110 1633623571
 !i10b 1
-!s100 j0OD7YbeEL1?bE]kOoU510
+!s100 d=S3PM_lBYbLDM?:Xm^Gg0
+R2
+IH^]8Y2Cz6V7m>iQNBn<R@2
 R3
-I[TCZQ[870mCW9mI6zXfA_1
-R4
 S1
 R0
-w1633500456
+w1633623210
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module_tb.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module_tb.sv
 !i122 1
-L0 1 31
-R5
+L0 1 43
+R4
 r1
 !s85 0
 31
-!s108 1633500684.000000
+R5
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module_tb.sv|
 !i113 1
