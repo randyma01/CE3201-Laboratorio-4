@@ -7,6 +7,7 @@ module total_deco
 	always @(total)
 		begin
 			case (total)
+			
 			  0 : display = 7'b1000000;
 			  
 			  1 : display = 7'b1111001;
@@ -28,7 +29,8 @@ module total_deco
 			  9 : display = 7'b0011000;
 			  
 			  default: display = 7'b1000000;
-			 endcase
-			end
+			  
+			endcase
+		end
 	
-endmodule
+endmodule 

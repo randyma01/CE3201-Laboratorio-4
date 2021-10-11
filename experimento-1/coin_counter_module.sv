@@ -16,6 +16,5 @@ module coin_counter_module
 			else if (coin_500)
 				 total_coins = total_coins + 4'd5;
     end
-
 	 
 endmodule 

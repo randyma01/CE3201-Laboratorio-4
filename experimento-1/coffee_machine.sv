@@ -1,4 +1,5 @@
 module coffee_machine
 (
 );
-endmodule
+
+endmodule 

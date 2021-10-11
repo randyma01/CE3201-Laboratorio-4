@@ -4,47 +4,23 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Q[0]",
+					"name" : "result",
 					"strict" : false
 				},
 				{
-					"name" : "Q[1]",
+					"name" : "timer_count[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[2]",
+					"name" : "ingredient_time[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[3]",
+					"name" : "timer_count[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Q[4]",
-					"strict" : false
-				},
-				{
-					"name" : "Q[5]",
-					"strict" : false
-				},
-				{
-					"name" : "Q[6]",
-					"strict" : false
-				},
-				{
-					"name" : "Q[7]",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "enable",
+					"name" : "ingredient_time[1]",
 					"strict" : false
 				}
 			]

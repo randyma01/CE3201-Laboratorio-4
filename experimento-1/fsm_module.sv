@@ -49,4 +49,4 @@ module fsm_module
 	 assign finished = (state == 3'b101);
 
 
-endmodule
+endmodule 
