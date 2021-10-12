@@ -5,10 +5,8 @@ module time_per_coffee_module
 	output logic [1:0] ingredient_time
 );
 	
-	
 	// temporal variable //
 	logic [1:0] temp_time;
-	
 	
 	always @(coffee_type, state)
 		begin
@@ -32,8 +30,7 @@ module time_per_coffee_module
 						endcase
 					 end
 				 
-				 
-				//W. milk 
+				//W. milk //
 				1:
 					begin
 						case(state)
@@ -50,8 +47,7 @@ module time_per_coffee_module
 							default: temp_time = 2'd0;
 						endcase
 					 end
-				 
-		
+					 
 				// capuccino //
 				2:
 					begin

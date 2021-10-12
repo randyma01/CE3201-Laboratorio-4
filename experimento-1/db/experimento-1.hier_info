@@ -1,8 +1,225 @@
-|time_comparator_module
+|coffee_machine
+clock => clock.IN2
+reset => reset.IN2
+coin_100 => coin_100.IN1
+coin_500 => coin_500.IN1
+coffee_type => coffee_type.IN2
+total_coins_inserted_display[0] <= coin_display_module:coins_display.port1
+total_coins_inserted_display[1] <= coin_display_module:coins_display.port1
+total_coins_inserted_display[2] <= coin_display_module:coins_display.port1
+total_coins_inserted_display[3] <= coin_display_module:coins_display.port1
+total_coins_inserted_display[4] <= coin_display_module:coins_display.port1
+total_coins_inserted_display[5] <= coin_display_module:coins_display.port1
+total_coins_inserted_display[6] <= coin_display_module:coins_display.port1
+total_change_coins_display[0] <= <GND>
+total_change_coins_display[1] <= <GND>
+total_change_coins_display[2] <= <GND>
+total_change_coins_display[3] <= <GND>
+total_change_coins_display[4] <= <GND>
+total_change_coins_display[5] <= <GND>
+total_change_coins_display[6] <= <GND>
+water <= fsm_module:FSM.port3
+coffee <= fsm_module:FSM.port4
+sugar <= fsm_module:FSM.port5
+milk <= fsm_module:FSM.port6
+chocolate <= fsm_module:FSM.port7
+finished <= fsm_module:FSM.port8
+
+
+|coffee_machine|coin_comparator_module:coins_comparator
+total_coins[0] => Equal0.IN3
+total_coins[1] => Equal0.IN1
+total_coins[2] => Equal0.IN2
+total_coins[3] => Equal0.IN0
+reset <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|coin_counter_module:total_coins_counter
+coin_100 => total_coins[3].IN0
+coin_500 => total_coins[0]~reg0.CLK
+coin_500 => total_coins[1]~reg0.CLK
+coin_500 => total_coins[2]~reg0.CLK
+coin_500 => total_coins[3]~reg0.CLK
+reset => total_coins[3].IN1
+reset => total_coins[0]~reg0.ACLR
+reset => total_coins[1]~reg0.ACLR
+reset => total_coins[2]~reg0.ACLR
+reset => total_coins[3]~reg0.ACLR
+total_coins[0] <= total_coins[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+total_coins[1] <= total_coins[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+total_coins[2] <= total_coins[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+total_coins[3] <= total_coins[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|coin_display_module:coins_display
+total[0] => Decoder0.IN3
+total[1] => Decoder0.IN2
+total[2] => Decoder0.IN1
+total[3] => Decoder0.IN0
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|substractor_module:coffee_selector
+coffee_type[0] => Mux0.IN6
+coffee_type[0] => Mux1.IN6
+coffee_type[0] => Mux2.IN5
+coffee_type[0] => Mux3.IN5
+coffee_type[0] => Mux4.IN10
+coffee_type[1] => Mux0.IN5
+coffee_type[1] => Mux1.IN5
+coffee_type[1] => Mux2.IN4
+coffee_type[1] => Mux3.IN4
+coffee_type[1] => Mux4.IN9
+coffee_type[2] => Mux0.IN4
+coffee_type[2] => Mux1.IN4
+coffee_type[2] => Mux2.IN3
+coffee_type[2] => Mux3.IN3
+coffee_type[2] => Mux4.IN8
+total_coins[0] => LessThan0.IN8
+total_coins[0] => Add0.IN8
+total_coins[0] => temp_change.DATAA
+total_coins[0] => LessThan1.IN8
+total_coins[0] => LessThan2.IN8
+total_coins[0] => Add2.IN8
+total_coins[0] => temp_change.DATAA
+total_coins[0] => LessThan3.IN8
+total_coins[0] => Add3.IN8
+total_coins[0] => temp_change.DATAA
+total_coins[0] => Mux3.IN6
+total_coins[0] => Mux3.IN7
+total_coins[0] => Mux3.IN8
+total_coins[0] => Mux3.IN9
+total_coins[0] => Mux3.IN10
+total_coins[1] => LessThan0.IN7
+total_coins[1] => Add0.IN7
+total_coins[1] => temp_change.DATAA
+total_coins[1] => LessThan1.IN7
+total_coins[1] => LessThan2.IN7
+total_coins[1] => Add2.IN7
+total_coins[1] => temp_change.DATAA
+total_coins[1] => LessThan3.IN7
+total_coins[1] => Add3.IN7
+total_coins[1] => temp_change.DATAA
+total_coins[1] => Mux2.IN6
+total_coins[1] => Mux2.IN7
+total_coins[1] => Mux2.IN8
+total_coins[1] => Mux2.IN9
+total_coins[1] => Mux2.IN10
+total_coins[2] => LessThan0.IN6
+total_coins[2] => Add0.IN6
+total_coins[2] => temp_change.DATAA
+total_coins[2] => LessThan1.IN6
+total_coins[2] => Add1.IN4
+total_coins[2] => temp_change.DATAA
+total_coins[2] => LessThan2.IN6
+total_coins[2] => Add2.IN6
+total_coins[2] => temp_change.DATAA
+total_coins[2] => LessThan3.IN6
+total_coins[2] => Add3.IN6
+total_coins[2] => temp_change.DATAA
+total_coins[2] => Mux1.IN7
+total_coins[2] => Mux1.IN8
+total_coins[2] => Mux1.IN9
+total_coins[2] => Mux1.IN10
+total_coins[3] => LessThan0.IN5
+total_coins[3] => Add0.IN5
+total_coins[3] => temp_change.DATAA
+total_coins[3] => LessThan1.IN5
+total_coins[3] => Add1.IN3
+total_coins[3] => temp_change.DATAA
+total_coins[3] => LessThan2.IN5
+total_coins[3] => Add2.IN5
+total_coins[3] => temp_change.DATAA
+total_coins[3] => LessThan3.IN5
+total_coins[3] => Add3.IN5
+total_coins[3] => temp_change.DATAA
+total_coins[3] => Mux0.IN7
+total_coins[3] => Mux0.IN8
+total_coins[3] => Mux0.IN9
+total_coins[3] => Mux0.IN10
+change[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+change[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+change[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+change[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+enable_timer <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|coin_display_module:change
+total[0] => Decoder0.IN3
+total[1] => Decoder0.IN2
+total[2] => Decoder0.IN1
+total[3] => Decoder0.IN0
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|timer_module:fpga_clock
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+enable => Q[0]~reg0.ENA
+enable => Q[1]~reg0.ENA
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|time_per_coffee_module:ingredients_coffee_1
+coffee_type[0] => Mux0.IN10
+coffee_type[0] => Mux1.IN10
+coffee_type[1] => Mux0.IN9
+coffee_type[1] => Mux1.IN9
+coffee_type[2] => Mux0.IN8
+coffee_type[2] => Mux1.IN8
+state[0] => Decoder1.IN1
+state[0] => Decoder2.IN2
+state[1] => Decoder0.IN1
+state[1] => Decoder2.IN1
+state[2] => Decoder0.IN0
+state[2] => Decoder1.IN0
+state[2] => Decoder2.IN0
+ingredient_time[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ingredient_time[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|time_comparator_module:ingredients_coffee_comparator
 timer_count[0] => Equal0.IN1
 timer_count[1] => Equal0.IN0
 ingredient_time[0] => Equal0.IN3
 ingredient_time[1] => Equal0.IN2
-result << Equal0.DB_MAX_OUTPUT_PORT_TYPE
+result <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|fsm_module:FSM
+clock => state~1.DATAIN
+reset => state~3.DATAIN
+result => Selector0.IN3
+result => Selector1.IN3
+result => Selector2.IN3
+result => Selector3.IN3
+result => Selector4.IN3
+result => next_state.000.DATAB
+result => Selector1.IN1
+result => Selector3.IN1
+result => Selector0.IN1
+result => Selector2.IN1
+water <= water.DB_MAX_OUTPUT_PORT_TYPE
+coffee <= coffee.DB_MAX_OUTPUT_PORT_TYPE
+sugar <= sugar.DB_MAX_OUTPUT_PORT_TYPE
+milk <= milk.DB_MAX_OUTPUT_PORT_TYPE
+chocolate <= chocolate.DB_MAX_OUTPUT_PORT_TYPE
+finished <= finished.DB_MAX_OUTPUT_PORT_TYPE
+next_state_output <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 
 

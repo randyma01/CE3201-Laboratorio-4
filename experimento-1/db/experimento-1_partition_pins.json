@@ -4,23 +4,31 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "result",
+					"name" : "total_coins_inserted_display[0]",
 					"strict" : false
 				},
 				{
-					"name" : "timer_count[0]",
+					"name" : "total_coins_inserted_display[3]",
 					"strict" : false
 				},
 				{
-					"name" : "ingredient_time[0]",
+					"name" : "total_coins_inserted_display[4]",
 					"strict" : false
 				},
 				{
-					"name" : "timer_count[1]",
+					"name" : "total_coins_inserted_display[5]",
 					"strict" : false
 				},
 				{
-					"name" : "ingredient_time[1]",
+					"name" : "coin_100",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "coin_500",
 					"strict" : false
 				}
 			]

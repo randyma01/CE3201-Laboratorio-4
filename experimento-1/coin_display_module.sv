@@ -1,4 +1,4 @@
-module total_deco
+module coin_display_module
 (
 	input logic [3:0] total,
 	output logic [6:0] display

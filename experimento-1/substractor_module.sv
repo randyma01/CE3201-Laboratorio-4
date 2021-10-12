@@ -13,6 +13,7 @@ module substractor_module
 	always @(coffee_type, total_coins)
 		begin
 			case (coffee_type)
+			
 				// expresso //
 				0 : 
 					begin
