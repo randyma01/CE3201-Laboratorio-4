@@ -10,7 +10,7 @@ module fsm_module
 	output logic milk,
 	output logic chocolate,
 	output logic finished,
-	output logic next_state_output 
+	output logic state_output 
 );
 
 	// states //
@@ -18,8 +18,8 @@ module fsm_module
 	logic [2:0] next_state;
 
 	// next_state //
-	always_ff @(posedge clock or posedge reset)
-		if (reset)
+	always_ff @(posedge clock or negedge reset)
+		if (!reset)
 			state = 3'b000;
 		else
 			state = next_state;
@@ -49,6 +49,6 @@ module fsm_module
 	assign milk = (state == 3'b011);
 	assign chocolate = (state == 3'b100);
 	assign finished = (state == 3'b101);
-	assign next_state_output = next_state;
+	assign state_output = state;
 
 endmodule 

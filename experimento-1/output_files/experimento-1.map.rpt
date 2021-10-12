@@ -1,5 +1,5 @@
-Analysis & Synthesis report for experimento-1
-Mon Oct 11 21:25:46 2021
+Analysis & Elaboration report for experimento-1
+Tue Oct 12 15:33:32 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,28 +7,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |coffee_machine|fsm_module:FSM|state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Port Connectivity Checks: "fsm_module:FSM"
- 13. Port Connectivity Checks: "time_comparator_module:ingredients_coffee_comparator"
- 14. Port Connectivity Checks: "time_per_coffee_module:ingredients_coffee_1"
- 15. Port Connectivity Checks: "timer_module:fpga_clock"
- 16. Port Connectivity Checks: "coin_display_module:change"
- 17. Port Connectivity Checks: "substractor_module:coffee_selector"
- 18. Port Connectivity Checks: "coin_display_module:coins_display"
- 19. Port Connectivity Checks: "coin_counter_module:total_coins_counter"
- 20. Port Connectivity Checks: "coin_comparator_module:coins_comparator"
- 21. Post-Synthesis Netlist Statistics for Top Partition
- 22. Elapsed Time Per Partition
- 23. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "time_per_coffee_module:COFFEE_TIMER"
+  6. Analysis & Elaboration Messages
+  7. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -52,31 +36,42 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 11 21:25:46 2021       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; experimento-1                               ;
-; Top-level Entity Name           ; coffee_machine                              ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1                                           ;
-; Total pins                      ; 25                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Oct 12 15:33:32 2021       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; experimento-1                               ;
+; Top-level Entity Name         ; coffee_machine                              ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -162,261 +157,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
-; fsm_module.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv             ;         ;
-; coin_counter_module.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv    ;         ;
-; substractor_module.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv     ;         ;
-; coin_comparator_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv ;         ;
-; time_per_coffee_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv ;         ;
-; time_comparator_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv ;         ;
-; coffee_machine.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv         ;         ;
-; timer_module.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/timer_module.sv           ;         ;
-; coin_display_module.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv    ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------+---------+
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                            ;
-+---------------------------------------------+----------------------------------------------------------+
-; Resource                                    ; Usage                                                    ;
-+---------------------------------------------+----------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 2                                                        ;
-;                                             ;                                                          ;
-; Combinational ALUT usage for logic          ; 4                                                        ;
-;     -- 7 input functions                    ; 0                                                        ;
-;     -- 6 input functions                    ; 0                                                        ;
-;     -- 5 input functions                    ; 1                                                        ;
-;     -- 4 input functions                    ; 1                                                        ;
-;     -- <=3 input functions                  ; 2                                                        ;
-;                                             ;                                                          ;
-; Dedicated logic registers                   ; 1                                                        ;
-;                                             ;                                                          ;
-; I/O pins                                    ; 25                                                       ;
-;                                             ;                                                          ;
-; Total DSP Blocks                            ; 0                                                        ;
-;                                             ;                                                          ;
-; Maximum fan-out node                        ; coin_counter_module:total_coins_counter|total_coins[0]~2 ;
-; Maximum fan-out                             ; 7                                                        ;
-; Total fan-out                               ; 45                                                       ;
-; Average fan-out                             ; 0.82                                                     ;
-+---------------------------------------------+----------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name         ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+---------------------+--------------+
-; |coffee_machine                              ; 4 (0)               ; 1 (0)                     ; 0                 ; 0          ; 25   ; 0            ; |coffee_machine                                         ; coffee_machine      ; work         ;
-;    |coin_counter_module:total_coins_counter| ; 4 (4)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_counter_module:total_coins_counter ; coin_counter_module ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------+
-; State Machine - |coffee_machine|fsm_module:FSM|state                              ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-; Name      ; state.101 ; state.100 ; state.011 ; state.010 ; state.001 ; state.000 ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-; state.000 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
-; state.001 ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
-; state.010 ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
-; state.011 ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
-; state.100 ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
-; state.101 ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
-+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                 ;
-+-----------------------------------------------------------+----------------------------------------+
-; Register name                                             ; Reason for Removal                     ;
-+-----------------------------------------------------------+----------------------------------------+
-; timer_module:fpga_clock|Q[0,1]                            ; Lost fanout                            ;
-; coin_counter_module:total_coins_counter|total_coins[1..3] ; Lost fanout                            ;
-; fsm_module:FSM|state~4                                    ; Lost fanout                            ;
-; fsm_module:FSM|state~5                                    ; Lost fanout                            ;
-; fsm_module:FSM|state~6                                    ; Lost fanout                            ;
-; fsm_module:FSM|state.001                                  ; Merged with fsm_module:FSM|state.000   ;
-; fsm_module:FSM|state.010                                  ; Merged with fsm_module:FSM|state.000   ;
-; fsm_module:FSM|state.011                                  ; Merged with fsm_module:FSM|state.000   ;
-; fsm_module:FSM|state.100                                  ; Merged with fsm_module:FSM|state.000   ;
-; fsm_module:FSM|state.101                                  ; Merged with fsm_module:FSM|state.000   ;
-; fsm_module:FSM|state.000                                  ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 14                    ;                                        ;
-+-----------------------------------------------------------+----------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                ;
-+------------------------------+--------------------+----------------------------------------+
-; Register name                ; Reason for Removal ; Registers Removed due to This Register ;
-+------------------------------+--------------------+----------------------------------------+
-; timer_module:fpga_clock|Q[0] ; Lost Fanouts       ; timer_module:fpga_clock|Q[1]           ;
-+------------------------------+--------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 1     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fsm_module:FSM"                                                                                  ;
-+-------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port              ; Type   ; Severity ; Details                                                                             ;
-+-------------------+--------+----------+-------------------------------------------------------------------------------------+
-; next_state_output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "time_comparator_module:ingredients_coffee_comparator"                                                                                                     ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                                                                                                                             ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; timer_count ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (2 bits) it drives.  Extra input bit(s) "timer_count[1..1]" will be connected to GND. ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "time_per_coffee_module:ingredients_coffee_1"                                                                                                              ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                                                                                                                             ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; coffee_type ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "coffee_type[2..1]" will be connected to GND. ;
-; state       ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "timer_module:fpga_clock"                                                                                             ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                              ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; Q    ; Output ; Warning  ; Output or bidir port (2 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[1..1]" have no fanouts ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "coin_display_module:change"                                                                                                                      ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                       ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; total   ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "total[3..1]" will be connected to GND. ;
-; display ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "display[6..1]" have no fanouts                    ;
-; display ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                           ;
-+---------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "substractor_module:coffee_selector"                                                                                                                        ;
-+-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                                             ;
-+-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; coffee_type ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "coffee_type[2..1]" will be connected to GND. ;
-; total_coins ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "total_coins[3..1]" will be connected to GND. ;
-; change      ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "change[3..1]" have no fanouts                           ;
-+-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "coin_display_module:coins_display"                                                                                                            ;
+; Port Connectivity Checks: "time_per_coffee_module:COFFEE_TIMER"                                                                                                          ;
 +-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port  ; Type  ; Severity ; Details                                                                                                                                       ;
 +-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; total ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "total[3..1]" will be connected to GND. ;
+; state ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "state[2..1]" will be connected to GND. ;
 +-------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "coin_counter_module:total_coins_counter"                                                                                              ;
-+-------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                                                                        ;
-+-------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
-; total_coins ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "total_coins[3..1]" have no fanouts ;
-+-------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "coin_comparator_module:coins_comparator"                                                                                                                  ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port        ; Type  ; Severity ; Details                                                                                                                                             ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; total_coins ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "total_coins[3..1]" will be connected to GND. ;
-+-------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 1                           ;
-;     CLR               ; 1                           ;
-; arriav_lcell_comb     ; 6                           ;
-;     normal            ; 6                           ;
-;         0 data inputs ; 2                           ;
-;         2 data inputs ; 2                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 1                           ;
-; boundary_port         ; 25                          ;
-;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.75                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 11 21:25:33 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off experimento-1 -c experimento-1
+    Info: Processing started: Tue Oct 12 15:33:21 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off experimento-1 -c experimento-1 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_module.sv
@@ -437,53 +194,32 @@ Info (12021): Found 1 design units, including 1 entities, in source file timer_m
     Info (12023): Found entity 1: timer_module File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/timer_module.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file coin_display_module.sv
     Info (12023): Found entity 1: coin_display_module File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at coffee_machine.sv(60): created implicit net for "total_change_coins" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 60
+Info (12021): Found 1 design units, including 1 entities, in source file coffee_machine_tb.sv
+    Info (12023): Found entity 1: coffee_machine_tb File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file general_tb.sv
+    Info (12023): Found entity 1: general_tb File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv Line: 1
 Info (12127): Elaborating entity "coffee_machine" for the top level hierarchy
-Warning (10034): Output port "total_change_coins_display" at coffee_machine.sv(14) has no driver File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
-Info (12128): Elaborating entity "coin_comparator_module" for hierarchy "coin_comparator_module:coins_comparator" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 38
-Info (12128): Elaborating entity "coin_counter_module" for hierarchy "coin_counter_module:total_coins_counter" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 43
-Info (12128): Elaborating entity "coin_display_module" for hierarchy "coin_display_module:coins_display" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 48
-Info (12128): Elaborating entity "substractor_module" for hierarchy "substractor_module:coffee_selector" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 54
-Info (12128): Elaborating entity "timer_module" for hierarchy "timer_module:fpga_clock" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 66
-Info (12128): Elaborating entity "time_per_coffee_module" for hierarchy "time_per_coffee_module:ingredients_coffee_1" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 72
-Info (12128): Elaborating entity "time_comparator_module" for hierarchy "time_comparator_module:ingredients_coffee_comparator" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 77
-Info (12128): Elaborating entity "fsm_module" for hierarchy "fsm_module:FSM" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 82
+Info (12128): Elaborating entity "coin_counter_module" for hierarchy "coin_counter_module:COIN_COUNTER" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 35
+Info (12128): Elaborating entity "coin_comparator_module" for hierarchy "coin_comparator_module:COIN_COMPRATOR" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 39
+Info (12128): Elaborating entity "coin_display_module" for hierarchy "coin_display_module:COINS_DISPLAY" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 43
+Info (12128): Elaborating entity "substractor_module" for hierarchy "substractor_module:COFEE_SELECTOR" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 47
+Info (12128): Elaborating entity "timer_module" for hierarchy "timer_module:GENERAL_TIMER" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 55
+Info (12128): Elaborating entity "time_per_coffee_module" for hierarchy "time_per_coffee_module:COFFEE_TIMER" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 59
+Info (12128): Elaborating entity "time_comparator_module" for hierarchy "time_comparator_module:TIMER_COMPARATOR" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 63
+Info (12128): Elaborating entity "fsm_module" for hierarchy "fsm_module:FSM" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 67
 Warning (10230): Verilog HDL assignment warning at fsm_module.sv(52): truncated value with size 3 to match size of target (1) File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv Line: 52
-Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "coin_counter_module:total_coins_counter|total_coins[0]" is converted into an equivalent circuit using register "coin_counter_module:total_coins_counter|total_coins[0]~_emulated" and latch "coin_counter_module:total_coins_counter|total_coins[0]~1" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv Line: 16
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "total_coins_inserted_display[1]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 13
-    Warning (13410): Pin "total_coins_inserted_display[2]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 13
-    Warning (13410): Pin "total_coins_inserted_display[6]" is stuck at VCC File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 13
-    Warning (13410): Pin "total_change_coins_display[0]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
-    Warning (13410): Pin "total_change_coins_display[1]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
-    Warning (13410): Pin "total_change_coins_display[2]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
-    Warning (13410): Pin "total_change_coins_display[3]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
-    Warning (13410): Pin "total_change_coins_display[4]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
-    Warning (13410): Pin "total_change_coins_display[5]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
-    Warning (13410): Pin "total_change_coins_display[6]" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
-    Warning (13410): Pin "water" is stuck at VCC File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 15
-    Warning (13410): Pin "coffee" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
-    Warning (13410): Pin "sugar" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 17
-    Warning (13410): Pin "milk" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 18
-    Warning (13410): Pin "chocolate" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 19
-    Warning (13410): Pin "finished" is stuck at GND File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 21
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "coffee_type" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 10
-    Warning (15610): No output dependent on input pin "clock" File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 4
-Info (21057): Implemented 29 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Mon Oct 11 21:25:46 2021
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:29
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/output_files/experimento-1.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Tue Oct 12 15:33:32 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:25
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/output_files/experimento-1.map.smsg.
 
 

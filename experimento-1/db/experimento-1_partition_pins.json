@@ -4,23 +4,99 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "total_coins_inserted_display[0]",
+					"name" : "total_coins_display[0]",
 					"strict" : false
 				},
 				{
-					"name" : "total_coins_inserted_display[3]",
+					"name" : "total_coins_display[1]",
 					"strict" : false
 				},
 				{
-					"name" : "total_coins_inserted_display[4]",
+					"name" : "total_coins_display[2]",
 					"strict" : false
 				},
 				{
-					"name" : "total_coins_inserted_display[5]",
+					"name" : "total_coins_display[3]",
 					"strict" : false
 				},
 				{
-					"name" : "coin_100",
+					"name" : "total_coins_display[4]",
+					"strict" : false
+				},
+				{
+					"name" : "total_coins_display[5]",
+					"strict" : false
+				},
+				{
+					"name" : "total_coins_display[6]",
+					"strict" : false
+				},
+				{
+					"name" : "change_display[0]",
+					"strict" : false
+				},
+				{
+					"name" : "change_display[1]",
+					"strict" : false
+				},
+				{
+					"name" : "change_display[2]",
+					"strict" : false
+				},
+				{
+					"name" : "change_display[3]",
+					"strict" : false
+				},
+				{
+					"name" : "change_display[4]",
+					"strict" : false
+				},
+				{
+					"name" : "change_display[5]",
+					"strict" : false
+				},
+				{
+					"name" : "change_display[6]",
+					"strict" : false
+				},
+				{
+					"name" : "water",
+					"strict" : false
+				},
+				{
+					"name" : "coffee",
+					"strict" : false
+				},
+				{
+					"name" : "sugar",
+					"strict" : false
+				},
+				{
+					"name" : "milk",
+					"strict" : false
+				},
+				{
+					"name" : "chocolate",
+					"strict" : false
+				},
+				{
+					"name" : "finished",
+					"strict" : false
+				},
+				{
+					"name" : "coffee_type[2]",
+					"strict" : false
+				},
+				{
+					"name" : "coffee_type[1]",
+					"strict" : false
+				},
+				{
+					"name" : "coffee_type[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
 					"strict" : false
 				},
 				{
@@ -29,6 +105,10 @@
 				},
 				{
 					"name" : "coin_500",
+					"strict" : false
+				},
+				{
+					"name" : "coin_100",
 					"strict" : false
 				}
 			]

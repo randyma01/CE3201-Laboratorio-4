@@ -1,0 +1,35 @@
+module general_tb();
+
+
+	logic coin_100;
+	logic coin_500;
+	logic reset;
+	logic [3:0] total_coins;
+	
+	coin_counter_module DUT_COIN_COUNTER(coin_100, coin_500, reset, total_coins);
+	
+	initial begin
+	
+	
+		reset = 0;
+		coin_100 = 0;
+		coin_500 = 0;
+		$display(total_coins);
+		#40;
+		
+		reset = 1;
+		coin_100 = 1;
+		coin_500 = 0;
+		$display(total_coins);
+		#40;
+		
+		reset = 1;
+		coin_100 = 1;
+		coin_500 = 0;
+		$display(total_coins);
+		#40;
+		
+		
+	end
+
+endmodule 

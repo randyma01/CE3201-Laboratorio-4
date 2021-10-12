@@ -1,17 +1,17 @@
 module coffee_machine
 (
-	//---default inputs---//
-	input logic clock, // ?
-	input logic reset, // switch 9
+	// default inputs 
+	input logic clock, 					// fpga clock
+	input logic reset, 					// switch 9
 	
-	//---user inputs---//
-	input logic coin_100, // button 1
-	input logic coin_500, // button 2
-	input logic coffee_type, // switches 1 y 2
+	// user inputs
+	input logic coin_100, 				// button 1
+	input logic coin_500, 				// button 2
+	input logic [2:0] coffee_type, 	// switches 1 y 2
 	
-	//---system outputs---//
-	output logic [6:0] total_coins_inserted_display,
-	output logic [6:0] total_change_coins_display,
+	// system outputs 
+	output logic [6:0] total_coins_display,
+	output logic [6:0] change_display,
 	output logic water,
 	output logic coffee,
 	output logic sugar,
@@ -19,71 +19,51 @@ module coffee_machine
 	output logic chocolate,
 	output logic finished
 );
-
-	//---logical variables---//
-	logic total_coins_inserted; // total coins inserted
-	logic actual_coins_count; // verify is total coins is equal to 1000
-	logic coins_reseter; // reset when is count is more than 1000
-	logic [1:0] ingredient_time; // time for each ingredient
-
-	//---temporal variables---//
-	logic temp_enable; // temporal enable
-	logic temp_change; // temporal change
-	logic temp_seconds; //timer counted
-	logic temp_time_result; //
-	logic temp_state; // 
+	
+	// connections
+	logic [3:0] total_coins; 
+	logic coins_reset;
+	logic [3:0] change;
+	logic enable; 
+	logic [1:0] seconds;
+	logic [1:0] ingredient_time;
+	logic comparator_result;
+	logic state;
 	
 	
-	//---counter compator---// ???
-	coin_comparator_module coins_comparator(total_coins_inserted, coins_reseter);
+	// verify if total coins is equal or bigger then 100
+	coin_counter_module COIN_COUNTER(coin_100, coin_500, reset && coins_reset, total_coins);
 	
 	
-	
-	//---counter of total coins inserted---//
-	coin_counter_module total_coins_counter(coin_100, coin_500, reset || coins_reseter, total_coins_inserted);
-	
+	// counts total coins inserted
+	coin_comparator_module COIN_COMPRATOR(total_coins, coins_reset);
 	
 	
-	//---coins display (coins inserted)---//
-	coin_display_module coins_display(total_coins_inserted, total_coins_inserted_display);
-
+		// display total coins inserted
+		coin_display_module COINS_DISPLAY(total_coins, total_coins_display);
 	
 	
-	
-	//---coffee selection---//
-	substractor_module coffee_selector(coffee_type, total_coins_inserted, temp_change, temp_enable);
-	
+	// selects coffee and return change (if exists)
+	substractor_module COFEE_SELECTOR(coffee_type, total_coins, change, enable);
 
 	
-	
-	//---coins display (if change)---//
-	coin_display_module change(temp_change, total_change_coins);
-	
+		// display total coins change (if exits)
+		coin_display_module CHANGE_DISPLAY(change, change_display);
 	
 	
-	
-	//---timer counter---//
-	timer_module fpga_clock(clock, reset, temp_enable, temp_seconds);
-	
+	// general timer
+	timer_module GENERAL_TIMER(clock, reset, enable, seconds);
 	
 	
-	
-	//---timer for each ingredient---//
-	time_per_coffee_module ingredients_coffee_1(coffee_type, 3'b000, ingredient_time);
-	
-		
-	
-	//---time comaparator for each ingredient---//
-	time_comparator_module ingredients_coffee_comparator(temp_seconds, ingredient_time, temp_time_result);
+	// timer for each ingredient in for a coffee
+	time_per_coffee_module COFFEE_TIMER(coffee_type, state, ingredient_time);
 	
 	
-	
-	//---FSM---//
-	fsm_module FSM(clock, reset, temp_time_result, water, coffee, sugar, milk, chocolate, finished, temp_state);
-	
+	// comparator for each coffee time ingredient
+	time_comparator_module TIMER_COMPARATOR(seconds, ingredient_time, comparator_result);	
 	
 	
-	//---timer for each ingredient---//
-	//time_per_coffee_module ingredients_coffee_2(coffee_type, state, ingredient_time);
-
-endmodule
+	// fsm module
+	fsm_module FSM(clock, reset, comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
+	
+endmodule 

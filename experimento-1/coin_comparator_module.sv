@@ -1,9 +1,9 @@
 module coin_comparator_module
 (
 	input logic [3:0] total_coins,
-	output logic reset
+	output logic coins_reset
 );
  
-	assign reset = (total_coins == 4'd10);
+	assign coins_reset = !(total_coins >= 4'd10);
 	 
 endmodule 
