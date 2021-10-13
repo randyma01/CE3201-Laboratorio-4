@@ -60,7 +60,7 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH coffee_machine_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH general_tb -section_id eda_simulation
 set_global_assignment -name SYSTEMVERILOG_FILE coin_comparator_module.sv
 set_global_assignment -name SYSTEMVERILOG_FILE time_per_coffee_module.sv
 set_global_assignment -name SYSTEMVERILOG_FILE time_comparator_module.sv

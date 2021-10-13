@@ -1,6 +1,6 @@
 |coffee_machine
 clock => clock.IN2
-reset => reset.IN2
+reset => reset.IN1
 coin_100 => coin_100.IN1
 coin_500 => coin_500.IN1
 coffee_type[0] => coffee_type[0].IN2
@@ -192,6 +192,8 @@ sugar <= sugar.DB_MAX_OUTPUT_PORT_TYPE
 milk <= milk.DB_MAX_OUTPUT_PORT_TYPE
 chocolate <= chocolate.DB_MAX_OUTPUT_PORT_TYPE
 finished <= finished.DB_MAX_OUTPUT_PORT_TYPE
-state_output <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+state_output[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+state_output[1] <= state_output.DB_MAX_OUTPUT_PORT_TYPE
+state_output[2] <= state_output.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -10,7 +10,7 @@ module fsm_module
 	output logic milk,
 	output logic chocolate,
 	output logic finished,
-	output logic state_output 
+	output logic [2:0] state_output 
 );
 
 	// states //

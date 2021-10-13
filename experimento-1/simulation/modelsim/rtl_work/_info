@@ -11,15 +11,15 @@ cModel Technology
 Z0 dC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/simulation/modelsim
 vcoffee_machine
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1634074423
+Z2 !s110 1634099757
 !i10b 1
-!s100 MQ;[K[P]<FOf6NckWBI=m1
+!s100 Po6LgS4AKUIJCUBC0B=bj1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IP]zPomMbCiR3NnADaCeaH3
+I[8gA15lUS2m^Xnm^L7DIf2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1634073389
+w1634098214
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv
 !i122 6
@@ -28,39 +28,13 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1634074423.000000
+Z6 !s108 1634099757.000000
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv|
 !i113 1
 Z7 o-sv -work work
 Z8 !s92 -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1
 Z9 tCvgOpt 0
-vcoffee_machine_tb
-R1
-Z10 !s110 1634074424
-!i10b 1
-!s100 b2DaITaK9Xee4907NENm[3
-R3
-IIfOVaDNT82SA<iHQzf0jc2
-R4
-S1
-R0
-w1634074362
-8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv
-FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv
-!i122 9
-L0 1 80
-R5
-r1
-!s85 0
-31
-!s108 1634074424.000000
-!s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv|
-!i113 1
-R7
-R8
-R9
 vcoin_comparator_module
 R1
 R2
@@ -80,7 +54,7 @@ R5
 r1
 !s85 0
 31
-R6
+Z10 !s108 1634099756.000000
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv|
 !i113 1
@@ -89,7 +63,7 @@ R8
 R9
 vcoin_counter_module
 R1
-R2
+Z11 !s110 1634099756
 !i10b 1
 !s100 aWl>?K0;dloh^?o?lI2R>0
 R3
@@ -106,7 +80,7 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv|
 !i113 1
@@ -115,7 +89,7 @@ R8
 R9
 vcoin_display_module
 R1
-R10
+R2
 !i10b 1
 !s100 4M=018JaWQ02i>komF?_n2
 R3
@@ -141,15 +115,15 @@ R8
 R9
 vfsm_module
 R1
-R2
+R11
 !i10b 1
-!s100 4YaR;65^mO3?P`IURX^DP0
+!s100 QQUXZbkHK`4XT@h7`40=>2
 R3
-IM7_UmceF=lNKoo4kL5ezJ1
+I5@le;VDJlLMZKVmPO@FZn0
 R4
 S1
 R0
-w1634059795
+w1634095932
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv
 !i122 0
@@ -158,16 +132,42 @@ R5
 r1
 !s85 0
 31
-!s108 1634074422.000000
+R10
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv|
 !i113 1
 R7
 R8
 R9
-vsubstractor_module
+vgeneral_tb
 R1
 R2
+!i10b 1
+!s100 WQEzeB9e^6>U_YeIXi0WB1
+R3
+IA?RU1`2FYAZGL`oaYYl]O2
+R4
+S1
+R0
+w1634099408
+8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv
+FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv
+!i122 9
+L0 1 134
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv|
+!i113 1
+R7
+R8
+R9
+vsubstractor_module
+R1
+R11
 !i10b 1
 !s100 g]9[T9e35Em3mKV5jQOgZ2
 R3
@@ -184,7 +184,7 @@ R5
 r1
 !s85 0
 31
-R6
+R10
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv|
 !i113 1
@@ -201,7 +201,7 @@ IY7>IMNhVYjl7Q]i>C_X1H2
 R4
 S1
 R0
-w1634071621
+w1634099664
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv
 !i122 5
@@ -227,7 +227,7 @@ Ij4fcJG=_fGUFATffzKziU0
 R4
 S1
 R0
-w1634007837
+w1634099645
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv
 !i122 4
@@ -253,7 +253,7 @@ IWY@VV`X1QFhPSdoc0aZlP1
 R4
 S1
 R0
-w1634070551
+w1634099697
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/timer_module.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/timer_module.sv
 !i122 7

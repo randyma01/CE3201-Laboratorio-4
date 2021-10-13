@@ -12,112 +12,111 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:42 on Oct 12,2021
+# Start time: 22:35:56 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv 
 # -- Compiling module fsm_module
 # 
 # Top level modules:
 # 	fsm_module
-# End time: 15:33:43 on Oct 12,2021, Elapsed time: 0:00:01
+# End time: 22:35:56 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:43 on Oct 12,2021
+# Start time: 22:35:56 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv 
 # -- Compiling module coin_counter_module
 # 
 # Top level modules:
 # 	coin_counter_module
-# End time: 15:33:43 on Oct 12,2021, Elapsed time: 0:00:00
+# End time: 22:35:56 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:43 on Oct 12,2021
+# Start time: 22:35:56 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv 
 # -- Compiling module substractor_module
 # 
 # Top level modules:
 # 	substractor_module
-# End time: 15:33:43 on Oct 12,2021, Elapsed time: 0:00:00
+# End time: 22:35:56 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:43 on Oct 12,2021
+# Start time: 22:35:56 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv 
 # -- Compiling module coin_comparator_module
 # 
 # Top level modules:
 # 	coin_comparator_module
-# End time: 15:33:43 on Oct 12,2021, Elapsed time: 0:00:00
+# End time: 22:35:57 on Oct 12,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:43 on Oct 12,2021
+# Start time: 22:35:57 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv 
 # -- Compiling module time_per_coffee_module
 # 
 # Top level modules:
 # 	time_per_coffee_module
-# End time: 15:33:43 on Oct 12,2021, Elapsed time: 0:00:00
+# End time: 22:35:57 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:43 on Oct 12,2021
+# Start time: 22:35:57 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv 
 # -- Compiling module time_comparator_module
 # 
 # Top level modules:
 # 	time_comparator_module
-# End time: 15:33:43 on Oct 12,2021, Elapsed time: 0:00:00
+# End time: 22:35:57 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:43 on Oct 12,2021
+# Start time: 22:35:57 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv 
 # -- Compiling module coffee_machine
 # 
 # Top level modules:
 # 	coffee_machine
-# End time: 15:33:43 on Oct 12,2021, Elapsed time: 0:00:00
+# End time: 22:35:57 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/timer_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:43 on Oct 12,2021
+# Start time: 22:35:57 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/timer_module.sv 
 # -- Compiling module timer_module
 # 
 # Top level modules:
 # 	timer_module
-# End time: 15:33:43 on Oct 12,2021, Elapsed time: 0:00:00
+# End time: 22:35:57 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:43 on Oct 12,2021
+# Start time: 22:35:57 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv 
 # -- Compiling module coin_display_module
 # 
 # Top level modules:
 # 	coin_display_module
-# End time: 15:33:44 on Oct 12,2021, Elapsed time: 0:00:01
+# End time: 22:35:57 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1 {C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:33:44 on Oct 12,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv 
-# -- Compiling module coffee_machine_tb
+# Start time: 22:35:57 on Oct 12,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1" C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv 
+# -- Compiling module general_tb
 # 
 # Top level modules:
-# 	coffee_machine_tb
-# End time: 15:33:44 on Oct 12,2021, Elapsed time: 0:00:00
+# 	general_tb
+# End time: 22:35:57 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  coffee_machine_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" coffee_machine_tb 
-# Start time: 15:33:44 on Oct 12,2021
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  general_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" general_tb 
+# Start time: 22:35:57 on Oct 12,2021
 # Loading sv_std.std
-# Loading work.coffee_machine_tb
-# Loading work.coffee_machine
+# Loading work.general_tb
 # Loading work.coin_counter_module
 # Loading work.coin_comparator_module
 # Loading work.coin_display_module
@@ -126,21 +125,19 @@
 # Loading work.time_per_coffee_module
 # Loading work.time_comparator_module
 # Loading work.fsm_module
-# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'state'. The port definition is at: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT/COFFEE_TIMER File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 59
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ranmsy  Hostname: RANDYMARTINC4C4  ProcessID: 1404
-#           Attempting to use alternate WLF file "./wlft1nxxs8".
+#           Attempting to use alternate WLF file "./wlftfvt228".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft1nxxs8
+#           Using alternate file: ./wlftfvt228
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Break key hit
-# Break in Module coffee_machine_tb at C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv line 40
-# End time: 15:40:07 on Oct 12,2021, Elapsed time: 0:06:23
-# Errors: 0, Warnings: 3
+# Break in Module timer_module at C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/timer_module.sv line 9
+# End time: 23:20:55 on Oct 12,2021, Elapsed time: 0:44:58
+# Errors: 0, Warnings: 2

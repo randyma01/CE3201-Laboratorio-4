@@ -25,16 +25,16 @@ module general_tb();
 	logic [3:0] change;
 	logic enable;
 	logic [1:0] seconds;
-	logic state;
+	logic [2:0] state;
 	logic [1:0] ingredient_time;
 	logic comparator_result;
 	
 	
-	// verify if total coins is equal or bigger than 1000
+	//  counts total coins inserted verify
 	coin_counter_module DUT_COIN_COUNTER(coin_100, coin_500, reset, total_coins);
 	
 	
-	// counts total coins inserted
+	// if total coins is equal or bigger than 1000
 	coin_comparator_module DUT_COIN_COMPRATOR(total_coins, coins_reset);
 	
 	
@@ -50,7 +50,10 @@ module general_tb();
 		coin_display_module DUT_CHANGE_DISPLAY(change, change_display);
 	
 	
-	// general timer
+	// general timer 
+	
+	// cuando el timer tenga el mismo tiempo del ingrediente
+	// se debe resetear el timer
 	timer_module DUT_GENERAL_TIMER(clock, reset, enable, seconds);
 	
 	

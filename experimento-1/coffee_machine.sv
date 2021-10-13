@@ -28,7 +28,7 @@ module coffee_machine
 	logic [1:0] seconds;
 	logic [1:0] ingredient_time;
 	logic comparator_result;
-	logic state;
+	logic [2:0] state;
 	
 	
 	// verify if total coins is equal or bigger then 100
@@ -52,7 +52,7 @@ module coffee_machine
 	
 	
 	// general timer
-	timer_module GENERAL_TIMER(clock, reset, enable, seconds);
+	timer_module GENERAL_TIMER(clock, reset & comparator_result, enable, seconds);
 	
 	
 	// timer for each ingredient in for a coffee
