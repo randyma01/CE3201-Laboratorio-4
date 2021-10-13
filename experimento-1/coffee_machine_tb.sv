@@ -18,6 +18,7 @@ module coffee_machine_tb();
 	logic milk;
 	logic chocolate;
 	logic finished;
+	
 
 	coffee_machine DUT
 	(
@@ -36,6 +37,7 @@ module coffee_machine_tb();
 	finished
 	);
 	
+	
 	always begin
 		clock = 0; 
 		#40;
@@ -48,32 +50,36 @@ module coffee_machine_tb();
 		reset = 0;
 		coin_100 = 0;
 		coin_500 = 0;
-		coffee_type = 3'b00;
+		coffee_type = 3'b011;
 		#40;
 		
+		reset = 1;
 		coin_100 = 1;
 		coin_500 = 0;
-		coffee_type = 3'b00;
+		//coffee_type = 3'b000;
 		#40;
 		
+		reset = 1;
 		coin_100 = 0;
 		coin_500 = 0;
-		coffee_type = 3'b00;
+		//coffee_type = 3'b000;
 		#40;
 		
+		reset = 1;
 		coin_100 = 1;
 		coin_500 = 0;
-		coffee_type = 3'b00;
+		//coffee_type = 3'b000;
 		#40;
 		
+		reset = 1;
 		coin_100 = 0;
 		coin_500 = 1;
-		coffee_type = 3'b00;
+		//coffee_type = 3'b011;
 		#40;
 		
+		reset = 1;
 		coin_100 = 0;
 		coin_500 = 0;
-		coffee_type = 3'b11;
 		#40;
 	end
 	

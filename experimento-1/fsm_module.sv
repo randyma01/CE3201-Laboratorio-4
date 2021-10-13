@@ -2,7 +2,7 @@ module fsm_module
 (
 	input logic clock,
 	input logic reset,
-	input logic result, // result of comparator
+	input logic result, // comparator_result
 	
 	output logic water,
 	output logic coffee,

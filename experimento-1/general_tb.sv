@@ -49,11 +49,8 @@ module general_tb();
 		// display total coins change (if exits)
 		coin_display_module DUT_CHANGE_DISPLAY(change, change_display);
 	
-	
+
 	// general timer 
-	
-	// cuando el timer tenga el mismo tiempo del ingrediente
-	// se debe resetear el timer
 	timer_module DUT_GENERAL_TIMER(clock, reset, enable, seconds);
 	
 	
@@ -66,7 +63,7 @@ module general_tb();
 	
 	
 	// fsm module
-	fsm_module DUT_FSM(clock, reset, comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
+	fsm_module DUT_FSM(clock, reset, ~comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
 	
 	
 	always begin
@@ -79,38 +76,57 @@ module general_tb();
 	initial begin
 	
 		reset = 0;
-		coin_100 = 0;
-		coin_500 = 0;
-		coffee_type = 3'b00;
+		enable = 0;
 		#40;
 		
-		reset = 1 && coins_reset;
-		coin_100 = 1;
-		coin_500 = 0;
-		coffee_type = 3'b00;
+		reset = 1;
+		enable = 0;
 		#40;
 		
-		reset = 1 && coins_reset;
-		coin_100 = 0;
-		coin_500 = 0;
-		coffee_type = 3'b00;
-		#40;
+		reset = 1;
+		enable = 1;
+		coffee_type = 3'b011;
+
 		
-		reset = 1 && coins_reset;
-		coin_100 = 1;
-		coin_500 = 0;
-		coffee_type = 3'b00;
-		#40;
+//		state = 3'b11;
+//		#40;
 		
-		reset = 1 && coins_reset;
-		coin_100 = 0;
-		coin_500 = 1;
-		coffee_type = 3'b11;
-		#40;
-		
-		reset = 1 && coins_reset;
-		coin_100 = 0;
-		coin_500 = 0;
+//		state = 3'b000;
+//		#40;
+
+//		reset = 0;
+//		coin_100 = 0;
+//		coin_500 = 0;
+//		coffee_type = 3'b011;
+//		#40;
+//		
+//		reset = 1 && coins_reset;
+//		coin_100 = 1;
+//		coin_500 = 0;
+//		//coffee_type = 3'b000;
+//		#40;
+//		
+//		reset = 1 && coins_reset;
+//		coin_100 = 0;
+//		coin_500 = 0;
+//		//coffee_type = 3'b000;
+//		#40;
+//		
+//		reset = 1 && coins_reset;
+//		coin_100 = 1;
+//		coin_500 = 0;
+//		//coffee_type = 3'b000;
+//		#40;
+//		
+//		reset = 1 && coins_reset;
+//		coin_100 = 0;
+//		coin_500 = 1;
+//		//coffee_type = 3'b011;
+//		#40;
+//		
+//		reset = 1 && coins_reset;
+//		coin_100 = 0;
+//		coin_500 = 0;
 		#40;
 		
 //		reset = 1 && coins_reset;

@@ -119,7 +119,7 @@ change[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 change[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 change[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 change[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-enable_timer <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+enable <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |coffee_machine|coin_display_module:CHANGE_DISPLAY
@@ -166,11 +166,11 @@ ingredient_time[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |coffee_machine|time_comparator_module:TIMER_COMPARATOR
-timer_count[0] => Equal0.IN1
-timer_count[1] => Equal0.IN0
-ingredient_time[0] => Equal0.IN3
-ingredient_time[1] => Equal0.IN2
-comparator_result <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+timer_count[0] => LessThan0.IN2
+timer_count[1] => LessThan0.IN1
+ingredient_time[0] => LessThan0.IN4
+ingredient_time[1] => LessThan0.IN3
+comparator_result <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |coffee_machine|fsm_module:FSM

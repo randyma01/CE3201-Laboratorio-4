@@ -1,0 +1,20 @@
+module counter_clock_module
+(
+	input logic clock, 
+	output logic flag
+);
+
+	int count = 0;
+
+	always @(posedge clock)
+	
+	begin
+		if (count == 1000000)
+			flag = 1;
+		else
+			count = count + 1;
+			flag = 0;
+	end
+		
+
+endmodule 

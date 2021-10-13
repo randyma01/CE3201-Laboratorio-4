@@ -35,7 +35,7 @@ module coffee_machine
 	coin_counter_module COIN_COUNTER(coin_100, coin_500, reset && coins_reset, total_coins);
 	
 	
-	// counts total coins inserted
+	// counts total coins inserted 
 	coin_comparator_module COIN_COMPRATOR(total_coins, coins_reset);
 	
 	
@@ -63,7 +63,7 @@ module coffee_machine
 	time_comparator_module TIMER_COMPARATOR(seconds, ingredient_time, comparator_result);	
 	
 	
-	// fsm module
-	fsm_module FSM(clock, reset, comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
+	// fsm module 
+	fsm_module FSM(clock, reset, !comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
 	
 endmodule 

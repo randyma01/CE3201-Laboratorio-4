@@ -11,15 +11,15 @@ cModel Technology
 Z0 dC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/simulation/modelsim
 vcoffee_machine
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1634099757
+Z2 !s110 1634150292
 !i10b 1
-!s100 Po6LgS4AKUIJCUBC0B=bj1
+!s100 Pl^FaQNSdicg]B=gbZVo:2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I[8gA15lUS2m^Xnm^L7DIf2
+ILHolH9PhfQK?Y^i7MPBjS0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1634098214
+w1634145021
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv
 !i122 6
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1634099757.000000
+Z6 !s108 1634150292.000000
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv|
 !i113 1
@@ -54,7 +54,7 @@ R5
 r1
 !s85 0
 31
-Z10 !s108 1634099756.000000
+R6
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv|
 !i113 1
@@ -63,7 +63,7 @@ R8
 R9
 vcoin_counter_module
 R1
-Z11 !s110 1634099756
+R2
 !i10b 1
 !s100 aWl>?K0;dloh^?o?lI2R>0
 R3
@@ -80,7 +80,7 @@ R5
 r1
 !s85 0
 31
-R10
+Z10 !s108 1634150291.000000
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv|
 !i113 1
@@ -115,7 +115,7 @@ R8
 R9
 vfsm_module
 R1
-R11
+!s110 1634150291
 !i10b 1
 !s100 QQUXZbkHK`4XT@h7`40=>2
 R3
@@ -123,7 +123,7 @@ I5@le;VDJlLMZKVmPO@FZn0
 R4
 S1
 R0
-w1634095932
+w1634142154
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/fsm_module.sv
 !i122 0
@@ -141,24 +141,24 @@ R8
 R9
 vgeneral_tb
 R1
-R2
+!s110 1634150293
 !i10b 1
-!s100 WQEzeB9e^6>U_YeIXi0WB1
+!s100 zX3VCazn]Ecjd:WHU5M;[1
 R3
-IA?RU1`2FYAZGL`oaYYl]O2
+IRZ^?m1OSf^zbTbJZTJ5A61
 R4
 S1
 R0
-w1634099408
+w1634150246
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv
 !i122 9
-L0 1 134
+L0 1 150
 R5
 r1
 !s85 0
 31
-R6
+!s108 1634150293.000000
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/general_tb.sv|
 !i113 1
@@ -167,15 +167,15 @@ R8
 R9
 vsubstractor_module
 R1
-R11
+R2
 !i10b 1
-!s100 g]9[T9e35Em3mKV5jQOgZ2
+!s100 di2=[i?S=o7[z1kWfcVcJ0
 R3
-I=2Ia;H2WZX2<1DiOhbo<l3
+I;4hnYAhhdPUWZP;=d<[252
 R4
 S1
 R0
-w1634069032
+w1634143246
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv
 !i122 2
@@ -184,7 +184,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1|C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/substractor_module.sv|
 !i113 1
@@ -195,13 +195,13 @@ vtime_comparator_module
 R1
 R2
 !i10b 1
-!s100 @W`W_>H[dYU>0@7_7STOm0
+!s100 W@ZG9dm>:l8M0ND4o40Yo2
 R3
-IY7>IMNhVYjl7Q]i>C_X1H2
+ImJKIihgh9djEKYjYYIhU?0
 R4
 S1
 R0
-w1634099664
+w1634150060
 8C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv
 FC:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv
 !i122 5

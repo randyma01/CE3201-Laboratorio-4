@@ -3,7 +3,7 @@ module substractor_module
 	input logic [2:0] coffee_type,
 	input logic [3:0] total_coins,
 	output logic [3:0] change,
-	output logic enable_timer
+	output logic enable
 );
 
 	// temporal variables //
@@ -85,6 +85,6 @@ module substractor_module
 	  
 	  // outputs //
 	  assign change = temp_change;
-	  assign enable_timer = temp_et;
+	  assign enable = temp_et;
 	  
 endmodule 
