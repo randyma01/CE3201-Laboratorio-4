@@ -6,7 +6,7 @@ module general_tb();
 	
 	// user inputs
 	logic coin_100;
-	//logic coin_500;
+	logic coin_500;
 	logic [2:0] coffee_type;
 	logic confirm;
 	
@@ -32,8 +32,8 @@ module general_tb();
 	
 	
 	//  counts total coins inserted verify
-	coin_counter_module DUT_COIN_COUNTER(coin_100, reset, total_coins);
-	//coin_counter_module DUT_COIN_COUNTER(coin_100, coin_500, reset, total_coins);
+	//coin_counter_module DUT_COIN_COUNTER(coin_100, reset, total_coins);
+	coin_counter_module DUT_COIN_COUNTER(coin_100, coin_500, reset, total_coins);
 
 	
 	// if total coins is equal or bigger than 1000

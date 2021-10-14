@@ -6,7 +6,7 @@ module coffee_machine
 	
 	// user inputs
 	input logic coin_100, 				// sw 3
-	//input logic coin_500, 				// sw 4
+	input logic coin_500, 				// sw 4
 	input logic [2:0] coffee_type, 	// switches 0, 1 y 2
 	input logic confirm,             //switch 7
 	
@@ -26,7 +26,8 @@ module coffee_machine
 );
 	
 	// connections
-	logic [3:0] total_coins; 
+	logic [3:0] total_1coins; 
+	logic [3:0] total_5coins;
 	logic coins_reset;
 	logic [3:0] change;
 	logic enable; 
@@ -37,21 +38,22 @@ module coffee_machine
 	
 	
 	// verify if total coins is equal or bigger then 100
-	//coin_counter_module COIN_COUNTER(coin_100, coin_500, reset | coins_reset, total_coins);
-	coin_counter_module COIN_COUNTER(coin_100, reset | coins_reset, total_coins);
+	coin_counter_module COIN_COUNTER(coin_100, reset | coins_reset, total_1coins);
+	
+	coin_500_counter_module COIN_5COUNTER(coin_500, reset | coins_reset, total_5coins);
 	
 	
 	
 	// counts total coins inserted 
-	coin_comparator_module COIN_COMPRATOR(total_coins, coins_reset);
+	coin_comparator_module COIN_COMPRATOR((total_1coins + total_5coins), coins_reset);
 	
 	
 		// display total coins inserted
-		coin_display_module COINS_DISPLAY(total_coins, total_coins_display);
+		coin_display_module COINS_DISPLAY((total_1coins + total_5coins), total_coins_display);
 	
 	
 	// selects coffee and return change (if exists)
-	substractor_module COFEE_SELECTOR(coffee_type, total_coins,confirm, change, enable);
+	substractor_module COFEE_SELECTOR(coffee_type, (total_1coins + total_5coins),confirm, change, enable);
 
 	
 		// display total coins change (if exits)

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for experimento-1
-Wed Oct 13 22:21:25 2021
+Wed Oct 13 22:50:48 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -51,14 +51,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 13 22:21:25 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 13 22:50:48 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; experimento-1                               ;
 ; Top-level Entity Name           ; coffee_machine                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 12                                          ;
-; Total pins                      ; 55                                          ;
+; Total registers                 ; 16                                          ;
+; Total pins                      ; 56                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -175,65 +175,66 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
-; fsm_module.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/fsm_module.sv             ;         ;
-; coin_counter_module.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv    ;         ;
-; substractor_module.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv     ;         ;
-; coin_comparator_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv ;         ;
-; time_per_coffee_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv ;         ;
-; time_comparator_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv ;         ;
-; coffee_machine.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv         ;         ;
-; timer_module.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/timer_module.sv           ;         ;
-; coin_display_module.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv    ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                            ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
+; fsm_module.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/fsm_module.sv              ;         ;
+; coin_counter_module.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv     ;         ;
+; substractor_module.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv      ;         ;
+; coin_comparator_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv  ;         ;
+; time_per_coffee_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv  ;         ;
+; time_comparator_module.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv  ;         ;
+; coffee_machine.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv          ;         ;
+; timer_module.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/timer_module.sv            ;         ;
+; coin_display_module.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv     ;         ;
+; coin_500_counter_module.sv       ; yes             ; User SystemVerilog HDL File  ; C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_500_counter_module.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                              ;
-+---------------------------------------------+--------------------------------------------+
-; Resource                                    ; Usage                                      ;
-+---------------------------------------------+--------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 31                                         ;
-;                                             ;                                            ;
-; Combinational ALUT usage for logic          ; 46                                         ;
-;     -- 7 input functions                    ; 1                                          ;
-;     -- 6 input functions                    ; 14                                         ;
-;     -- 5 input functions                    ; 7                                          ;
-;     -- 4 input functions                    ; 17                                         ;
-;     -- <=3 input functions                  ; 7                                          ;
-;                                             ;                                            ;
-; Dedicated logic registers                   ; 12                                         ;
-;                                             ;                                            ;
-; I/O pins                                    ; 55                                         ;
-;                                             ;                                            ;
-; Total DSP Blocks                            ; 0                                          ;
-;                                             ;                                            ;
-; Maximum fan-out node                        ; coin_counter_module:COIN_COUNTER|number[0] ;
-; Maximum fan-out                             ; 19                                         ;
-; Total fan-out                               ; 324                                        ;
-; Average fan-out                             ; 1.93                                       ;
-+---------------------------------------------+--------------------------------------------+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimate of Logic utilization (ALMs needed) ; 38     ;
+;                                             ;        ;
+; Combinational ALUT usage for logic          ; 57     ;
+;     -- 7 input functions                    ; 1      ;
+;     -- 6 input functions                    ; 16     ;
+;     -- 5 input functions                    ; 4      ;
+;     -- 4 input functions                    ; 21     ;
+;     -- <=3 input functions                  ; 15     ;
+;                                             ;        ;
+; Dedicated logic registers                   ; 16     ;
+;                                             ;        ;
+; I/O pins                                    ; 56     ;
+;                                             ;        ;
+; Total DSP Blocks                            ; 0      ;
+;                                             ;        ;
+; Maximum fan-out node                        ; Add1~1 ;
+; Maximum fan-out                             ; 17     ;
+; Total fan-out                               ; 368    ;
+; Average fan-out                             ; 1.99   ;
++---------------------------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+------------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name            ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+------------------------+--------------+
-; |coffee_machine                              ; 46 (1)              ; 12 (0)                    ; 0                 ; 0          ; 55   ; 0            ; |coffee_machine                                         ; coffee_machine         ; work         ;
-;    |coin_counter_module:COIN_COUNTER|        ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_counter_module:COIN_COUNTER        ; coin_counter_module    ; work         ;
-;    |coin_display_module:CHANGE_DISPLAY|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:CHANGE_DISPLAY      ; coin_display_module    ; work         ;
-;    |coin_display_module:COINS_DISPLAY|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:COINS_DISPLAY       ; coin_display_module    ; work         ;
-;    |fsm_module:FSM|                          ; 2 (2)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|fsm_module:FSM                          ; fsm_module             ; work         ;
-;    |substractor_module:COFEE_SELECTOR|       ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|substractor_module:COFEE_SELECTOR       ; substractor_module     ; work         ;
-;    |time_comparator_module:TIMER_COMPARATOR| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_comparator_module:TIMER_COMPARATOR ; time_comparator_module ; work         ;
-;    |time_per_coffee_module:COFFEE_TIMER|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_per_coffee_module:COFFEE_TIMER     ; time_per_coffee_module ; work         ;
-;    |timer_module:GENERAL_TIMER|              ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|timer_module:GENERAL_TIMER              ; timer_module           ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                      ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name             ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
+; |coffee_machine                              ; 57 (5)              ; 16 (0)                    ; 0                 ; 0          ; 56   ; 0            ; |coffee_machine                                         ; coffee_machine          ; work         ;
+;    |coin_500_counter_module:COIN_5COUNTER|   ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_500_counter_module:COIN_5COUNTER   ; coin_500_counter_module ; work         ;
+;    |coin_counter_module:COIN_COUNTER|        ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_counter_module:COIN_COUNTER        ; coin_counter_module     ; work         ;
+;    |coin_display_module:CHANGE_DISPLAY|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:CHANGE_DISPLAY      ; coin_display_module     ; work         ;
+;    |coin_display_module:COINS_DISPLAY|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:COINS_DISPLAY       ; coin_display_module     ; work         ;
+;    |fsm_module:FSM|                          ; 2 (2)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|fsm_module:FSM                          ; fsm_module              ; work         ;
+;    |substractor_module:COFEE_SELECTOR|       ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|substractor_module:COFEE_SELECTOR       ; substractor_module      ; work         ;
+;    |time_comparator_module:TIMER_COMPARATOR| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_comparator_module:TIMER_COMPARATOR ; time_comparator_module  ; work         ;
+;    |timer_module:GENERAL_TIMER|              ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|timer_module:GENERAL_TIMER              ; timer_module            ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -269,10 +270,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 12    ;
+; Total registers                              ; 16    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 12    ;
+; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
@@ -284,7 +285,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 13:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |coffee_machine|substractor_module:COFEE_SELECTOR|change[1] ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |coffee_machine|substractor_module:COFEE_SELECTOR|change[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
@@ -333,24 +334,26 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 12                          ;
-;     CLR               ; 7                           ;
+; arriav_ff             ; 16                          ;
+;     CLR               ; 11                          ;
 ;     ENA CLR           ; 5                           ;
-; arriav_lcell_comb     ; 51                          ;
+; arriav_lcell_comb     ; 62                          ;
+;     arith             ; 4                           ;
+;         2 data inputs ; 4                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 50                          ;
+;     normal            ; 57                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 5                           ;
 ;         3 data inputs ; 3                           ;
-;         4 data inputs ; 17                          ;
-;         5 data inputs ; 7                           ;
-;         6 data inputs ; 14                          ;
-; boundary_port         ; 55                          ;
+;         4 data inputs ; 21                          ;
+;         5 data inputs ; 4                           ;
+;         6 data inputs ; 16                          ;
+; boundary_port         ; 56                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.41                        ;
+; Max LUT depth         ; 6.30                        ;
+; Average LUT depth     ; 3.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -369,7 +372,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 13 22:21:17 2021
+    Info: Processing started: Wed Oct 13 22:50:40 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off experimento-1 -c experimento-1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -395,18 +398,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file coffee_
     Info (12023): Found entity 1: coffee_machine_tb File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file general_tb.sv
     Info (12023): Found entity 1: general_tb File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/general_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file coin_500_counter_module.sv
+    Info (12023): Found entity 1: coin_500_counter_module File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_500_counter_module.sv Line: 1
 Info (12127): Elaborating entity "coffee_machine" for the top level hierarchy
 Info (12128): Elaborating entity "coin_counter_module" for hierarchy "coin_counter_module:COIN_COUNTER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 41
-Warning (10230): Verilog HDL assignment warning at coin_counter_module.sv(18): truncated value with size 32 to match size of target (4) File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv Line: 18
-Info (12128): Elaborating entity "coin_comparator_module" for hierarchy "coin_comparator_module:COIN_COMPRATOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 46
-Info (12128): Elaborating entity "coin_display_module" for hierarchy "coin_display_module:COINS_DISPLAY" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 50
-Info (12128): Elaborating entity "substractor_module" for hierarchy "substractor_module:COFEE_SELECTOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at coin_counter_module.sv(19): truncated value with size 32 to match size of target (4) File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv Line: 19
+Info (12128): Elaborating entity "coin_500_counter_module" for hierarchy "coin_500_counter_module:COIN_5COUNTER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 43
+Warning (10230): Verilog HDL assignment warning at coin_500_counter_module.sv(17): truncated value with size 32 to match size of target (4) File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_500_counter_module.sv Line: 17
+Info (12128): Elaborating entity "coin_comparator_module" for hierarchy "coin_comparator_module:COIN_COMPRATOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 48
+Info (12128): Elaborating entity "coin_display_module" for hierarchy "coin_display_module:COINS_DISPLAY" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 52
+Info (12128): Elaborating entity "substractor_module" for hierarchy "substractor_module:COFEE_SELECTOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 56
 Warning (10235): Verilog HDL Always Construct warning at substractor_module.sv(91): variable "temp_change" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv Line: 91
 Warning (10235): Verilog HDL Always Construct warning at substractor_module.sv(92): variable "temp_et" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv Line: 92
-Info (12128): Elaborating entity "timer_module" for hierarchy "timer_module:GENERAL_TIMER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 68
-Info (12128): Elaborating entity "time_per_coffee_module" for hierarchy "time_per_coffee_module:COFFEE_TIMER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 72
-Info (12128): Elaborating entity "time_comparator_module" for hierarchy "time_comparator_module:TIMER_COMPARATOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 76
-Info (12128): Elaborating entity "fsm_module" for hierarchy "fsm_module:FSM" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 80
+Info (12128): Elaborating entity "timer_module" for hierarchy "timer_module:GENERAL_TIMER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 70
+Info (12128): Elaborating entity "time_per_coffee_module" for hierarchy "time_per_coffee_module:COFFEE_TIMER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 74
+Info (12128): Elaborating entity "time_comparator_module" for hierarchy "time_comparator_module:TIMER_COMPARATOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 78
+Info (12128): Elaborating entity "fsm_module" for hierarchy "fsm_module:FSM" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 82
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "zero1_display[0]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
@@ -442,15 +449,15 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/output_files/experimento-1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 51 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info (21061): Implemented 61 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
     Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Wed Oct 13 22:21:25 2021
+    Info: Processing ended: Wed Oct 13 22:50:48 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+

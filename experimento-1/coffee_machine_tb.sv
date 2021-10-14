@@ -6,7 +6,7 @@ module coffee_machine_tb();
 	
 	// user inputs
 	logic coin_100;
-	//logic coin_500;
+	logic coin_500;
 	logic [2:0] coffee_type;
 	logic confirm;
 	

@@ -1,5 +1,5 @@
 Flow report for experimento-1
-Wed Oct 13 22:22:16 2021
+Wed Oct 13 22:51:38 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 13 22:22:16 2021       ;
+; Flow Status                     ; Successful - Wed Oct 13 22:51:38 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; experimento-1                               ;
 ; Top-level Entity Name           ; coffee_machine                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 31 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 15                                          ;
-; Total pins                      ; 55 / 457 ( 12 % )                           ;
+; Logic utilization (in ALMs)     ; 38 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 21                                          ;
+; Total pins                      ; 56 / 457 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/13/2021 22:21:17 ;
+; Start date & time ; 10/13/2021 22:50:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; experimento-1       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+----------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name    ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+----------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 61573277009429.163418527709920         ; --            ; --             ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 61573277009429.163418704021412         ; --            ; --             ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --             ; coffee_machine_tb                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --             ; general_tb                        ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --             ; eda_board_design_timing           ;
@@ -114,12 +114,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4843 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:35     ; 1.0                     ; 6719 MB             ; 00:01:27                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4841 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 5140 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:01                           ;
-; Total                ; 00:00:55     ; --                      ; --                  ; 00:01:59                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4843 MB             ; 00:00:19                           ;
+; Fitter               ; 00:00:33     ; 1.0                     ; 6768 MB             ; 00:01:19                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4835 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 5166 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4724 MB             ; 00:00:01                           ;
+; Total                ; 00:00:55     ; --                      ; --                  ; 00:01:51                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

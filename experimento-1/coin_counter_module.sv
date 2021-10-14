@@ -12,6 +12,7 @@ module coin_counter_module
 	always_ff@(negedge coin_100 or posedge reset)
   
 	begin
+	
 		if (reset)
 			number = 0;
 		else
