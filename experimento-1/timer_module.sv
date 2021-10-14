@@ -6,8 +6,8 @@ module timer_module
 	output logic [1:0] seconds
 );
 
-	always_ff @(posedge clock or negedge reset)
-	  if(!reset) 
+	always_ff @(posedge clock or posedge reset)
+	  if(reset) 
 			seconds = 2'd0;
 	  else
 			if (enable) 

@@ -1,11 +1,12 @@
 |coffee_machine
 clock => clock.IN2
-reset => reset.IN1
+reset => reset.IN2
 coin_100 => coin_100.IN1
 coin_500 => coin_500.IN1
 coffee_type[0] => coffee_type[0].IN2
 coffee_type[1] => coffee_type[1].IN2
 coffee_type[2] => coffee_type[2].IN2
+confirm => confirm.IN1
 total_coins_display[0] << coin_display_module:COINS_DISPLAY.port1
 total_coins_display[1] << coin_display_module:COINS_DISPLAY.port1
 total_coins_display[2] << coin_display_module:COINS_DISPLAY.port1
@@ -34,11 +35,11 @@ coin_500 => total_coins[0]~reg0.CLK
 coin_500 => total_coins[1]~reg0.CLK
 coin_500 => total_coins[2]~reg0.CLK
 coin_500 => total_coins[3]~reg0.CLK
-reset => total_coins[3].IN1
 reset => total_coins[0]~reg0.ACLR
 reset => total_coins[1]~reg0.ACLR
 reset => total_coins[2]~reg0.ACLR
 reset => total_coins[3]~reg0.ACLR
+reset => total_coins[3].IN1
 total_coins[0] <= total_coins[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 total_coins[1] <= total_coins[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 total_coins[2] <= total_coins[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -115,11 +116,16 @@ total_coins[3] => LessThan2.IN5
 total_coins[3] => Add2.IN5
 total_coins[3] => LessThan3.IN5
 total_coins[3] => Add3.IN5
-change[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
-change[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-change[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
-change[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-enable <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+confirm => change.OUTPUTSELECT
+confirm => change.OUTPUTSELECT
+confirm => change.OUTPUTSELECT
+confirm => change.OUTPUTSELECT
+confirm => enable.OUTPUTSELECT
+change[0] <= change.DB_MAX_OUTPUT_PORT_TYPE
+change[1] <= change.DB_MAX_OUTPUT_PORT_TYPE
+change[2] <= change.DB_MAX_OUTPUT_PORT_TYPE
+change[3] <= change.DB_MAX_OUTPUT_PORT_TYPE
+enable <= enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |coffee_machine|coin_display_module:CHANGE_DISPLAY

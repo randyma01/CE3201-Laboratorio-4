@@ -1,1 +1,1 @@
-Info (10281): Verilog HDL Declaration information at coffee_machine.sv(14): object "change_display" differs only in case from object "CHANGE_DISPLAY" in the same scope File: C:/Users/ranmsy/Desktop/laboratorio-1-codigos/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 14
+Info (10281): Verilog HDL Declaration information at coffee_machine.sv(15): object "change_display" differs only in case from object "CHANGE_DISPLAY" in the same scope File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 15

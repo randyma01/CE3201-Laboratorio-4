@@ -1,0 +1,2374 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
+
+// DATE "10/13/2021 17:41:30"
+
+// 
+// Device: Altera 5CSEMA5F31C6 Package FBGA896
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (SystemVerilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module coffee_machine (
+	clock,
+	reset,
+	coin_100,
+	coin_500,
+	coffee_type,
+	confirm,
+	total_coins_display,
+	change_display,
+	water,
+	coffee,
+	sugar,
+	milk,
+	chocolate,
+	finished);
+input 	clock;
+input 	reset;
+input 	coin_100;
+input 	coin_500;
+input 	[2:0] coffee_type;
+input 	confirm;
+output 	[6:0] total_coins_display;
+output 	[6:0] change_display;
+output 	water;
+output 	coffee;
+output 	sugar;
+output 	milk;
+output 	chocolate;
+output 	finished;
+
+// Design Ports Information
+// total_coins_display[0]	=>  Location: PIN_V25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// total_coins_display[1]	=>  Location: PIN_AA28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// total_coins_display[2]	=>  Location: PIN_Y27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// total_coins_display[3]	=>  Location: PIN_AB27,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// total_coins_display[4]	=>  Location: PIN_AB26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// total_coins_display[5]	=>  Location: PIN_AA26,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// total_coins_display[6]	=>  Location: PIN_AA25,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// change_display[0]	=>  Location: PIN_AB23,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// change_display[1]	=>  Location: PIN_AD29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// change_display[2]	=>  Location: PIN_AE29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// change_display[3]	=>  Location: PIN_AC28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// change_display[4]	=>  Location: PIN_AD30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// change_display[5]	=>  Location: PIN_AC29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// change_display[6]	=>  Location: PIN_AC30,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// water	=>  Location: PIN_Y21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// coffee	=>  Location: PIN_W21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sugar	=>  Location: PIN_W19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// milk	=>  Location: PIN_W20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// chocolate	=>  Location: PIN_Y19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// finished	=>  Location: PIN_W17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// coffee_type[1]	=>  Location: PIN_AC12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// coffee_type[0]	=>  Location: PIN_AB12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// coffee_type[2]	=>  Location: PIN_AF9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// confirm	=>  Location: PIN_AD10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// clock	=>  Location: PIN_AF14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// reset	=>  Location: PIN_AE12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// coin_500	=>  Location: PIN_AA15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// coin_100	=>  Location: PIN_AA14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \reset~input_o ;
+wire \coin_100~input_o ;
+wire \COIN_COUNTER|total_coins[3]~25_combout ;
+wire \COIN_COUNTER|total_coins[0]~1_combout ;
+wire \coin_500~input_o ;
+wire \coin_500~inputCLKENA0_outclk ;
+wire \COIN_COUNTER|total_coins[0]~3_combout ;
+wire \COIN_COUNTER|total_coins[0]~0_combout ;
+wire \COIN_COUNTER|total_coins[0]~_emulated_q ;
+wire \COIN_COUNTER|total_coins[0]~2_combout ;
+wire \COFEE_SELECTOR|Add0~1_combout ;
+wire \COIN_COUNTER|total_coins[1]~5_combout ;
+wire \COIN_COUNTER|total_coins[1]~7_combout ;
+wire \COIN_COUNTER|total_coins[1]~_emulated_q ;
+wire \COIN_COUNTER|total_coins[1]~6_combout ;
+wire \COFEE_SELECTOR|Add3~0_combout ;
+wire \COIN_COUNTER|total_coins[3]~13_combout ;
+wire \COIN_COUNTER|total_coins[3]~15_combout ;
+wire \COIN_COUNTER|total_coins[3]~_emulated_q ;
+wire \COIN_COUNTER|total_coins[3]~14_combout ;
+wire \comb~0_combout ;
+wire \COFEE_SELECTOR|Add0~2_combout ;
+wire \COIN_COUNTER|total_coins[2]~9_combout ;
+wire \COIN_COUNTER|total_coins[2]~11_combout ;
+wire \COIN_COUNTER|total_coins[2]~_emulated_q ;
+wire \COIN_COUNTER|total_coins[2]~10_combout ;
+wire \COINS_DISPLAY|display[0]~0_combout ;
+wire \COINS_DISPLAY|display[1]~1_combout ;
+wire \COINS_DISPLAY|Decoder0~0_combout ;
+wire \COINS_DISPLAY|WideOr3~0_combout ;
+wire \COINS_DISPLAY|WideOr2~0_combout ;
+wire \COINS_DISPLAY|WideOr1~0_combout ;
+wire \COINS_DISPLAY|WideOr0~0_combout ;
+wire \coffee_type[0]~input_o ;
+wire \coffee_type[1]~input_o ;
+wire \coffee_type[2]~input_o ;
+wire \confirm~input_o ;
+wire \COFEE_SELECTOR|change[0]~0_combout ;
+wire \COFEE_SELECTOR|change[1]~2_combout ;
+wire \COFEE_SELECTOR|change[1]~3_combout ;
+wire \COFEE_SELECTOR|change[3]~6_combout ;
+wire \COFEE_SELECTOR|change[3]~7_combout ;
+wire \COFEE_SELECTOR|Add0~0_combout ;
+wire \COFEE_SELECTOR|change[3]~8_combout ;
+wire \COFEE_SELECTOR|change[3]~9_combout ;
+wire \COFEE_SELECTOR|change[2]~4_combout ;
+wire \COFEE_SELECTOR|change[2]~5_combout ;
+wire \COFEE_SELECTOR|Mux3~0_combout ;
+wire \COFEE_SELECTOR|change[0]~1_combout ;
+wire \CHANGE_DISPLAY|display[0]~0_combout ;
+wire \CHANGE_DISPLAY|display[1]~1_combout ;
+wire \CHANGE_DISPLAY|Decoder0~0_combout ;
+wire \CHANGE_DISPLAY|WideOr3~0_combout ;
+wire \CHANGE_DISPLAY|WideOr2~0_combout ;
+wire \CHANGE_DISPLAY|WideOr1~0_combout ;
+wire \CHANGE_DISPLAY|WideOr0~0_combout ;
+wire \clock~input_o ;
+wire \clock~inputCLKENA0_outclk ;
+wire \FSM|state.000~feeder_combout ;
+wire \FSM|state.001~0_combout ;
+wire \FSM|state.001~q ;
+wire \FSM|state.010~q ;
+wire \FSM|state.011~q ;
+wire \FSM|state.100~q ;
+wire \GENERAL_TIMER|seconds[0]~1_combout ;
+wire \GENERAL_TIMER|seconds[1]~0_combout ;
+wire \FSM|state.101~0_combout ;
+wire \FSM|state.101~q ;
+wire \COFFEE_TIMER|Mux1~2_combout ;
+wire \COFFEE_TIMER|Mux1~1_combout ;
+wire \COFFEE_TIMER|WideOr0~1_combout ;
+wire \COFFEE_TIMER|Mux0~3_combout ;
+wire \COFFEE_TIMER|Mux0~2_combout ;
+wire \COFFEE_TIMER|Mux0~1_combout ;
+wire \TIMER_COMPARATOR|LessThan0~3_combout ;
+wire \TIMER_COMPARATOR|LessThan0~2_combout ;
+wire \TIMER_COMPARATOR|LessThan0~0_combout ;
+wire \TIMER_COMPARATOR|LessThan0~1_combout ;
+wire \FSM|state.000~q ;
+wire [1:0] \GENERAL_TIMER|seconds ;
+wire [2:0] \FSM|state_output ;
+
+
+// Location: IOOBUF_X89_Y20_N62
+cyclonev_io_obuf \total_coins_display[0]~output (
+	.i(\COINS_DISPLAY|display[0]~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(total_coins_display[0]),
+	.obar());
+// synopsys translate_off
+defparam \total_coins_display[0]~output .bus_hold = "false";
+defparam \total_coins_display[0]~output .open_drain_output = "false";
+defparam \total_coins_display[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y21_N56
+cyclonev_io_obuf \total_coins_display[1]~output (
+	.i(\COINS_DISPLAY|display[1]~1_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(total_coins_display[1]),
+	.obar());
+// synopsys translate_off
+defparam \total_coins_display[1]~output .bus_hold = "false";
+defparam \total_coins_display[1]~output .open_drain_output = "false";
+defparam \total_coins_display[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y25_N22
+cyclonev_io_obuf \total_coins_display[2]~output (
+	.i(\COINS_DISPLAY|Decoder0~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(total_coins_display[2]),
+	.obar());
+// synopsys translate_off
+defparam \total_coins_display[2]~output .bus_hold = "false";
+defparam \total_coins_display[2]~output .open_drain_output = "false";
+defparam \total_coins_display[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y23_N22
+cyclonev_io_obuf \total_coins_display[3]~output (
+	.i(\COINS_DISPLAY|WideOr3~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(total_coins_display[3]),
+	.obar());
+// synopsys translate_off
+defparam \total_coins_display[3]~output .bus_hold = "false";
+defparam \total_coins_display[3]~output .open_drain_output = "false";
+defparam \total_coins_display[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N56
+cyclonev_io_obuf \total_coins_display[4]~output (
+	.i(\COINS_DISPLAY|WideOr2~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(total_coins_display[4]),
+	.obar());
+// synopsys translate_off
+defparam \total_coins_display[4]~output .bus_hold = "false";
+defparam \total_coins_display[4]~output .open_drain_output = "false";
+defparam \total_coins_display[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y23_N5
+cyclonev_io_obuf \total_coins_display[5]~output (
+	.i(\COINS_DISPLAY|WideOr1~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(total_coins_display[5]),
+	.obar());
+// synopsys translate_off
+defparam \total_coins_display[5]~output .bus_hold = "false";
+defparam \total_coins_display[5]~output .open_drain_output = "false";
+defparam \total_coins_display[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N39
+cyclonev_io_obuf \total_coins_display[6]~output (
+	.i(!\COINS_DISPLAY|WideOr0~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(total_coins_display[6]),
+	.obar());
+// synopsys translate_off
+defparam \total_coins_display[6]~output .bus_hold = "false";
+defparam \total_coins_display[6]~output .open_drain_output = "false";
+defparam \total_coins_display[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y9_N22
+cyclonev_io_obuf \change_display[0]~output (
+	.i(\CHANGE_DISPLAY|display[0]~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(change_display[0]),
+	.obar());
+// synopsys translate_off
+defparam \change_display[0]~output .bus_hold = "false";
+defparam \change_display[0]~output .open_drain_output = "false";
+defparam \change_display[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y23_N56
+cyclonev_io_obuf \change_display[1]~output (
+	.i(\CHANGE_DISPLAY|display[1]~1_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(change_display[1]),
+	.obar());
+// synopsys translate_off
+defparam \change_display[1]~output .bus_hold = "false";
+defparam \change_display[1]~output .open_drain_output = "false";
+defparam \change_display[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y23_N39
+cyclonev_io_obuf \change_display[2]~output (
+	.i(\CHANGE_DISPLAY|Decoder0~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(change_display[2]),
+	.obar());
+// synopsys translate_off
+defparam \change_display[2]~output .bus_hold = "false";
+defparam \change_display[2]~output .open_drain_output = "false";
+defparam \change_display[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y20_N79
+cyclonev_io_obuf \change_display[3]~output (
+	.i(\CHANGE_DISPLAY|WideOr3~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(change_display[3]),
+	.obar());
+// synopsys translate_off
+defparam \change_display[3]~output .bus_hold = "false";
+defparam \change_display[3]~output .open_drain_output = "false";
+defparam \change_display[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y25_N39
+cyclonev_io_obuf \change_display[4]~output (
+	.i(\CHANGE_DISPLAY|WideOr2~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(change_display[4]),
+	.obar());
+// synopsys translate_off
+defparam \change_display[4]~output .bus_hold = "false";
+defparam \change_display[4]~output .open_drain_output = "false";
+defparam \change_display[4]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y20_N96
+cyclonev_io_obuf \change_display[5]~output (
+	.i(\CHANGE_DISPLAY|WideOr1~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(change_display[5]),
+	.obar());
+// synopsys translate_off
+defparam \change_display[5]~output .bus_hold = "false";
+defparam \change_display[5]~output .open_drain_output = "false";
+defparam \change_display[5]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y25_N56
+cyclonev_io_obuf \change_display[6]~output (
+	.i(!\CHANGE_DISPLAY|WideOr0~0_combout ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(change_display[6]),
+	.obar());
+// synopsys translate_off
+defparam \change_display[6]~output .bus_hold = "false";
+defparam \change_display[6]~output .open_drain_output = "false";
+defparam \change_display[6]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y6_N22
+cyclonev_io_obuf \water~output (
+	.i(!\FSM|state.000~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(water),
+	.obar());
+// synopsys translate_off
+defparam \water~output .bus_hold = "false";
+defparam \water~output .open_drain_output = "false";
+defparam \water~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y8_N5
+cyclonev_io_obuf \coffee~output (
+	.i(\FSM|state.001~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(coffee),
+	.obar());
+// synopsys translate_off
+defparam \coffee~output .bus_hold = "false";
+defparam \coffee~output .open_drain_output = "false";
+defparam \coffee~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X80_Y0_N19
+cyclonev_io_obuf \sugar~output (
+	.i(\FSM|state.010~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(sugar),
+	.obar());
+// synopsys translate_off
+defparam \sugar~output .bus_hold = "false";
+defparam \sugar~output .open_drain_output = "false";
+defparam \sugar~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X89_Y6_N5
+cyclonev_io_obuf \milk~output (
+	.i(\FSM|state.011~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(milk),
+	.obar());
+// synopsys translate_off
+defparam \milk~output .bus_hold = "false";
+defparam \milk~output .open_drain_output = "false";
+defparam \milk~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X84_Y0_N2
+cyclonev_io_obuf \chocolate~output (
+	.i(\FSM|state.100~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(chocolate),
+	.obar());
+// synopsys translate_off
+defparam \chocolate~output .bus_hold = "false";
+defparam \chocolate~output .open_drain_output = "false";
+defparam \chocolate~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X60_Y0_N19
+cyclonev_io_obuf \finished~output (
+	.i(\FSM|state.101~q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(finished),
+	.obar());
+// synopsys translate_off
+defparam \finished~output .bus_hold = "false";
+defparam \finished~output .open_drain_output = "false";
+defparam \finished~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X2_Y0_N58
+cyclonev_io_ibuf \reset~input (
+	.i(reset),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\reset~input_o ));
+// synopsys translate_off
+defparam \reset~input .bus_hold = "false";
+defparam \reset~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X36_Y0_N1
+cyclonev_io_ibuf \coin_100~input (
+	.i(coin_100),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\coin_100~input_o ));
+// synopsys translate_off
+defparam \coin_100~input .bus_hold = "false";
+defparam \coin_100~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X36_Y1_N0
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[3]~25 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[3]~25_combout  = ( \comb~0_combout  & ( \coin_100~input_o  ) ) # ( !\comb~0_combout  & ( \coin_100~input_o  ) ) # ( \comb~0_combout  & ( !\coin_100~input_o  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(!\comb~0_combout ),
+	.dataf(!\coin_100~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[3]~25_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[3]~25 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[3]~25 .lut_mask = 64'h0000FFFFFFFFFFFF;
+defparam \COIN_COUNTER|total_coins[3]~25 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N45
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[0]~1 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[0]~1_combout  = ( !\comb~0_combout  & ( (!\COIN_COUNTER|total_coins[3]~25_combout  & (!\COIN_COUNTER|total_coins[0]~2_combout )) # (\COIN_COUNTER|total_coins[3]~25_combout  & ((\COIN_COUNTER|total_coins[0]~1_combout ))) ) )
+
+	.dataa(gnd),
+	.datab(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datac(!\COIN_COUNTER|total_coins[0]~1_combout ),
+	.datad(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datae(gnd),
+	.dataf(!\comb~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[0]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[0]~1 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[0]~1 .lut_mask = 64'hCC0FCC0F00000000;
+defparam \COIN_COUNTER|total_coins[0]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X36_Y0_N18
+cyclonev_io_ibuf \coin_500~input (
+	.i(coin_500),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\coin_500~input_o ));
+// synopsys translate_off
+defparam \coin_500~input .bus_hold = "false";
+defparam \coin_500~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G5
+cyclonev_clkena \coin_500~inputCLKENA0 (
+	.inclk(\coin_500~input_o ),
+	.ena(vcc),
+	.outclk(\coin_500~inputCLKENA0_outclk ),
+	.enaout());
+// synopsys translate_off
+defparam \coin_500~inputCLKENA0 .clock_type = "global clock";
+defparam \coin_500~inputCLKENA0 .disable_mode = "low";
+defparam \coin_500~inputCLKENA0 .ena_register_mode = "always enabled";
+defparam \coin_500~inputCLKENA0 .ena_register_power_up = "high";
+defparam \coin_500~inputCLKENA0 .test_syn = "high";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N30
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[0]~3 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[0]~3_combout  = ( \COIN_COUNTER|total_coins[0]~2_combout  & ( \COIN_COUNTER|total_coins[0]~1_combout  ) ) # ( !\COIN_COUNTER|total_coins[0]~2_combout  & ( !\COIN_COUNTER|total_coins[0]~1_combout  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\COIN_COUNTER|total_coins[0]~1_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[0]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[0]~3 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[0]~3 .lut_mask = 64'hFF00FF0000FF00FF;
+defparam \COIN_COUNTER|total_coins[0]~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N54
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[0]~0 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[0]~0_combout  = ( \COIN_COUNTER|total_coins[3]~25_combout  & ( \comb~0_combout  ) ) # ( !\COIN_COUNTER|total_coins[3]~25_combout  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\comb~0_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[0]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[0]~0 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[0]~0 .lut_mask = 64'hFFFFFFFF00FF00FF;
+defparam \COIN_COUNTER|total_coins[0]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y7_N32
+dffeas \COIN_COUNTER|total_coins[0]~_emulated (
+	.clk(!\coin_500~inputCLKENA0_outclk ),
+	.d(\COIN_COUNTER|total_coins[0]~3_combout ),
+	.asdata(vcc),
+	.clrn(!\COIN_COUNTER|total_coins[0]~0_combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\COIN_COUNTER|total_coins[0]~_emulated_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[0]~_emulated .is_wysiwyg = "true";
+defparam \COIN_COUNTER|total_coins[0]~_emulated .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N51
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[0]~2 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[0]~2_combout  = ( \COIN_COUNTER|total_coins[0]~_emulated_q  & ( (!\comb~0_combout  & ((!\COIN_COUNTER|total_coins[3]~25_combout  & (!\COIN_COUNTER|total_coins[0]~2_combout )) # (\COIN_COUNTER|total_coins[3]~25_combout  & 
+// ((!\COIN_COUNTER|total_coins[0]~1_combout ))))) ) ) # ( !\COIN_COUNTER|total_coins[0]~_emulated_q  & ( (!\comb~0_combout  & ((!\COIN_COUNTER|total_coins[3]~25_combout  & (!\COIN_COUNTER|total_coins[0]~2_combout )) # 
+// (\COIN_COUNTER|total_coins[3]~25_combout  & ((\COIN_COUNTER|total_coins[0]~1_combout ))))) ) )
+
+	.dataa(!\comb~0_combout ),
+	.datab(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datac(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datad(!\COIN_COUNTER|total_coins[0]~1_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[0]~_emulated_q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[0]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[0]~2 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[0]~2 .lut_mask = 64'h80A280A2A280A280;
+defparam \COIN_COUNTER|total_coins[0]~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N24
+cyclonev_lcell_comb \COFEE_SELECTOR|Add0~1 (
+// Equation(s):
+// \COFEE_SELECTOR|Add0~1_combout  = ( \COIN_COUNTER|total_coins[1]~6_combout  & ( !\COIN_COUNTER|total_coins[0]~2_combout  ) ) # ( !\COIN_COUNTER|total_coins[1]~6_combout  & ( \COIN_COUNTER|total_coins[0]~2_combout  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|Add0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|Add0~1 .extended_lut = "off";
+defparam \COFEE_SELECTOR|Add0~1 .lut_mask = 64'h0F0F0F0FF0F0F0F0;
+defparam \COFEE_SELECTOR|Add0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N57
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[1]~5 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[1]~5_combout  = ( !\comb~0_combout  & ( (!\COIN_COUNTER|total_coins[3]~25_combout  & (\COFEE_SELECTOR|Add0~1_combout )) # (\COIN_COUNTER|total_coins[3]~25_combout  & ((\COIN_COUNTER|total_coins[1]~5_combout ))) ) )
+
+	.dataa(gnd),
+	.datab(!\COFEE_SELECTOR|Add0~1_combout ),
+	.datac(!\COIN_COUNTER|total_coins[1]~5_combout ),
+	.datad(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datae(gnd),
+	.dataf(!\comb~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[1]~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[1]~5 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[1]~5 .lut_mask = 64'h330F330F00000000;
+defparam \COIN_COUNTER|total_coins[1]~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N42
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[1]~7 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[1]~7_combout  = ( \COFEE_SELECTOR|Add0~1_combout  & ( !\COIN_COUNTER|total_coins[1]~5_combout  ) ) # ( !\COFEE_SELECTOR|Add0~1_combout  & ( \COIN_COUNTER|total_coins[1]~5_combout  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\COIN_COUNTER|total_coins[1]~5_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\COFEE_SELECTOR|Add0~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[1]~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[1]~7 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[1]~7 .lut_mask = 64'h0F0F0F0FF0F0F0F0;
+defparam \COIN_COUNTER|total_coins[1]~7 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y7_N44
+dffeas \COIN_COUNTER|total_coins[1]~_emulated (
+	.clk(!\coin_500~inputCLKENA0_outclk ),
+	.d(\COIN_COUNTER|total_coins[1]~7_combout ),
+	.asdata(vcc),
+	.clrn(!\COIN_COUNTER|total_coins[0]~0_combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\COIN_COUNTER|total_coins[1]~_emulated_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[1]~_emulated .is_wysiwyg = "true";
+defparam \COIN_COUNTER|total_coins[1]~_emulated .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N48
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[1]~6 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[1]~6_combout  = ( \COIN_COUNTER|total_coins[1]~_emulated_q  & ( (!\comb~0_combout  & ((!\COIN_COUNTER|total_coins[3]~25_combout  & (\COFEE_SELECTOR|Add0~1_combout )) # (\COIN_COUNTER|total_coins[3]~25_combout  & 
+// ((!\COIN_COUNTER|total_coins[1]~5_combout ))))) ) ) # ( !\COIN_COUNTER|total_coins[1]~_emulated_q  & ( (!\comb~0_combout  & ((!\COIN_COUNTER|total_coins[3]~25_combout  & (\COFEE_SELECTOR|Add0~1_combout )) # (\COIN_COUNTER|total_coins[3]~25_combout  & 
+// ((\COIN_COUNTER|total_coins[1]~5_combout ))))) ) )
+
+	.dataa(!\comb~0_combout ),
+	.datab(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datac(!\COFEE_SELECTOR|Add0~1_combout ),
+	.datad(!\COIN_COUNTER|total_coins[1]~5_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[1]~_emulated_q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[1]~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[1]~6 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[1]~6 .lut_mask = 64'h082A082A2A082A08;
+defparam \COIN_COUNTER|total_coins[1]~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N18
+cyclonev_lcell_comb \COFEE_SELECTOR|Add3~0 (
+// Equation(s):
+// \COFEE_SELECTOR|Add3~0_combout  = ( \COIN_COUNTER|total_coins[3]~14_combout  & ( (!\COIN_COUNTER|total_coins[0]~2_combout ) # ((!\COIN_COUNTER|total_coins[2]~10_combout ) # (!\COIN_COUNTER|total_coins[1]~6_combout )) ) ) # ( 
+// !\COIN_COUNTER|total_coins[3]~14_combout  & ( (\COIN_COUNTER|total_coins[0]~2_combout  & (\COIN_COUNTER|total_coins[2]~10_combout  & \COIN_COUNTER|total_coins[1]~6_combout )) ) )
+
+	.dataa(gnd),
+	.datab(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datac(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datad(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|Add3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|Add3~0 .extended_lut = "off";
+defparam \COFEE_SELECTOR|Add3~0 .lut_mask = 64'h00030003FFFCFFFC;
+defparam \COFEE_SELECTOR|Add3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N21
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[3]~13 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[3]~13_combout  = ( !\comb~0_combout  & ( (!\COIN_COUNTER|total_coins[3]~25_combout  & (\COFEE_SELECTOR|Add3~0_combout )) # (\COIN_COUNTER|total_coins[3]~25_combout  & ((\COIN_COUNTER|total_coins[3]~13_combout ))) ) )
+
+	.dataa(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datab(gnd),
+	.datac(!\COFEE_SELECTOR|Add3~0_combout ),
+	.datad(!\COIN_COUNTER|total_coins[3]~13_combout ),
+	.datae(gnd),
+	.dataf(!\comb~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[3]~13_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[3]~13 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[3]~13 .lut_mask = 64'h0A5F0A5F00000000;
+defparam \COIN_COUNTER|total_coins[3]~13 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N33
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[3]~15 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[3]~15_combout  = ( \COIN_COUNTER|total_coins[3]~14_combout  & ( !\COIN_COUNTER|total_coins[3]~13_combout  $ ((((\COIN_COUNTER|total_coins[0]~2_combout  & \COIN_COUNTER|total_coins[1]~6_combout )) # 
+// (\COIN_COUNTER|total_coins[2]~10_combout ))) ) ) # ( !\COIN_COUNTER|total_coins[3]~14_combout  & ( !\COIN_COUNTER|total_coins[3]~13_combout  $ (((!\COIN_COUNTER|total_coins[2]~10_combout  & ((!\COIN_COUNTER|total_coins[0]~2_combout ) # 
+// (!\COIN_COUNTER|total_coins[1]~6_combout ))))) ) )
+
+	.dataa(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datab(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datac(!\COIN_COUNTER|total_coins[3]~13_combout ),
+	.datad(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[3]~15_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[3]~15 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[3]~15 .lut_mask = 64'h1EF01EF0E10FE10F;
+defparam \COIN_COUNTER|total_coins[3]~15 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y7_N35
+dffeas \COIN_COUNTER|total_coins[3]~_emulated (
+	.clk(!\coin_500~inputCLKENA0_outclk ),
+	.d(\COIN_COUNTER|total_coins[3]~15_combout ),
+	.asdata(vcc),
+	.clrn(!\COIN_COUNTER|total_coins[0]~0_combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\COIN_COUNTER|total_coins[3]~_emulated_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[3]~_emulated .is_wysiwyg = "true";
+defparam \COIN_COUNTER|total_coins[3]~_emulated .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N36
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[3]~14 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[3]~14_combout  = ( \COIN_COUNTER|total_coins[3]~_emulated_q  & ( (!\comb~0_combout  & ((!\COIN_COUNTER|total_coins[3]~25_combout  & (\COFEE_SELECTOR|Add3~0_combout )) # (\COIN_COUNTER|total_coins[3]~25_combout  & 
+// ((!\COIN_COUNTER|total_coins[3]~13_combout ))))) ) ) # ( !\COIN_COUNTER|total_coins[3]~_emulated_q  & ( (!\comb~0_combout  & ((!\COIN_COUNTER|total_coins[3]~25_combout  & (\COFEE_SELECTOR|Add3~0_combout )) # (\COIN_COUNTER|total_coins[3]~25_combout  & 
+// ((\COIN_COUNTER|total_coins[3]~13_combout ))))) ) )
+
+	.dataa(!\comb~0_combout ),
+	.datab(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datac(!\COFEE_SELECTOR|Add3~0_combout ),
+	.datad(!\COIN_COUNTER|total_coins[3]~13_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[3]~_emulated_q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[3]~14_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[3]~14 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[3]~14 .lut_mask = 64'h082A082A2A082A08;
+defparam \COIN_COUNTER|total_coins[3]~14 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N3
+cyclonev_lcell_comb \comb~0 (
+// Equation(s):
+// \comb~0_combout  = ( \COIN_COUNTER|total_coins[1]~6_combout  & ( (\COIN_COUNTER|total_coins[3]~14_combout ) # (\reset~input_o ) ) ) # ( !\COIN_COUNTER|total_coins[1]~6_combout  & ( ((\COIN_COUNTER|total_coins[2]~10_combout  & 
+// \COIN_COUNTER|total_coins[3]~14_combout )) # (\reset~input_o ) ) )
+
+	.dataa(!\reset~input_o ),
+	.datab(gnd),
+	.datac(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datad(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\comb~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \comb~0 .extended_lut = "off";
+defparam \comb~0 .lut_mask = 64'h555F555F55FF55FF;
+defparam \comb~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N9
+cyclonev_lcell_comb \COFEE_SELECTOR|Add0~2 (
+// Equation(s):
+// \COFEE_SELECTOR|Add0~2_combout  = ( \COIN_COUNTER|total_coins[1]~6_combout  & ( !\COIN_COUNTER|total_coins[0]~2_combout  $ (!\COIN_COUNTER|total_coins[2]~10_combout ) ) ) # ( !\COIN_COUNTER|total_coins[1]~6_combout  & ( 
+// \COIN_COUNTER|total_coins[2]~10_combout  ) )
+
+	.dataa(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datab(gnd),
+	.datac(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|Add0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|Add0~2 .extended_lut = "off";
+defparam \COFEE_SELECTOR|Add0~2 .lut_mask = 64'h0F0F0F0F5A5A5A5A;
+defparam \COFEE_SELECTOR|Add0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N6
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[2]~9 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[2]~9_combout  = ( !\comb~0_combout  & ( (!\COIN_COUNTER|total_coins[3]~25_combout  & ((\COFEE_SELECTOR|Add0~2_combout ))) # (\COIN_COUNTER|total_coins[3]~25_combout  & (\COIN_COUNTER|total_coins[2]~9_combout )) ) )
+
+	.dataa(gnd),
+	.datab(!\COIN_COUNTER|total_coins[2]~9_combout ),
+	.datac(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datad(!\COFEE_SELECTOR|Add0~2_combout ),
+	.datae(gnd),
+	.dataf(!\comb~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[2]~9_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[2]~9 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[2]~9 .lut_mask = 64'h03F303F300000000;
+defparam \COIN_COUNTER|total_coins[2]~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N18
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[2]~11 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[2]~11_combout  = ( \COFEE_SELECTOR|Add0~2_combout  & ( \COIN_COUNTER|total_coins[2]~9_combout  ) ) # ( !\COFEE_SELECTOR|Add0~2_combout  & ( !\COIN_COUNTER|total_coins[2]~9_combout  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\COIN_COUNTER|total_coins[2]~9_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\COFEE_SELECTOR|Add0~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[2]~11_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[2]~11 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[2]~11 .lut_mask = 64'hF0F0F0F00F0F0F0F;
+defparam \COIN_COUNTER|total_coins[2]~11 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y7_N20
+dffeas \COIN_COUNTER|total_coins[2]~_emulated (
+	.clk(!\coin_500~inputCLKENA0_outclk ),
+	.d(\COIN_COUNTER|total_coins[2]~11_combout ),
+	.asdata(vcc),
+	.clrn(!\COIN_COUNTER|total_coins[0]~0_combout ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\COIN_COUNTER|total_coins[2]~_emulated_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[2]~_emulated .is_wysiwyg = "true";
+defparam \COIN_COUNTER|total_coins[2]~_emulated .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N39
+cyclonev_lcell_comb \COIN_COUNTER|total_coins[2]~10 (
+// Equation(s):
+// \COIN_COUNTER|total_coins[2]~10_combout  = ( \COIN_COUNTER|total_coins[2]~_emulated_q  & ( (!\comb~0_combout  & ((!\COIN_COUNTER|total_coins[3]~25_combout  & ((\COFEE_SELECTOR|Add0~2_combout ))) # (\COIN_COUNTER|total_coins[3]~25_combout  & 
+// (!\COIN_COUNTER|total_coins[2]~9_combout )))) ) ) # ( !\COIN_COUNTER|total_coins[2]~_emulated_q  & ( (!\comb~0_combout  & ((!\COIN_COUNTER|total_coins[3]~25_combout  & ((\COFEE_SELECTOR|Add0~2_combout ))) # (\COIN_COUNTER|total_coins[3]~25_combout  & 
+// (\COIN_COUNTER|total_coins[2]~9_combout )))) ) )
+
+	.dataa(!\comb~0_combout ),
+	.datab(!\COIN_COUNTER|total_coins[3]~25_combout ),
+	.datac(!\COIN_COUNTER|total_coins[2]~9_combout ),
+	.datad(!\COFEE_SELECTOR|Add0~2_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[2]~_emulated_q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COIN_COUNTER|total_coins[2]~10_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COIN_COUNTER|total_coins[2]~10 .extended_lut = "off";
+defparam \COIN_COUNTER|total_coins[2]~10 .lut_mask = 64'h028A028A20A820A8;
+defparam \COIN_COUNTER|total_coins[2]~10 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N39
+cyclonev_lcell_comb \COINS_DISPLAY|display[0]~0 (
+// Equation(s):
+// \COINS_DISPLAY|display[0]~0_combout  = (!\COIN_COUNTER|total_coins[3]~14_combout  & (!\COIN_COUNTER|total_coins[1]~6_combout  & (!\COIN_COUNTER|total_coins[2]~10_combout  $ (!\COIN_COUNTER|total_coins[0]~2_combout ))))
+
+	.dataa(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datab(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datac(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datad(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COINS_DISPLAY|display[0]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COINS_DISPLAY|display[0]~0 .extended_lut = "off";
+defparam \COINS_DISPLAY|display[0]~0 .lut_mask = 64'h4800480048004800;
+defparam \COINS_DISPLAY|display[0]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N30
+cyclonev_lcell_comb \COINS_DISPLAY|display[1]~1 (
+// Equation(s):
+// \COINS_DISPLAY|display[1]~1_combout  = ( \COIN_COUNTER|total_coins[2]~10_combout  & ( (!\COIN_COUNTER|total_coins[3]~14_combout  & (!\COIN_COUNTER|total_coins[1]~6_combout  $ (!\COIN_COUNTER|total_coins[0]~2_combout ))) ) )
+
+	.dataa(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datab(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datac(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COINS_DISPLAY|display[1]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COINS_DISPLAY|display[1]~1 .extended_lut = "off";
+defparam \COINS_DISPLAY|display[1]~1 .lut_mask = 64'h0000000028282828;
+defparam \COINS_DISPLAY|display[1]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N33
+cyclonev_lcell_comb \COINS_DISPLAY|Decoder0~0 (
+// Equation(s):
+// \COINS_DISPLAY|Decoder0~0_combout  = ( !\COIN_COUNTER|total_coins[2]~10_combout  & ( (!\COIN_COUNTER|total_coins[3]~14_combout  & (\COIN_COUNTER|total_coins[1]~6_combout  & !\COIN_COUNTER|total_coins[0]~2_combout )) ) )
+
+	.dataa(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datab(gnd),
+	.datac(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datad(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COINS_DISPLAY|Decoder0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COINS_DISPLAY|Decoder0~0 .extended_lut = "off";
+defparam \COINS_DISPLAY|Decoder0~0 .lut_mask = 64'h0A000A0000000000;
+defparam \COINS_DISPLAY|Decoder0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N36
+cyclonev_lcell_comb \COINS_DISPLAY|WideOr3~0 (
+// Equation(s):
+// \COINS_DISPLAY|WideOr3~0_combout  = ( \COIN_COUNTER|total_coins[0]~2_combout  & ( (!\COIN_COUNTER|total_coins[2]~10_combout  & ((!\COIN_COUNTER|total_coins[1]~6_combout ))) # (\COIN_COUNTER|total_coins[2]~10_combout  & 
+// (!\COIN_COUNTER|total_coins[3]~14_combout  & \COIN_COUNTER|total_coins[1]~6_combout )) ) ) # ( !\COIN_COUNTER|total_coins[0]~2_combout  & ( (!\COIN_COUNTER|total_coins[3]~14_combout  & (\COIN_COUNTER|total_coins[2]~10_combout  & 
+// !\COIN_COUNTER|total_coins[1]~6_combout )) ) )
+
+	.dataa(gnd),
+	.datab(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datac(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datad(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COINS_DISPLAY|WideOr3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COINS_DISPLAY|WideOr3~0 .extended_lut = "off";
+defparam \COINS_DISPLAY|WideOr3~0 .lut_mask = 64'h0C000C00F00CF00C;
+defparam \COINS_DISPLAY|WideOr3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N6
+cyclonev_lcell_comb \COINS_DISPLAY|WideOr2~0 (
+// Equation(s):
+// \COINS_DISPLAY|WideOr2~0_combout  = ( \COIN_COUNTER|total_coins[0]~2_combout  & ( (!\COIN_COUNTER|total_coins[3]~14_combout ) # ((!\COIN_COUNTER|total_coins[2]~10_combout  & !\COIN_COUNTER|total_coins[1]~6_combout )) ) ) # ( 
+// !\COIN_COUNTER|total_coins[0]~2_combout  & ( (!\COIN_COUNTER|total_coins[3]~14_combout  & (\COIN_COUNTER|total_coins[2]~10_combout  & !\COIN_COUNTER|total_coins[1]~6_combout )) ) )
+
+	.dataa(gnd),
+	.datab(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datac(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datad(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COINS_DISPLAY|WideOr2~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COINS_DISPLAY|WideOr2~0 .extended_lut = "off";
+defparam \COINS_DISPLAY|WideOr2~0 .lut_mask = 64'h0C000C00FCCCFCCC;
+defparam \COINS_DISPLAY|WideOr2~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N9
+cyclonev_lcell_comb \COINS_DISPLAY|WideOr1~0 (
+// Equation(s):
+// \COINS_DISPLAY|WideOr1~0_combout  = (!\COIN_COUNTER|total_coins[3]~14_combout  & ((!\COIN_COUNTER|total_coins[2]~10_combout  & ((\COIN_COUNTER|total_coins[1]~6_combout ) # (\COIN_COUNTER|total_coins[0]~2_combout ))) # 
+// (\COIN_COUNTER|total_coins[2]~10_combout  & (\COIN_COUNTER|total_coins[0]~2_combout  & \COIN_COUNTER|total_coins[1]~6_combout ))))
+
+	.dataa(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datab(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datac(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datad(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COINS_DISPLAY|WideOr1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COINS_DISPLAY|WideOr1~0 .extended_lut = "off";
+defparam \COINS_DISPLAY|WideOr1~0 .lut_mask = 64'h088C088C088C088C;
+defparam \COINS_DISPLAY|WideOr1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N48
+cyclonev_lcell_comb \COINS_DISPLAY|WideOr0~0 (
+// Equation(s):
+// \COINS_DISPLAY|WideOr0~0_combout  = ( \COIN_COUNTER|total_coins[0]~2_combout  & ( \COIN_COUNTER|total_coins[3]~14_combout  & ( (!\COIN_COUNTER|total_coins[1]~6_combout  & !\COIN_COUNTER|total_coins[2]~10_combout ) ) ) ) # ( 
+// !\COIN_COUNTER|total_coins[0]~2_combout  & ( \COIN_COUNTER|total_coins[3]~14_combout  & ( (!\COIN_COUNTER|total_coins[1]~6_combout  & !\COIN_COUNTER|total_coins[2]~10_combout ) ) ) ) # ( \COIN_COUNTER|total_coins[0]~2_combout  & ( 
+// !\COIN_COUNTER|total_coins[3]~14_combout  & ( !\COIN_COUNTER|total_coins[1]~6_combout  $ (!\COIN_COUNTER|total_coins[2]~10_combout ) ) ) ) # ( !\COIN_COUNTER|total_coins[0]~2_combout  & ( !\COIN_COUNTER|total_coins[3]~14_combout  & ( 
+// (\COIN_COUNTER|total_coins[2]~10_combout ) # (\COIN_COUNTER|total_coins[1]~6_combout ) ) ) )
+
+	.dataa(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datab(gnd),
+	.datac(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datad(gnd),
+	.datae(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.dataf(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COINS_DISPLAY|WideOr0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COINS_DISPLAY|WideOr0~0 .extended_lut = "off";
+defparam \COINS_DISPLAY|WideOr0~0 .lut_mask = 64'h5F5F5A5AA0A0A0A0;
+defparam \COINS_DISPLAY|WideOr0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X12_Y0_N18
+cyclonev_io_ibuf \coffee_type[0]~input (
+	.i(coffee_type[0]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\coffee_type[0]~input_o ));
+// synopsys translate_off
+defparam \coffee_type[0]~input .bus_hold = "false";
+defparam \coffee_type[0]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X16_Y0_N1
+cyclonev_io_ibuf \coffee_type[1]~input (
+	.i(coffee_type[1]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\coffee_type[1]~input_o ));
+// synopsys translate_off
+defparam \coffee_type[1]~input .bus_hold = "false";
+defparam \coffee_type[1]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X8_Y0_N35
+cyclonev_io_ibuf \coffee_type[2]~input (
+	.i(coffee_type[2]),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\coffee_type[2]~input_o ));
+// synopsys translate_off
+defparam \coffee_type[2]~input .bus_hold = "false";
+defparam \coffee_type[2]~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X4_Y0_N18
+cyclonev_io_ibuf \confirm~input (
+	.i(confirm),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\confirm~input_o ));
+// synopsys translate_off
+defparam \confirm~input .bus_hold = "false";
+defparam \confirm~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N12
+cyclonev_lcell_comb \COFEE_SELECTOR|change[0]~0 (
+// Equation(s):
+// \COFEE_SELECTOR|change[0]~0_combout  = ( \confirm~input_o  & ( !\coffee_type[2]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(!\coffee_type[2]~input_o ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\confirm~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[0]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[0]~0 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[0]~0 .lut_mask = 64'h00000000CCCCCCCC;
+defparam \COFEE_SELECTOR|change[0]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N12
+cyclonev_lcell_comb \COFEE_SELECTOR|change[1]~2 (
+// Equation(s):
+// \COFEE_SELECTOR|change[1]~2_combout  = ( \coffee_type[0]~input_o  & ( \COIN_COUNTER|total_coins[0]~2_combout  & ( (!\COIN_COUNTER|total_coins[3]~14_combout  & ((!\COIN_COUNTER|total_coins[2]~10_combout ) # ((!\COIN_COUNTER|total_coins[1]~6_combout  & 
+// \coffee_type[1]~input_o )))) ) ) ) # ( !\coffee_type[0]~input_o  & ( \COIN_COUNTER|total_coins[0]~2_combout  & ( (!\COIN_COUNTER|total_coins[2]~10_combout  & (!\COIN_COUNTER|total_coins[3]~14_combout  & ((!\COIN_COUNTER|total_coins[1]~6_combout ) # 
+// (\coffee_type[1]~input_o )))) ) ) ) # ( \coffee_type[0]~input_o  & ( !\COIN_COUNTER|total_coins[0]~2_combout  & ( (!\COIN_COUNTER|total_coins[3]~14_combout  & ((!\COIN_COUNTER|total_coins[2]~10_combout ) # (\coffee_type[1]~input_o ))) ) ) ) # ( 
+// !\coffee_type[0]~input_o  & ( !\COIN_COUNTER|total_coins[0]~2_combout  & ( (!\COIN_COUNTER|total_coins[3]~14_combout  & ((!\COIN_COUNTER|total_coins[2]~10_combout ) # ((!\COIN_COUNTER|total_coins[1]~6_combout  & \coffee_type[1]~input_o )))) ) ) )
+
+	.dataa(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datab(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datac(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datad(!\coffee_type[1]~input_o ),
+	.datae(!\coffee_type[0]~input_o ),
+	.dataf(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[1]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[1]~2 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[1]~2 .lut_mask = 64'hC0E0C0F080C0C0E0;
+defparam \COFEE_SELECTOR|change[1]~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N54
+cyclonev_lcell_comb \COFEE_SELECTOR|change[1]~3 (
+// Equation(s):
+// \COFEE_SELECTOR|change[1]~3_combout  = ( !\COFEE_SELECTOR|change[1]~2_combout  & ( \COIN_COUNTER|total_coins[1]~6_combout  & ( (\COFEE_SELECTOR|change[0]~0_combout  & ((!\coffee_type[0]~input_o  & (!\COFEE_SELECTOR|Add0~1_combout  $ 
+// (!\coffee_type[1]~input_o ))) # (\coffee_type[0]~input_o  & ((!\coffee_type[1]~input_o ) # (\COFEE_SELECTOR|Add0~1_combout ))))) ) ) ) # ( !\COFEE_SELECTOR|change[1]~2_combout  & ( !\COIN_COUNTER|total_coins[1]~6_combout  & ( 
+// (\COFEE_SELECTOR|change[0]~0_combout  & ((!\coffee_type[0]~input_o  & (!\COFEE_SELECTOR|Add0~1_combout  $ (!\coffee_type[1]~input_o ))) # (\coffee_type[0]~input_o  & (\COFEE_SELECTOR|Add0~1_combout  & \coffee_type[1]~input_o )))) ) ) )
+
+	.dataa(!\coffee_type[0]~input_o ),
+	.datab(!\COFEE_SELECTOR|Add0~1_combout ),
+	.datac(!\coffee_type[1]~input_o ),
+	.datad(!\COFEE_SELECTOR|change[0]~0_combout ),
+	.datae(!\COFEE_SELECTOR|change[1]~2_combout ),
+	.dataf(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[1]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[1]~3 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[1]~3 .lut_mask = 64'h0029000000790000;
+defparam \COFEE_SELECTOR|change[1]~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N42
+cyclonev_lcell_comb \COFEE_SELECTOR|change[3]~6 (
+// Equation(s):
+// \COFEE_SELECTOR|change[3]~6_combout  = ( \coffee_type[1]~input_o  & ( (\COFEE_SELECTOR|change[0]~0_combout  & (!\coffee_type[0]~input_o  & !\COFEE_SELECTOR|change[1]~2_combout )) ) ) # ( !\coffee_type[1]~input_o  & ( (\COFEE_SELECTOR|change[0]~0_combout  
+// & (\coffee_type[0]~input_o  & !\COFEE_SELECTOR|change[1]~2_combout )) ) )
+
+	.dataa(gnd),
+	.datab(!\COFEE_SELECTOR|change[0]~0_combout ),
+	.datac(!\coffee_type[0]~input_o ),
+	.datad(!\COFEE_SELECTOR|change[1]~2_combout ),
+	.datae(gnd),
+	.dataf(!\coffee_type[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[3]~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[3]~6 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[3]~6 .lut_mask = 64'h0300030030003000;
+defparam \COFEE_SELECTOR|change[3]~6 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N21
+cyclonev_lcell_comb \COFEE_SELECTOR|change[3]~7 (
+// Equation(s):
+// \COFEE_SELECTOR|change[3]~7_combout  = ( \coffee_type[1]~input_o  & ( (!\COIN_COUNTER|total_coins[0]~2_combout  & (!\COIN_COUNTER|total_coins[1]~6_combout  & ((!\coffee_type[0]~input_o ) # (\COFEE_SELECTOR|change[1]~2_combout )))) ) ) # ( 
+// !\coffee_type[1]~input_o  & ( (\COFEE_SELECTOR|change[1]~2_combout  & (!\COIN_COUNTER|total_coins[0]~2_combout  & !\COIN_COUNTER|total_coins[1]~6_combout )) ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~2_combout ),
+	.datab(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datac(!\coffee_type[0]~input_o ),
+	.datad(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datae(gnd),
+	.dataf(!\coffee_type[1]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[3]~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[3]~7 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[3]~7 .lut_mask = 64'h44004400C400C400;
+defparam \COFEE_SELECTOR|change[3]~7 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N45
+cyclonev_lcell_comb \COFEE_SELECTOR|Add0~0 (
+// Equation(s):
+// \COFEE_SELECTOR|Add0~0_combout  = ( \COIN_COUNTER|total_coins[2]~10_combout  & ( !\COIN_COUNTER|total_coins[3]~14_combout  ) ) # ( !\COIN_COUNTER|total_coins[2]~10_combout  & ( !\COIN_COUNTER|total_coins[3]~14_combout  $ 
+// (((!\COIN_COUNTER|total_coins[0]~2_combout ) # (!\COIN_COUNTER|total_coins[1]~6_combout ))) ) )
+
+	.dataa(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datab(gnd),
+	.datac(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datad(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datae(gnd),
+	.dataf(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|Add0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|Add0~0 .extended_lut = "off";
+defparam \COFEE_SELECTOR|Add0~0 .lut_mask = 64'h555A555AAAAAAAAA;
+defparam \COFEE_SELECTOR|Add0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N24
+cyclonev_lcell_comb \COFEE_SELECTOR|change[3]~8 (
+// Equation(s):
+// \COFEE_SELECTOR|change[3]~8_combout  = ( \COFEE_SELECTOR|Add0~0_combout  & ( \coffee_type[0]~input_o  & ( (\coffee_type[1]~input_o  & (\COFEE_SELECTOR|change[0]~0_combout  & (!\COFEE_SELECTOR|change[1]~2_combout  & !\COFEE_SELECTOR|Add3~0_combout ))) ) ) 
+// ) # ( !\COFEE_SELECTOR|Add0~0_combout  & ( \coffee_type[0]~input_o  & ( (\coffee_type[1]~input_o  & (\COFEE_SELECTOR|change[0]~0_combout  & (!\COFEE_SELECTOR|change[1]~2_combout  & !\COFEE_SELECTOR|Add3~0_combout ))) ) ) ) # ( 
+// !\COFEE_SELECTOR|Add0~0_combout  & ( !\coffee_type[0]~input_o  & ( (!\coffee_type[1]~input_o  & (\COFEE_SELECTOR|change[0]~0_combout  & !\COFEE_SELECTOR|change[1]~2_combout )) ) ) )
+
+	.dataa(!\coffee_type[1]~input_o ),
+	.datab(!\COFEE_SELECTOR|change[0]~0_combout ),
+	.datac(!\COFEE_SELECTOR|change[1]~2_combout ),
+	.datad(!\COFEE_SELECTOR|Add3~0_combout ),
+	.datae(!\COFEE_SELECTOR|Add0~0_combout ),
+	.dataf(!\coffee_type[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[3]~8_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[3]~8 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[3]~8 .lut_mask = 64'h2020000010001000;
+defparam \COFEE_SELECTOR|change[3]~8 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N54
+cyclonev_lcell_comb \COFEE_SELECTOR|change[3]~9 (
+// Equation(s):
+// \COFEE_SELECTOR|change[3]~9_combout  = ( \COFEE_SELECTOR|change[3]~7_combout  & ( !\COFEE_SELECTOR|change[3]~8_combout  & ( (!\COFEE_SELECTOR|change[3]~6_combout ) # (\COIN_COUNTER|total_coins[3]~14_combout ) ) ) ) # ( !\COFEE_SELECTOR|change[3]~7_combout 
+//  & ( !\COFEE_SELECTOR|change[3]~8_combout  & ( (!\COFEE_SELECTOR|change[3]~6_combout ) # (!\COIN_COUNTER|total_coins[3]~14_combout  $ (!\COIN_COUNTER|total_coins[2]~10_combout )) ) ) )
+
+	.dataa(gnd),
+	.datab(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datac(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datad(!\COFEE_SELECTOR|change[3]~6_combout ),
+	.datae(!\COFEE_SELECTOR|change[3]~7_combout ),
+	.dataf(!\COFEE_SELECTOR|change[3]~8_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[3]~9_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[3]~9 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[3]~9 .lut_mask = 64'hFF3CFF3300000000;
+defparam \COFEE_SELECTOR|change[3]~9 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N12
+cyclonev_lcell_comb \COFEE_SELECTOR|change[2]~4 (
+// Equation(s):
+// \COFEE_SELECTOR|change[2]~4_combout  = ( !\COIN_COUNTER|total_coins[1]~6_combout  & ( \COIN_COUNTER|total_coins[2]~10_combout  & ( (!\COIN_COUNTER|total_coins[0]~2_combout  & (((\coffee_type[1]~input_o  & !\coffee_type[0]~input_o )) # 
+// (\COFEE_SELECTOR|change[1]~2_combout ))) ) ) ) # ( \COIN_COUNTER|total_coins[1]~6_combout  & ( !\COIN_COUNTER|total_coins[2]~10_combout  ) ) # ( !\COIN_COUNTER|total_coins[1]~6_combout  & ( !\COIN_COUNTER|total_coins[2]~10_combout  & ( 
+// ((!\COFEE_SELECTOR|change[1]~2_combout  & ((!\coffee_type[1]~input_o ) # (\coffee_type[0]~input_o )))) # (\COIN_COUNTER|total_coins[0]~2_combout ) ) ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~2_combout ),
+	.datab(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.datac(!\coffee_type[1]~input_o ),
+	.datad(!\coffee_type[0]~input_o ),
+	.datae(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.dataf(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[2]~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[2]~4 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[2]~4 .lut_mask = 64'hB3BBFFFF4C440000;
+defparam \COFEE_SELECTOR|change[2]~4 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N0
+cyclonev_lcell_comb \COFEE_SELECTOR|change[2]~5 (
+// Equation(s):
+// \COFEE_SELECTOR|change[2]~5_combout  = ( \COFEE_SELECTOR|change[2]~4_combout  & ( \coffee_type[0]~input_o  & ( (\COFEE_SELECTOR|change[0]~0_combout  & (!\COFEE_SELECTOR|change[1]~2_combout  & ((!\coffee_type[1]~input_o ) # (\COFEE_SELECTOR|Add0~2_combout 
+// )))) ) ) ) # ( !\COFEE_SELECTOR|change[2]~4_combout  & ( \coffee_type[0]~input_o  & ( (\coffee_type[1]~input_o  & (\COFEE_SELECTOR|change[0]~0_combout  & (!\COFEE_SELECTOR|change[1]~2_combout  & \COFEE_SELECTOR|Add0~2_combout ))) ) ) ) # ( 
+// \COFEE_SELECTOR|change[2]~4_combout  & ( !\coffee_type[0]~input_o  & ( (\COFEE_SELECTOR|change[0]~0_combout  & (!\COFEE_SELECTOR|change[1]~2_combout  & ((!\COFEE_SELECTOR|Add0~2_combout ) # (\coffee_type[1]~input_o )))) ) ) ) # ( 
+// !\COFEE_SELECTOR|change[2]~4_combout  & ( !\coffee_type[0]~input_o  & ( (!\coffee_type[1]~input_o  & (\COFEE_SELECTOR|change[0]~0_combout  & (!\COFEE_SELECTOR|change[1]~2_combout  & !\COFEE_SELECTOR|Add0~2_combout ))) ) ) )
+
+	.dataa(!\coffee_type[1]~input_o ),
+	.datab(!\COFEE_SELECTOR|change[0]~0_combout ),
+	.datac(!\COFEE_SELECTOR|change[1]~2_combout ),
+	.datad(!\COFEE_SELECTOR|Add0~2_combout ),
+	.datae(!\COFEE_SELECTOR|change[2]~4_combout ),
+	.dataf(!\coffee_type[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[2]~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[2]~5 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[2]~5 .lut_mask = 64'h2000301000102030;
+defparam \COFEE_SELECTOR|change[2]~5 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X64_Y7_N0
+cyclonev_lcell_comb \COFEE_SELECTOR|Mux3~0 (
+// Equation(s):
+// \COFEE_SELECTOR|Mux3~0_combout  = ( \COIN_COUNTER|total_coins[0]~2_combout  & ( \COIN_COUNTER|total_coins[2]~10_combout  & ( (!\coffee_type[1]~input_o  & \coffee_type[0]~input_o ) ) ) ) # ( !\COIN_COUNTER|total_coins[0]~2_combout  & ( 
+// \COIN_COUNTER|total_coins[2]~10_combout  & ( (!\coffee_type[1]~input_o  & (!\coffee_type[0]~input_o )) # (\coffee_type[1]~input_o  & (((!\coffee_type[0]~input_o  & \COIN_COUNTER|total_coins[1]~6_combout )) # (\COIN_COUNTER|total_coins[3]~14_combout ))) ) 
+// ) ) # ( \COIN_COUNTER|total_coins[0]~2_combout  & ( !\COIN_COUNTER|total_coins[2]~10_combout  & ( (!\coffee_type[1]~input_o  & (\coffee_type[0]~input_o  & \COIN_COUNTER|total_coins[3]~14_combout )) ) ) ) # ( !\COIN_COUNTER|total_coins[0]~2_combout  & ( 
+// !\COIN_COUNTER|total_coins[2]~10_combout  & ( (\COIN_COUNTER|total_coins[3]~14_combout  & ((!\coffee_type[0]~input_o ) # (\coffee_type[1]~input_o ))) ) ) )
+
+	.dataa(!\coffee_type[1]~input_o ),
+	.datab(!\coffee_type[0]~input_o ),
+	.datac(!\COIN_COUNTER|total_coins[3]~14_combout ),
+	.datad(!\COIN_COUNTER|total_coins[1]~6_combout ),
+	.datae(!\COIN_COUNTER|total_coins[0]~2_combout ),
+	.dataf(!\COIN_COUNTER|total_coins[2]~10_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|Mux3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|Mux3~0 .extended_lut = "off";
+defparam \COFEE_SELECTOR|Mux3~0 .lut_mask = 64'h0D0D02028DCD2222;
+defparam \COFEE_SELECTOR|Mux3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N51
+cyclonev_lcell_comb \COFEE_SELECTOR|change[0]~1 (
+// Equation(s):
+// \COFEE_SELECTOR|change[0]~1_combout  = ( \COFEE_SELECTOR|Mux3~0_combout  & ( \COFEE_SELECTOR|change[0]~0_combout  ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\COFEE_SELECTOR|change[0]~0_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\COFEE_SELECTOR|Mux3~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFEE_SELECTOR|change[0]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFEE_SELECTOR|change[0]~1 .extended_lut = "off";
+defparam \COFEE_SELECTOR|change[0]~1 .lut_mask = 64'h000000000F0F0F0F;
+defparam \COFEE_SELECTOR|change[0]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N45
+cyclonev_lcell_comb \CHANGE_DISPLAY|display[0]~0 (
+// Equation(s):
+// \CHANGE_DISPLAY|display[0]~0_combout  = ( !\COFEE_SELECTOR|change[2]~5_combout  & ( \COFEE_SELECTOR|change[0]~1_combout  & ( (!\COFEE_SELECTOR|change[1]~3_combout  & \COFEE_SELECTOR|change[3]~9_combout ) ) ) ) # ( \COFEE_SELECTOR|change[2]~5_combout  & ( 
+// !\COFEE_SELECTOR|change[0]~1_combout  & ( (!\COFEE_SELECTOR|change[1]~3_combout  & \COFEE_SELECTOR|change[3]~9_combout ) ) ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~3_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\COFEE_SELECTOR|change[3]~9_combout ),
+	.datae(!\COFEE_SELECTOR|change[2]~5_combout ),
+	.dataf(!\COFEE_SELECTOR|change[0]~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\CHANGE_DISPLAY|display[0]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \CHANGE_DISPLAY|display[0]~0 .extended_lut = "off";
+defparam \CHANGE_DISPLAY|display[0]~0 .lut_mask = 64'h000000AA00AA0000;
+defparam \CHANGE_DISPLAY|display[0]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N36
+cyclonev_lcell_comb \CHANGE_DISPLAY|display[1]~1 (
+// Equation(s):
+// \CHANGE_DISPLAY|display[1]~1_combout  = ( \COFEE_SELECTOR|change[2]~5_combout  & ( \COFEE_SELECTOR|change[3]~9_combout  & ( !\COFEE_SELECTOR|change[1]~3_combout  $ (!\COFEE_SELECTOR|change[0]~1_combout ) ) ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~3_combout ),
+	.datab(gnd),
+	.datac(!\COFEE_SELECTOR|change[0]~1_combout ),
+	.datad(gnd),
+	.datae(!\COFEE_SELECTOR|change[2]~5_combout ),
+	.dataf(!\COFEE_SELECTOR|change[3]~9_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\CHANGE_DISPLAY|display[1]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \CHANGE_DISPLAY|display[1]~1 .extended_lut = "off";
+defparam \CHANGE_DISPLAY|display[1]~1 .lut_mask = 64'h0000000000005A5A;
+defparam \CHANGE_DISPLAY|display[1]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N21
+cyclonev_lcell_comb \CHANGE_DISPLAY|Decoder0~0 (
+// Equation(s):
+// \CHANGE_DISPLAY|Decoder0~0_combout  = ( !\COFEE_SELECTOR|change[2]~5_combout  & ( !\COFEE_SELECTOR|change[0]~1_combout  & ( (\COFEE_SELECTOR|change[1]~3_combout  & \COFEE_SELECTOR|change[3]~9_combout ) ) ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~3_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\COFEE_SELECTOR|change[3]~9_combout ),
+	.datae(!\COFEE_SELECTOR|change[2]~5_combout ),
+	.dataf(!\COFEE_SELECTOR|change[0]~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\CHANGE_DISPLAY|Decoder0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \CHANGE_DISPLAY|Decoder0~0 .extended_lut = "off";
+defparam \CHANGE_DISPLAY|Decoder0~0 .lut_mask = 64'h0055000000000000;
+defparam \CHANGE_DISPLAY|Decoder0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N12
+cyclonev_lcell_comb \CHANGE_DISPLAY|WideOr3~0 (
+// Equation(s):
+// \CHANGE_DISPLAY|WideOr3~0_combout  = ( \COFEE_SELECTOR|change[2]~5_combout  & ( \COFEE_SELECTOR|change[3]~9_combout  & ( !\COFEE_SELECTOR|change[1]~3_combout  $ (\COFEE_SELECTOR|change[0]~1_combout ) ) ) ) # ( !\COFEE_SELECTOR|change[2]~5_combout  & ( 
+// \COFEE_SELECTOR|change[3]~9_combout  & ( (!\COFEE_SELECTOR|change[1]~3_combout  & \COFEE_SELECTOR|change[0]~1_combout ) ) ) ) # ( !\COFEE_SELECTOR|change[2]~5_combout  & ( !\COFEE_SELECTOR|change[3]~9_combout  & ( (!\COFEE_SELECTOR|change[1]~3_combout  & 
+// \COFEE_SELECTOR|change[0]~1_combout ) ) ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~3_combout ),
+	.datab(gnd),
+	.datac(!\COFEE_SELECTOR|change[0]~1_combout ),
+	.datad(gnd),
+	.datae(!\COFEE_SELECTOR|change[2]~5_combout ),
+	.dataf(!\COFEE_SELECTOR|change[3]~9_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\CHANGE_DISPLAY|WideOr3~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \CHANGE_DISPLAY|WideOr3~0 .extended_lut = "off";
+defparam \CHANGE_DISPLAY|WideOr3~0 .lut_mask = 64'h0A0A00000A0AA5A5;
+defparam \CHANGE_DISPLAY|WideOr3~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N9
+cyclonev_lcell_comb \CHANGE_DISPLAY|WideOr2~0 (
+// Equation(s):
+// \CHANGE_DISPLAY|WideOr2~0_combout  = ( \COFEE_SELECTOR|change[2]~5_combout  & ( \COFEE_SELECTOR|change[0]~1_combout  & ( \COFEE_SELECTOR|change[3]~9_combout  ) ) ) # ( !\COFEE_SELECTOR|change[2]~5_combout  & ( \COFEE_SELECTOR|change[0]~1_combout  & ( 
+// (!\COFEE_SELECTOR|change[1]~3_combout ) # (\COFEE_SELECTOR|change[3]~9_combout ) ) ) ) # ( \COFEE_SELECTOR|change[2]~5_combout  & ( !\COFEE_SELECTOR|change[0]~1_combout  & ( (!\COFEE_SELECTOR|change[1]~3_combout  & \COFEE_SELECTOR|change[3]~9_combout ) ) 
+// ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~3_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\COFEE_SELECTOR|change[3]~9_combout ),
+	.datae(!\COFEE_SELECTOR|change[2]~5_combout ),
+	.dataf(!\COFEE_SELECTOR|change[0]~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\CHANGE_DISPLAY|WideOr2~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \CHANGE_DISPLAY|WideOr2~0 .extended_lut = "off";
+defparam \CHANGE_DISPLAY|WideOr2~0 .lut_mask = 64'h000000AAAAFF00FF;
+defparam \CHANGE_DISPLAY|WideOr2~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N24
+cyclonev_lcell_comb \CHANGE_DISPLAY|WideOr1~0 (
+// Equation(s):
+// \CHANGE_DISPLAY|WideOr1~0_combout  = ( \COFEE_SELECTOR|change[2]~5_combout  & ( \COFEE_SELECTOR|change[3]~9_combout  & ( (\COFEE_SELECTOR|change[1]~3_combout  & \COFEE_SELECTOR|change[0]~1_combout ) ) ) ) # ( !\COFEE_SELECTOR|change[2]~5_combout  & ( 
+// \COFEE_SELECTOR|change[3]~9_combout  & ( (\COFEE_SELECTOR|change[0]~1_combout ) # (\COFEE_SELECTOR|change[1]~3_combout ) ) ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~3_combout ),
+	.datab(gnd),
+	.datac(!\COFEE_SELECTOR|change[0]~1_combout ),
+	.datad(gnd),
+	.datae(!\COFEE_SELECTOR|change[2]~5_combout ),
+	.dataf(!\COFEE_SELECTOR|change[3]~9_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\CHANGE_DISPLAY|WideOr1~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \CHANGE_DISPLAY|WideOr1~0 .extended_lut = "off";
+defparam \CHANGE_DISPLAY|WideOr1~0 .lut_mask = 64'h000000005F5F0505;
+defparam \CHANGE_DISPLAY|WideOr1~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: MLABCELL_X65_Y7_N33
+cyclonev_lcell_comb \CHANGE_DISPLAY|WideOr0~0 (
+// Equation(s):
+// \CHANGE_DISPLAY|WideOr0~0_combout  = ( \COFEE_SELECTOR|change[2]~5_combout  & ( \COFEE_SELECTOR|change[0]~1_combout  & ( (!\COFEE_SELECTOR|change[1]~3_combout  & \COFEE_SELECTOR|change[3]~9_combout ) ) ) ) # ( !\COFEE_SELECTOR|change[2]~5_combout  & ( 
+// \COFEE_SELECTOR|change[0]~1_combout  & ( !\COFEE_SELECTOR|change[1]~3_combout  $ (\COFEE_SELECTOR|change[3]~9_combout ) ) ) ) # ( \COFEE_SELECTOR|change[2]~5_combout  & ( !\COFEE_SELECTOR|change[0]~1_combout  & ( \COFEE_SELECTOR|change[3]~9_combout  ) ) ) 
+// # ( !\COFEE_SELECTOR|change[2]~5_combout  & ( !\COFEE_SELECTOR|change[0]~1_combout  & ( !\COFEE_SELECTOR|change[1]~3_combout  $ (\COFEE_SELECTOR|change[3]~9_combout ) ) ) )
+
+	.dataa(!\COFEE_SELECTOR|change[1]~3_combout ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\COFEE_SELECTOR|change[3]~9_combout ),
+	.datae(!\COFEE_SELECTOR|change[2]~5_combout ),
+	.dataf(!\COFEE_SELECTOR|change[0]~1_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\CHANGE_DISPLAY|WideOr0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \CHANGE_DISPLAY|WideOr0~0 .extended_lut = "off";
+defparam \CHANGE_DISPLAY|WideOr0~0 .lut_mask = 64'hAA5500FFAA5500AA;
+defparam \CHANGE_DISPLAY|WideOr0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: IOIBUF_X32_Y0_N1
+cyclonev_io_ibuf \clock~input (
+	.i(clock),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clock~input_o ));
+// synopsys translate_off
+defparam \clock~input .bus_hold = "false";
+defparam \clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G6
+cyclonev_clkena \clock~inputCLKENA0 (
+	.inclk(\clock~input_o ),
+	.ena(vcc),
+	.outclk(\clock~inputCLKENA0_outclk ),
+	.enaout());
+// synopsys translate_off
+defparam \clock~inputCLKENA0 .clock_type = "global clock";
+defparam \clock~inputCLKENA0 .disable_mode = "low";
+defparam \clock~inputCLKENA0 .ena_register_mode = "always enabled";
+defparam \clock~inputCLKENA0 .ena_register_power_up = "high";
+defparam \clock~inputCLKENA0 .test_syn = "high";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N57
+cyclonev_lcell_comb \FSM|state.000~feeder (
+// Equation(s):
+// \FSM|state.000~feeder_combout  = VCC
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\FSM|state.000~feeder_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \FSM|state.000~feeder .extended_lut = "off";
+defparam \FSM|state.000~feeder .lut_mask = 64'hFFFFFFFFFFFFFFFF;
+defparam \FSM|state.000~feeder .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N6
+cyclonev_lcell_comb \FSM|state.001~0 (
+// Equation(s):
+// \FSM|state.001~0_combout  = ( !\FSM|state.000~q  )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\FSM|state.000~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\FSM|state.001~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \FSM|state.001~0 .extended_lut = "off";
+defparam \FSM|state.001~0 .lut_mask = 64'hFFFFFFFF00000000;
+defparam \FSM|state.001~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X62_Y7_N56
+dffeas \FSM|state.001 (
+	.clk(\clock~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\FSM|state.001~0_combout ),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(\TIMER_COMPARATOR|LessThan0~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FSM|state.001~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \FSM|state.001 .is_wysiwyg = "true";
+defparam \FSM|state.001 .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X62_Y7_N14
+dffeas \FSM|state.010 (
+	.clk(\clock~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\FSM|state.001~q ),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(\TIMER_COMPARATOR|LessThan0~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FSM|state.010~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \FSM|state.010 .is_wysiwyg = "true";
+defparam \FSM|state.010 .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X62_Y7_N50
+dffeas \FSM|state.011 (
+	.clk(\clock~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\FSM|state.010~q ),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(\TIMER_COMPARATOR|LessThan0~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FSM|state.011~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \FSM|state.011 .is_wysiwyg = "true";
+defparam \FSM|state.011 .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X62_Y7_N8
+dffeas \FSM|state.100 (
+	.clk(\clock~inputCLKENA0_outclk ),
+	.d(gnd),
+	.asdata(\FSM|state.011~q ),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(\TIMER_COMPARATOR|LessThan0~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FSM|state.100~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \FSM|state.100 .is_wysiwyg = "true";
+defparam \FSM|state.100 .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N27
+cyclonev_lcell_comb \GENERAL_TIMER|seconds[0]~1 (
+// Equation(s):
+// \GENERAL_TIMER|seconds[0]~1_combout  = !\GENERAL_TIMER|seconds [0] $ (((!\COFEE_SELECTOR|change[0]~0_combout ) # (\COFEE_SELECTOR|change[1]~2_combout )))
+
+	.dataa(!\COFEE_SELECTOR|change[0]~0_combout ),
+	.datab(!\COFEE_SELECTOR|change[1]~2_combout ),
+	.datac(gnd),
+	.datad(!\GENERAL_TIMER|seconds [0]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\GENERAL_TIMER|seconds[0]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \GENERAL_TIMER|seconds[0]~1 .extended_lut = "off";
+defparam \GENERAL_TIMER|seconds[0]~1 .lut_mask = 64'h44BB44BB44BB44BB;
+defparam \GENERAL_TIMER|seconds[0]~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y7_N29
+dffeas \GENERAL_TIMER|seconds[0] (
+	.clk(\clock~inputCLKENA0_outclk ),
+	.d(\GENERAL_TIMER|seconds[0]~1_combout ),
+	.asdata(vcc),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\GENERAL_TIMER|seconds [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \GENERAL_TIMER|seconds[0] .is_wysiwyg = "true";
+defparam \GENERAL_TIMER|seconds[0] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X63_Y7_N0
+cyclonev_lcell_comb \GENERAL_TIMER|seconds[1]~0 (
+// Equation(s):
+// \GENERAL_TIMER|seconds[1]~0_combout  = ( \COFEE_SELECTOR|change[0]~0_combout  & ( !\GENERAL_TIMER|seconds [1] $ (((!\GENERAL_TIMER|seconds [0]) # (\COFEE_SELECTOR|change[1]~2_combout ))) ) ) # ( !\COFEE_SELECTOR|change[0]~0_combout  & ( 
+// \GENERAL_TIMER|seconds [1] ) )
+
+	.dataa(gnd),
+	.datab(!\COFEE_SELECTOR|change[1]~2_combout ),
+	.datac(!\GENERAL_TIMER|seconds [0]),
+	.datad(!\GENERAL_TIMER|seconds [1]),
+	.datae(gnd),
+	.dataf(!\COFEE_SELECTOR|change[0]~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\GENERAL_TIMER|seconds[1]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \GENERAL_TIMER|seconds[1]~0 .extended_lut = "off";
+defparam \GENERAL_TIMER|seconds[1]~0 .lut_mask = 64'h00FF00FF0CF30CF3;
+defparam \GENERAL_TIMER|seconds[1]~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X63_Y7_N2
+dffeas \GENERAL_TIMER|seconds[1] (
+	.clk(\clock~inputCLKENA0_outclk ),
+	.d(\GENERAL_TIMER|seconds[1]~0_combout ),
+	.asdata(vcc),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\GENERAL_TIMER|seconds [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \GENERAL_TIMER|seconds[1] .is_wysiwyg = "true";
+defparam \GENERAL_TIMER|seconds[1] .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N30
+cyclonev_lcell_comb \FSM|state.101~0 (
+// Equation(s):
+// \FSM|state.101~0_combout  = ( \FSM|state.100~q  & ( (((\GENERAL_TIMER|seconds [0] & \coffee_type[2]~input_o )) # (\FSM|state.101~q )) # (\GENERAL_TIMER|seconds [1]) ) ) # ( !\FSM|state.100~q  & ( \FSM|state.101~q  ) )
+
+	.dataa(!\GENERAL_TIMER|seconds [0]),
+	.datab(!\coffee_type[2]~input_o ),
+	.datac(!\GENERAL_TIMER|seconds [1]),
+	.datad(!\FSM|state.101~q ),
+	.datae(gnd),
+	.dataf(!\FSM|state.100~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\FSM|state.101~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \FSM|state.101~0 .extended_lut = "off";
+defparam \FSM|state.101~0 .lut_mask = 64'h00FF00FF1FFF1FFF;
+defparam \FSM|state.101~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X62_Y7_N32
+dffeas \FSM|state.101 (
+	.clk(\clock~inputCLKENA0_outclk ),
+	.d(\FSM|state.101~0_combout ),
+	.asdata(vcc),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FSM|state.101~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \FSM|state.101 .is_wysiwyg = "true";
+defparam \FSM|state.101 .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N54
+cyclonev_lcell_comb \FSM|state_output[2] (
+// Equation(s):
+// \FSM|state_output [2] = ( !\FSM|state.101~q  & ( !\FSM|state.100~q  ) )
+
+	.dataa(gnd),
+	.datab(!\FSM|state.100~q ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\FSM|state.101~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\FSM|state_output [2]),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \FSM|state_output[2] .extended_lut = "off";
+defparam \FSM|state_output[2] .lut_mask = 64'hCCCCCCCC00000000;
+defparam \FSM|state_output[2] .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N42
+cyclonev_lcell_comb \COFFEE_TIMER|Mux1~2 (
+// Equation(s):
+// \COFFEE_TIMER|Mux1~2_combout  = ( \coffee_type[0]~input_o  & ( (!\coffee_type[2]~input_o  & \coffee_type[1]~input_o ) ) )
+
+	.dataa(gnd),
+	.datab(!\coffee_type[2]~input_o ),
+	.datac(!\coffee_type[1]~input_o ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(!\coffee_type[0]~input_o ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFFEE_TIMER|Mux1~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFFEE_TIMER|Mux1~2 .extended_lut = "off";
+defparam \COFFEE_TIMER|Mux1~2 .lut_mask = 64'h000000000C0C0C0C;
+defparam \COFFEE_TIMER|Mux1~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N18
+cyclonev_lcell_comb \COFFEE_TIMER|Mux1~1 (
+// Equation(s):
+// \COFFEE_TIMER|Mux1~1_combout  = ( \FSM|state.000~q  & ( \FSM|state.100~q  & ( \COFFEE_TIMER|Mux1~2_combout  ) ) ) # ( !\FSM|state.000~q  & ( \FSM|state.100~q  & ( \COFFEE_TIMER|Mux1~2_combout  ) ) ) # ( \FSM|state.000~q  & ( !\FSM|state.100~q  & ( 
+// (\COFFEE_TIMER|Mux1~2_combout  & (((!\FSM|state.011~q ) # (\FSM|state.010~q )) # (\FSM|state.101~q ))) ) ) ) # ( !\FSM|state.000~q  & ( !\FSM|state.100~q  & ( \COFFEE_TIMER|Mux1~2_combout  ) ) )
+
+	.dataa(!\COFFEE_TIMER|Mux1~2_combout ),
+	.datab(!\FSM|state.101~q ),
+	.datac(!\FSM|state.011~q ),
+	.datad(!\FSM|state.010~q ),
+	.datae(!\FSM|state.000~q ),
+	.dataf(!\FSM|state.100~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFFEE_TIMER|Mux1~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFFEE_TIMER|Mux1~1 .extended_lut = "off";
+defparam \COFFEE_TIMER|Mux1~1 .lut_mask = 64'h5555515555555555;
+defparam \COFFEE_TIMER|Mux1~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N45
+cyclonev_lcell_comb \COFFEE_TIMER|WideOr0~1 (
+// Equation(s):
+// \COFFEE_TIMER|WideOr0~1_combout  = ( \FSM|state.100~q  & ( (!\FSM|state.011~q  & !\FSM|state.010~q ) ) ) # ( !\FSM|state.100~q  & ( (!\FSM|state.010~q  & (!\FSM|state.011~q  $ (\FSM|state.000~q ))) ) )
+
+	.dataa(!\FSM|state.011~q ),
+	.datab(gnd),
+	.datac(!\FSM|state.010~q ),
+	.datad(!\FSM|state.000~q ),
+	.datae(gnd),
+	.dataf(!\FSM|state.100~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFFEE_TIMER|WideOr0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFFEE_TIMER|WideOr0~1 .extended_lut = "off";
+defparam \COFFEE_TIMER|WideOr0~1 .lut_mask = 64'hA050A050A0A0A0A0;
+defparam \COFFEE_TIMER|WideOr0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N33
+cyclonev_lcell_comb \COFFEE_TIMER|Mux0~3 (
+// Equation(s):
+// \COFFEE_TIMER|Mux0~3_combout  = ( \FSM|state.011~q  & ( (!\coffee_type[2]~input_o  & (\coffee_type[1]~input_o  & \FSM|state.000~q )) ) ) # ( !\FSM|state.011~q  & ( !\coffee_type[1]~input_o  ) )
+
+	.dataa(gnd),
+	.datab(!\coffee_type[2]~input_o ),
+	.datac(!\coffee_type[1]~input_o ),
+	.datad(!\FSM|state.000~q ),
+	.datae(gnd),
+	.dataf(!\FSM|state.011~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFFEE_TIMER|Mux0~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFFEE_TIMER|Mux0~3 .extended_lut = "off";
+defparam \COFFEE_TIMER|Mux0~3 .lut_mask = 64'hF0F0F0F0000C000C;
+defparam \COFFEE_TIMER|Mux0~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N15
+cyclonev_lcell_comb \COFFEE_TIMER|Mux0~2 (
+// Equation(s):
+// \COFFEE_TIMER|Mux0~2_combout  = ( \FSM|state.010~q  & ( (\coffee_type[1]~input_o  & (!\coffee_type[2]~input_o  & !\FSM|state.101~q )) ) ) # ( !\FSM|state.010~q  & ( (!\coffee_type[2]~input_o  & (!\FSM|state.101~q  & ((!\coffee_type[1]~input_o ) # 
+// (!\FSM|state.000~q )))) ) )
+
+	.dataa(!\coffee_type[1]~input_o ),
+	.datab(!\coffee_type[2]~input_o ),
+	.datac(!\FSM|state.101~q ),
+	.datad(!\FSM|state.000~q ),
+	.datae(gnd),
+	.dataf(!\FSM|state.010~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFFEE_TIMER|Mux0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFFEE_TIMER|Mux0~2 .extended_lut = "off";
+defparam \COFFEE_TIMER|Mux0~2 .lut_mask = 64'hC080C08040404040;
+defparam \COFFEE_TIMER|Mux0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N0
+cyclonev_lcell_comb \COFFEE_TIMER|Mux0~1 (
+// Equation(s):
+// \COFFEE_TIMER|Mux0~1_combout  = ( \FSM|state.010~q  & ( \COFFEE_TIMER|Mux0~2_combout  & ( (!\FSM|state.100~q  & ((!\coffee_type[1]~input_o  & ((\COFFEE_TIMER|Mux0~3_combout ))) # (\coffee_type[1]~input_o  & (!\coffee_type[0]~input_o )))) ) ) ) # ( 
+// !\FSM|state.010~q  & ( \COFFEE_TIMER|Mux0~2_combout  & ( (!\FSM|state.100~q  & (((!\coffee_type[0]~input_o  & \coffee_type[1]~input_o )) # (\COFFEE_TIMER|Mux0~3_combout ))) ) ) ) # ( !\FSM|state.010~q  & ( !\COFFEE_TIMER|Mux0~2_combout  & ( 
+// (\coffee_type[0]~input_o  & (!\FSM|state.100~q  & (\COFFEE_TIMER|Mux0~3_combout  & \coffee_type[1]~input_o ))) ) ) )
+
+	.dataa(!\coffee_type[0]~input_o ),
+	.datab(!\FSM|state.100~q ),
+	.datac(!\COFFEE_TIMER|Mux0~3_combout ),
+	.datad(!\coffee_type[1]~input_o ),
+	.datae(!\FSM|state.010~q ),
+	.dataf(!\COFFEE_TIMER|Mux0~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\COFFEE_TIMER|Mux0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \COFFEE_TIMER|Mux0~1 .extended_lut = "off";
+defparam \COFFEE_TIMER|Mux0~1 .lut_mask = 64'h000400000C8C0C88;
+defparam \COFFEE_TIMER|Mux0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N9
+cyclonev_lcell_comb \TIMER_COMPARATOR|LessThan0~3 (
+// Equation(s):
+// \TIMER_COMPARATOR|LessThan0~3_combout  = ( \FSM|state.010~q  & ( (!\coffee_type[1]~input_o  & (!\coffee_type[2]~input_o  & \coffee_type[0]~input_o )) ) ) # ( !\FSM|state.010~q  & ( (!\coffee_type[1]~input_o  & (!\coffee_type[2]~input_o  & 
+// (\coffee_type[0]~input_o  & !\FSM|state.000~q ))) ) )
+
+	.dataa(!\coffee_type[1]~input_o ),
+	.datab(!\coffee_type[2]~input_o ),
+	.datac(!\coffee_type[0]~input_o ),
+	.datad(!\FSM|state.000~q ),
+	.datae(gnd),
+	.dataf(!\FSM|state.010~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\TIMER_COMPARATOR|LessThan0~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \TIMER_COMPARATOR|LessThan0~3 .extended_lut = "off";
+defparam \TIMER_COMPARATOR|LessThan0~3 .lut_mask = 64'h0800080008080808;
+defparam \TIMER_COMPARATOR|LessThan0~3 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N51
+cyclonev_lcell_comb \TIMER_COMPARATOR|LessThan0~2 (
+// Equation(s):
+// \TIMER_COMPARATOR|LessThan0~2_combout  = ( \FSM|state.000~q  & ( \FSM|state.100~q  & ( (!\coffee_type[2]~input_o  & ((!\coffee_type[1]~input_o ) # (!\coffee_type[0]~input_o ))) ) ) ) # ( !\FSM|state.000~q  & ( \FSM|state.100~q  & ( 
+// (!\coffee_type[2]~input_o  & ((!\coffee_type[1]~input_o ) # (!\coffee_type[0]~input_o ))) ) ) ) # ( \FSM|state.000~q  & ( !\FSM|state.100~q  & ( (!\coffee_type[2]~input_o  & (!\FSM|state.101~q  & !\coffee_type[0]~input_o )) ) ) ) # ( !\FSM|state.000~q  & 
+// ( !\FSM|state.100~q  & ( (!\coffee_type[2]~input_o  & (\FSM|state.101~q  & ((!\coffee_type[1]~input_o ) # (!\coffee_type[0]~input_o )))) ) ) )
+
+	.dataa(!\coffee_type[1]~input_o ),
+	.datab(!\coffee_type[2]~input_o ),
+	.datac(!\FSM|state.101~q ),
+	.datad(!\coffee_type[0]~input_o ),
+	.datae(!\FSM|state.000~q ),
+	.dataf(!\FSM|state.100~q ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\TIMER_COMPARATOR|LessThan0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \TIMER_COMPARATOR|LessThan0~2 .extended_lut = "off";
+defparam \TIMER_COMPARATOR|LessThan0~2 .lut_mask = 64'h0C08C000CC88CC88;
+defparam \TIMER_COMPARATOR|LessThan0~2 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N24
+cyclonev_lcell_comb \TIMER_COMPARATOR|LessThan0~0 (
+// Equation(s):
+// \TIMER_COMPARATOR|LessThan0~0_combout  = ( \TIMER_COMPARATOR|LessThan0~3_combout  & ( \TIMER_COMPARATOR|LessThan0~2_combout  & ( (\GENERAL_TIMER|seconds [0] & ((\FSM|state.010~q ) # (\FSM|state.011~q ))) ) ) ) # ( !\TIMER_COMPARATOR|LessThan0~3_combout  & 
+// ( \TIMER_COMPARATOR|LessThan0~2_combout  & ( (\GENERAL_TIMER|seconds [0] & ((\FSM|state.010~q ) # (\FSM|state.011~q ))) ) ) ) # ( \TIMER_COMPARATOR|LessThan0~3_combout  & ( !\TIMER_COMPARATOR|LessThan0~2_combout  & ( (\GENERAL_TIMER|seconds [0] & 
+// ((!\FSM|state.010~q  & ((!\FSM|state.011~q ))) # (\FSM|state.010~q  & (\FSM|state.101~q )))) ) ) ) # ( !\TIMER_COMPARATOR|LessThan0~3_combout  & ( !\TIMER_COMPARATOR|LessThan0~2_combout  & ( \GENERAL_TIMER|seconds [0] ) ) )
+
+	.dataa(!\GENERAL_TIMER|seconds [0]),
+	.datab(!\FSM|state.101~q ),
+	.datac(!\FSM|state.011~q ),
+	.datad(!\FSM|state.010~q ),
+	.datae(!\TIMER_COMPARATOR|LessThan0~3_combout ),
+	.dataf(!\TIMER_COMPARATOR|LessThan0~2_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\TIMER_COMPARATOR|LessThan0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \TIMER_COMPARATOR|LessThan0~0 .extended_lut = "off";
+defparam \TIMER_COMPARATOR|LessThan0~0 .lut_mask = 64'h5555501105550555;
+defparam \TIMER_COMPARATOR|LessThan0~0 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: LABCELL_X62_Y7_N36
+cyclonev_lcell_comb \TIMER_COMPARATOR|LessThan0~1 (
+// Equation(s):
+// \TIMER_COMPARATOR|LessThan0~1_combout  = ( \COFFEE_TIMER|Mux0~1_combout  & ( \TIMER_COMPARATOR|LessThan0~0_combout  & ( (\GENERAL_TIMER|seconds [1] & ((!\COFFEE_TIMER|Mux1~1_combout ) # ((!\FSM|state_output [2] & !\COFFEE_TIMER|WideOr0~1_combout )))) ) ) 
+// ) # ( !\COFFEE_TIMER|Mux0~1_combout  & ( \TIMER_COMPARATOR|LessThan0~0_combout  & ( ((!\COFFEE_TIMER|Mux1~1_combout ) # ((!\FSM|state_output [2] & !\COFFEE_TIMER|WideOr0~1_combout ))) # (\GENERAL_TIMER|seconds [1]) ) ) ) # ( !\COFFEE_TIMER|Mux0~1_combout  
+// & ( !\TIMER_COMPARATOR|LessThan0~0_combout  & ( \GENERAL_TIMER|seconds [1] ) ) )
+
+	.dataa(!\FSM|state_output [2]),
+	.datab(!\GENERAL_TIMER|seconds [1]),
+	.datac(!\COFFEE_TIMER|Mux1~1_combout ),
+	.datad(!\COFFEE_TIMER|WideOr0~1_combout ),
+	.datae(!\COFFEE_TIMER|Mux0~1_combout ),
+	.dataf(!\TIMER_COMPARATOR|LessThan0~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\TIMER_COMPARATOR|LessThan0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \TIMER_COMPARATOR|LessThan0~1 .extended_lut = "off";
+defparam \TIMER_COMPARATOR|LessThan0~1 .lut_mask = 64'h33330000FBF33230;
+defparam \TIMER_COMPARATOR|LessThan0~1 .shared_arith = "off";
+// synopsys translate_on
+
+// Location: FF_X62_Y7_N59
+dffeas \FSM|state.000 (
+	.clk(\clock~inputCLKENA0_outclk ),
+	.d(\FSM|state.000~feeder_combout ),
+	.asdata(vcc),
+	.clrn(!\reset~input_o ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\TIMER_COMPARATOR|LessThan0~1_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\FSM|state.000~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \FSM|state.000 .is_wysiwyg = "true";
+defparam \FSM|state.000 .power_up = "low";
+// synopsys translate_on
+
+// Location: LABCELL_X40_Y19_N3
+cyclonev_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .extended_lut = "off";
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 64'h0000000000000000;
+defparam \~QUARTUS_CREATED_GND~I .shared_arith = "off";
+// synopsys translate_on
+
+endmodule

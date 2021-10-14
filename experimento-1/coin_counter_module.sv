@@ -6,14 +6,14 @@ module coin_counter_module
 	output logic [3:0] total_coins
 );
 
-	always_ff@(posedge coin_100 or posedge coin_500 or negedge reset)
+	always_ff@(negedge coin_100 or negedge coin_500 or posedge reset)
   
 	begin
-		if (!reset)
+		if (reset)
 			total_coins = 0;
-		else if (coin_100)
+		else if (~coin_100)
 			total_coins = total_coins + 4'd1;
-		else if (coin_500)
+		else if (~coin_500)
 			total_coins = total_coins + 4'd5;
 	end
 	 

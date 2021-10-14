@@ -8,6 +8,7 @@ module general_tb();
 	logic coin_100;
 	logic coin_500;
 	logic [2:0] coffee_type;
+	logic confirm;
 	
 	// system outputs
 	logic [6:0] total_coins_display;
@@ -43,7 +44,7 @@ module general_tb();
 	
 	
 	// selects coffee and return change (if exists)
-	substractor_module DUT_COFEE_SELECTOR(coffee_type, total_coins, change, enable);
+	substractor_module DUT_COFEE_SELECTOR(coffee_type, total_coins,confirm, change, enable);
 
 	
 		// display total coins change (if exits)
@@ -63,7 +64,7 @@ module general_tb();
 	
 	
 	// fsm module
-	fsm_module DUT_FSM(clock, reset, ~comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
+	fsm_module DUT_FSM(clock, reset, comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
 	
 	
 	always begin
@@ -74,7 +75,7 @@ module general_tb();
 	end
 	
 	initial begin
-	
+	/*
 		reset = 0;
 		enable = 0;
 		#40;
@@ -86,64 +87,80 @@ module general_tb();
 		reset = 1;
 		enable = 1;
 		coffee_type = 3'b011;
+		
+		*/
 
 		
-//		state = 3'b11;
-//		#40;
+	//state = 3'b11;
+		//#40;
 		
-//		state = 3'b000;
-//		#40;
+		//state = 3'b000;
+		//#40;
 
-//		reset = 0;
-//		coin_100 = 0;
-//		coin_500 = 0;
-//		coffee_type = 3'b011;
-//		#40;
-//		
-//		reset = 1 && coins_reset;
-//		coin_100 = 1;
-//		coin_500 = 0;
-//		//coffee_type = 3'b000;
-//		#40;
-//		
-//		reset = 1 && coins_reset;
-//		coin_100 = 0;
-//		coin_500 = 0;
-//		//coffee_type = 3'b000;
-//		#40;
-//		
-//		reset = 1 && coins_reset;
-//		coin_100 = 1;
-//		coin_500 = 0;
-//		//coffee_type = 3'b000;
-//		#40;
-//		
-//		reset = 1 && coins_reset;
-//		coin_100 = 0;
-//		coin_500 = 1;
-//		//coffee_type = 3'b011;
-//		#40;
-//		
-//		reset = 1 && coins_reset;
-//		coin_100 = 0;
-//		coin_500 = 0;
+		reset = 1;
+		coin_100 = 1;
+		coin_500 = 1;
+		coffee_type = 3'b011;
+		confirm=0;
 		#40;
 		
-//		reset = 1 && coins_reset;
-//		coin_100 = 0;
-//		coin_500 = 1;
-//		#40;
+		reset = 0 | coins_reset;
+		coin_100 = 0;
+		coin_500 = 1;
+		//coffee_type = 3'b000;
+		#40;
 		
-//		reset = 1 && coins_reset;
-//		coin_100 = 0;
-//		coin_500 = 0;
-//		$display("Total coins before: ");
-//		$display(total_coins);
-//		$display("Output reset: ");
-//		$display(coins_reset);
-//		$display("Total coins after: ");
-//		$display(total_coins);
-//		#40;
+		reset = 0 | coins_reset;
+		coin_100 = 1;
+		coin_500 = 1;
+		//coffee_type = 3'b000;
+		#40;
+		
+		reset = 0 | coins_reset;
+		coin_100 = 0;
+		coin_500 = 1;
+		//coffee_type = 3'b000;
+		#40;
+		
+		reset = 0 | coins_reset;
+		coin_100 = 1;
+		coin_500 = 1;
+		//coffee_type = 3'b011;
+		#40;
+		
+				reset = 1 && coins_reset;
+		coin_100 = 0;
+		coin_500 = 1;
+		//coffee_type = 3'b011;
+		#40;
+		
+		
+		reset = 0 | coins_reset;
+		coin_100 = 1;
+		coin_500 = 1;
+		#40;
+		
+		reset = 0 | coins_reset;
+		coin_100 = 0;
+		coin_500 = 1;
+		#40;
+		
+				reset = 0 | coins_reset;
+		coin_100 = 1;
+		coin_500 = 1;
+		#40;
+		
+		reset = 0 | coins_reset;
+		coin_100 = 1;
+		coin_500 = 0;
+		#40;
+		
+		reset = 0 | coins_reset;
+		coin_100 = 1;
+		coin_500 = 1;
+		confirm=1;
+		
+
 		
 	end
 

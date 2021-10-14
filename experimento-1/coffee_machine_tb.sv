@@ -8,6 +8,7 @@ module coffee_machine_tb();
 	logic coin_100;
 	logic coin_500;
 	logic [2:0] coffee_type;
+	logic confirm;
 	
 	// system outputs
 	logic [6:0] total_coins_display;
@@ -27,6 +28,7 @@ module coffee_machine_tb();
 	coin_100, 
 	coin_500, 
 	coffee_type,
+	confirm,
 	total_coins_display,
 	change_display,
 	water,
@@ -51,6 +53,7 @@ module coffee_machine_tb();
 		coin_100 = 0;
 		coin_500 = 0;
 		coffee_type = 3'b011;
+		confirm =0;
 		#40;
 		
 		reset = 1;
@@ -80,6 +83,7 @@ module coffee_machine_tb();
 		reset = 1;
 		coin_100 = 0;
 		coin_500 = 0;
+		confirm=1;
 		#40;
 	end
 	

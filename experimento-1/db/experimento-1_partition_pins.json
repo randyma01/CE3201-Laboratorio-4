@@ -84,15 +84,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "coffee_type[2]",
-					"strict" : false
-				},
-				{
 					"name" : "coffee_type[1]",
 					"strict" : false
 				},
 				{
 					"name" : "coffee_type[0]",
+					"strict" : false
+				},
+				{
+					"name" : "coffee_type[2]",
+					"strict" : false
+				},
+				{
+					"name" : "confirm",
 					"strict" : false
 				},
 				{

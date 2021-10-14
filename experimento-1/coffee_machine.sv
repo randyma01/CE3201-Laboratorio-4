@@ -8,6 +8,7 @@ module coffee_machine
 	input logic coin_100, 				// button 1
 	input logic coin_500, 				// button 2
 	input logic [2:0] coffee_type, 	// switches 1 y 2
+	input logic confirm,             //switch 8
 	
 	// system outputs 
 	output logic [6:0] total_coins_display,
@@ -32,7 +33,7 @@ module coffee_machine
 	
 	
 	// verify if total coins is equal or bigger then 100
-	coin_counter_module COIN_COUNTER(coin_100, coin_500, reset && coins_reset, total_coins);
+	coin_counter_module COIN_COUNTER(coin_100, coin_500, reset | coins_reset, total_coins);
 	
 	
 	// counts total coins inserted 
@@ -44,7 +45,7 @@ module coffee_machine
 	
 	
 	// selects coffee and return change (if exists)
-	substractor_module COFEE_SELECTOR(coffee_type, total_coins, change, enable);
+	substractor_module COFEE_SELECTOR(coffee_type, total_coins,confirm, change, enable);
 
 	
 		// display total coins change (if exits)
@@ -52,7 +53,7 @@ module coffee_machine
 	
 	
 	// general timer
-	timer_module GENERAL_TIMER(clock, reset & comparator_result, enable, seconds);
+	timer_module GENERAL_TIMER(clock, reset , enable, seconds);
 	
 	
 	// timer for each ingredient in for a coffee
@@ -64,6 +65,6 @@ module coffee_machine
 	
 	
 	// fsm module 
-	fsm_module FSM(clock, reset, !comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
+	fsm_module FSM(clock, reset, comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
 	
 endmodule 
