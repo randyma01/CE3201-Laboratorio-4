@@ -1,5 +1,5 @@
 Analysis & Synthesis report for experimento-1
-Thu Oct 14 00:20:05 2021
+Thu Oct 14 00:51:26 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -52,13 +52,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 14 00:20:05 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 14 00:51:26 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; experimento-1                               ;
 ; Top-level Entity Name           ; coffee_machine                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 49                                          ;
+; Total registers                 ; 50                                          ;
 ; Total pins                      ; 56                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -200,16 +200,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------------------------------+
 ; Resource                                    ; Usage                               ;
 +---------------------------------------------+-------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 61                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 66                                  ;
 ;                                             ;                                     ;
-; Combinational ALUT usage for logic          ; 98                                  ;
+; Combinational ALUT usage for logic          ; 105                                 ;
 ;     -- 7 input functions                    ; 1                                   ;
-;     -- 6 input functions                    ; 22                                  ;
+;     -- 6 input functions                    ; 24                                  ;
 ;     -- 5 input functions                    ; 4                                   ;
-;     -- 4 input functions                    ; 21                                  ;
-;     -- <=3 input functions                  ; 50                                  ;
+;     -- 4 input functions                    ; 22                                  ;
+;     -- <=3 input functions                  ; 54                                  ;
 ;                                             ;                                     ;
-; Dedicated logic registers                   ; 49                                  ;
+; Dedicated logic registers                   ; 50                                  ;
 ;                                             ;                                     ;
 ; I/O pins                                    ; 56                                  ;
 ;                                             ;                                     ;
@@ -217,8 +217,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                     ;
 ; Maximum fan-out node                        ; new_clock_module:NEW_CLOCK|Equal0~6 ;
 ; Maximum fan-out                             ; 33                                  ;
-; Total fan-out                               ; 570                                 ;
-; Average fan-out                             ; 2.20                                ;
+; Total fan-out                               ; 599                                 ;
+; Average fan-out                             ; 2.24                                ;
 +---------------------------------------------+-------------------------------------+
 
 
@@ -227,16 +227,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name             ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
-; |coffee_machine                              ; 98 (5)              ; 49 (0)                    ; 0                 ; 0          ; 56   ; 0            ; |coffee_machine                                         ; coffee_machine          ; work         ;
+; |coffee_machine                              ; 105 (5)             ; 50 (0)                    ; 0                 ; 0          ; 56   ; 0            ; |coffee_machine                                         ; coffee_machine          ; work         ;
 ;    |coin_500_counter_module:COIN_5COUNTER|   ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_500_counter_module:COIN_5COUNTER   ; coin_500_counter_module ; work         ;
 ;    |coin_counter_module:COIN_COUNTER|        ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_counter_module:COIN_COUNTER        ; coin_counter_module     ; work         ;
 ;    |coin_display_module:CHANGE_DISPLAY|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:CHANGE_DISPLAY      ; coin_display_module     ; work         ;
 ;    |coin_display_module:COINS_DISPLAY|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:COINS_DISPLAY       ; coin_display_module     ; work         ;
-;    |fsm_module:FSM|                          ; 2 (2)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|fsm_module:FSM                          ; fsm_module              ; work         ;
+;    |fsm_module:FSM|                          ; 4 (4)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|fsm_module:FSM                          ; fsm_module              ; work         ;
 ;    |new_clock_module:NEW_CLOCK|              ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|new_clock_module:NEW_CLOCK              ; new_clock_module        ; work         ;
-;    |substractor_module:COFEE_SELECTOR|       ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|substractor_module:COFEE_SELECTOR       ; substractor_module      ; work         ;
-;    |time_comparator_module:TIMER_COMPARATOR| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_comparator_module:TIMER_COMPARATOR ; time_comparator_module  ; work         ;
-;    |timer_module:GENERAL_TIMER|              ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|timer_module:GENERAL_TIMER              ; timer_module            ; work         ;
+;    |substractor_module:COFEE_SELECTOR|       ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|substractor_module:COFEE_SELECTOR       ; substractor_module      ; work         ;
+;    |time_comparator_module:TIMER_COMPARATOR| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_comparator_module:TIMER_COMPARATOR ; time_comparator_module  ; work         ;
+;    |time_per_coffee_module:COFFEE_TIMER|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_per_coffee_module:COFFEE_TIMER     ; time_per_coffee_module  ; work         ;
+;    |timer_module:GENERAL_TIMER|              ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|timer_module:GENERAL_TIMER              ; timer_module            ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -273,10 +274,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
+; Total registers                              ; 50    ;
 ; Number of registers using Synchronous Clear  ; 31    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 17    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 5     ;
 ; Number of registers using Preset             ; 0     ;
@@ -347,29 +348,29 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 49                          ;
-;     CLR               ; 11                          ;
+; arriav_ff             ; 50                          ;
+;     CLR               ; 12                          ;
 ;     ENA CLR           ; 5                           ;
 ;     SCLR              ; 31                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 103                         ;
+; arriav_lcell_comb     ; 110                         ;
 ;     arith             ; 36                          ;
 ;         1 data inputs ; 32                          ;
 ;         2 data inputs ; 4                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 66                          ;
+;     normal            ; 73                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 21                          ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 22                          ;
 ;         5 data inputs ; 4                           ;
-;         6 data inputs ; 22                          ;
+;         6 data inputs ; 24                          ;
 ; boundary_port         ; 56                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.30                        ;
-; Average LUT depth     ; 3.57                        ;
+; Max LUT depth         ; 7.20                        ;
+; Average LUT depth     ; 3.72                        ;
 +-----------------------+-----------------------------+
 
 
@@ -388,7 +389,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 14 00:19:57 2021
+    Info: Processing started: Thu Oct 14 00:51:18 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off experimento-1 -c experimento-1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -468,15 +469,15 @@ Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/output_files/experimento-1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 165 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 102 logic cells
+    Info (21061): Implemented 109 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4845 megabytes
-    Info: Processing ended: Thu Oct 14 00:20:05 2021
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Thu Oct 14 00:51:26 2021
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

@@ -26,7 +26,7 @@ module coffee_machine_tb();
 	clock,
 	reset,
 	coin_100, 
-	//coin_500, 
+	coin_500, 
 	coffee_type,
 	confirm,
 	total_coins_display,
@@ -51,53 +51,44 @@ module coffee_machine_tb();
 	
 		reset = 1;
 		coin_100 = 1;
-		//coin_500 = 0;
+		coin_500 = 1;
 		coffee_type = 3'b001;
 		confirm =0;
 		#40;
 		
+		//EXPRESSO
+		
 		reset = 0;
 		coin_100 = 0;
-		//coin_500 = 0;
+		coin_500 = 1;
 		#40;
 		
 		reset = 0;
 		coin_100 = 1;
-		//coin_500 = 0;
+		coin_500 = 1;
 		#40;
 		
 		reset = 0;
 		coin_100 = 0;
-		//coin_500 = 0;
+		coin_500 = 1;
 		#40;
 		
 		reset = 0;
 		coin_100 = 1;
-		//coin_500 = 0;
+		coin_500 = 1;
 		#40;
 		
 		reset = 0;
 		coin_100 = 0;
-		//coin_500 = 0;
+		coin_500 = 1;
 		#40;
 		
 		reset = 0;
 		coin_100 = 1;
-		//coin_500 = 0;
+		coin_500 = 1;
+		confirm=1;
 		#40;
 		
-		reset = 0;
-		coin_100 = 0;
-		//coin_500 = 0;
-		#40;
-		
-		reset = 0;
-		coin_100 = 1;
-		//coin_500 = 0;
-		confirm =1;
-		#40;
-
-
 
 
 	end

@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/simulation/modelsim
 vcoffee_machine
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1634185083
+Z2 !s110 1634193564
 !i10b 1
-!s100 b8MzEP6;:YD808VjWBcc;2
+!s100 H`AXTNj[jnShMBPzMFeDB2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-ISZLE1jY2O7_IZ0;:X<n:V3
+IBX:?80Tb@WM9SGbG9P?lZ3
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1634183856
+w1634193542
 8C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv
 FC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv
 !i122 6
-L0 1 82
+L0 1 88
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1634185083.000000
+Z6 !s108 1634193564.000000
 !s107 C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1|C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv|
 !i113 1
@@ -39,17 +39,17 @@ vcoffee_machine_tb
 R1
 R2
 !i10b 1
-!s100 LmgkNFHVNdF9ChZFC;ogA2
+!s100 59aABL:c94]3LY>XgfT`P0
 R3
-I<Q`O<l>c16Qj:@_ZB`kPP0
+IKFn:=>`na^I8S1ShT1kGJ3
 R4
 S1
 R0
-w1634184545
+w1634193450
 8C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv
 FC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv
-!i122 9
-L0 1 105
+!i122 11
+L0 1 96
 R5
 r1
 !s85 0
@@ -61,9 +61,35 @@ R6
 R7
 R8
 R9
+vcoin_500_counter_module
+R1
+R2
+!i10b 1
+!s100 WRJajZhf?2=?^`eUCUO`V2
+R3
+I:>?I2V]jz`S<Rf4;==je13
+R4
+S1
+R0
+w1634186179
+8C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_500_counter_module.sv
+FC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_500_counter_module.sv
+!i122 9
+Z10 L0 1 23
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_500_counter_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1|C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_500_counter_module.sv|
+!i113 1
+R7
+R8
+R9
 vcoin_comparator_module
 R1
-Z10 !s110 1634185082
+R2
 !i10b 1
 !s100 8eXhech2^7Q46BD=:5kXc0
 R3
@@ -80,7 +106,7 @@ R5
 r1
 !s85 0
 31
-Z11 !s108 1634185082.000000
+R6
 !s107 C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1|C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv|
 !i113 1
@@ -89,24 +115,24 @@ R8
 R9
 vcoin_counter_module
 R1
-R10
+Z11 !s110 1634193563
 !i10b 1
-!s100 l]4h8fQ39Dj3d^A?BXl>Y2
+!s100 NmQ;kl:;dg0]98Q8KCaZ[1
 R3
-IUG:1CFKCR0I1n^iGB?ZQF0
+IbNFG7H0J;P[ie6UHFjUW?2
 R4
 S1
 R0
-w1634182645
+w1634186058
 8C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv
 FC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv
 !i122 1
-L0 1 32
+L0 1 33
 R5
 r1
 !s85 0
 31
-R11
+Z12 !s108 1634193563.000000
 !s107 C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1|C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv|
 !i113 1
@@ -141,7 +167,7 @@ R8
 R9
 vfsm_module
 R1
-R10
+R11
 !i10b 1
 !s100 nCnZHbbA478:5BYY9`naX1
 R3
@@ -158,16 +184,42 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/fsm_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1|C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/fsm_module.sv|
 !i113 1
 R7
 R8
 R9
+vnew_clock_module
+R1
+R2
+!i10b 1
+!s100 =[cB>5:XekLGA<W3amgXo2
+R3
+I[;Ki_AWLIl<6onA;0@bd[2
+R4
+S1
+R0
+w1634191452
+8C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/new_clock_module.sv
+FC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/new_clock_module.sv
+!i122 10
+R10
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/new_clock_module.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1|C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/new_clock_module.sv|
+!i113 1
+R7
+R8
+R9
 vsubstractor_module
 R1
-R10
+R2
 !i10b 1
 !s100 hmZ78=`_=UXOeS@oY>^S_0
 R3
@@ -184,7 +236,7 @@ R5
 r1
 !s85 0
 31
-R11
+R12
 !s107 C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1|C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv|
 !i113 1
@@ -195,13 +247,13 @@ vtime_comparator_module
 R1
 R2
 !i10b 1
-!s100 [jYQYgYQ]klEVV2IO3]YX0
+!s100 c15^Th<^9?n_18MYGgaNB3
 R3
-IVS?lKWS4<lQIMQGOYNooW2
+IQNA8<OTB=eTKj7jP`X8Gh1
 R4
 S1
 R0
-w1634185023
+w1634192952
 8C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv
 FC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv
 !i122 5
@@ -219,15 +271,15 @@ R8
 R9
 vtime_per_coffee_module
 R1
-R10
+R2
 !i10b 1
-!s100 Cl233XKW7O>?gP3<aE5lE2
+!s100 IK2`;cjg2V_aX9O1X7zR]3
 R3
-IE9Pz9cg@^R_`B<g>2Y:GJ1
+IBlJDdUd?U3JPz3[2K_J^P2
 R4
 S1
 R0
-w1634183846
+w1634192963
 8C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv
 FC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv
 !i122 4
@@ -236,7 +288,7 @@ R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1|C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv|
 !i113 1
@@ -247,13 +299,13 @@ vtimer_module
 R1
 R2
 !i10b 1
-!s100 K>0j>foXK88J1:4TlhDcW0
+!s100 @QR@bQN^>X]7[2<AAfiKk2
 R3
-Ia@UB0YohJMa^EF[fOkX3:0
+Ika;d9HdJ;VATmNm?@HzmL1
 R4
 S1
 R0
-w1634164078
+w1634192862
 8C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/timer_module.sv
 FC:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/timer_module.sv
 !i122 7

@@ -31,8 +31,8 @@ module coffee_machine
 	logic coins_reset;
 	logic [3:0] change;
 	logic enable; 
-	logic [1:0] seconds;
-	logic [1:0] ingredient_time;
+	logic [2:0] seconds;
+	logic [2:0] ingredient_time;
 	logic comparator_result;
 	logic [2:0] state;
 	logic new_clock;
