@@ -27,16 +27,23 @@ module fsm_module
 	// next_state //
 	always_comb 
 		case(state)
+		
+			//Water(?) -> Coffee
 			3'b000: if (result) next_state = 3'b001; else next_state = 3'b000;
 			
+			//Coffee(?) -> Sugar
 			3'b001: if (result) next_state = 3'b010; else next_state = 3'b001;
 			
+			//Sugar(?) -> Milk
 			3'b010: if (result) next_state = 3'b011; else next_state = 3'b010;
 			
+			//Milk(?) -> Chocolate
 			3'b011: if (result) next_state = 3'b100; else next_state = 3'b011;
 			
+			//Chocolate(?) -> Finished
 			3'b100: if (result) next_state = 3'b101; else next_state = 3'b100;
 			
+			//Finished!
 			3'b101: next_state = 3'b101;
 			
 			default : next_state = 3'b000;

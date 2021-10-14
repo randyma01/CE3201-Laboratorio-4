@@ -3,259 +3,259 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : -11.355
-TNS   : -46.083
+Slack : -10.784
+TNS   : -45.968
 
 Type  : Slow 1100mV 85C Model Setup 'clock'
-Slack : -5.626
-TNS   : -125.201
+Slack : -5.579
+TNS   : -114.039
 
 Type  : Slow 1100mV 85C Model Setup 'coin_100'
-Slack : -0.369
-TNS   : -1.907
+Slack : -0.360
+TNS   : -1.339
 
 Type  : Slow 1100mV 85C Model Setup 'coin_500'
-Slack : -0.358
-TNS   : -1.538
-
-Type  : Slow 1100mV 85C Model Hold 'coin_500'
-Slack : 0.277
-TNS   : 0.000
+Slack : -0.351
+TNS   : -2.130
 
 Type  : Slow 1100mV 85C Model Hold 'coin_100'
-Slack : 0.284
+Slack : 0.225
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'coin_500'
+Slack : 0.276
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'clock'
-Slack : 0.465
+Slack : 0.378
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : 0.883
+Slack : 0.663
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Recovery 'coin_500'
-Slack : -7.327
-TNS   : -36.617
+Slack : -7.183
+TNS   : -50.265
 
 Type  : Slow 1100mV 85C Model Recovery 'coin_100'
-Slack : -6.873
-TNS   : -41.231
-
-Type  : Slow 1100mV 85C Model Removal 'coin_100'
-Slack : 0.729
-TNS   : 0.000
+Slack : -6.931
+TNS   : -34.647
 
 Type  : Slow 1100mV 85C Model Removal 'coin_500'
-Slack : 0.863
+Slack : 0.727
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'coin_100'
+Slack : 0.741
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.470
-TNS   : -25.760
+Slack : -0.394
+TNS   : -24.132
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'new_clock_module:NEW_CLOCK|temp_new_clock'
 Slack : -0.394
-TNS   : -5.192
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'coin_100'
-Slack : -0.394
-TNS   : -4.149
+TNS   : -5.637
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'coin_500'
 Slack : -0.394
-TNS   : -2.657
+TNS   : -4.706
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'coin_100'
+Slack : -0.394
+TNS   : -3.379
 
 Type  : Slow 1100mV 0C Model Setup 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : -11.220
-TNS   : -45.242
+Slack : -10.631
+TNS   : -45.236
 
 Type  : Slow 1100mV 0C Model Setup 'clock'
-Slack : -5.675
-TNS   : -123.509
+Slack : -5.654
+TNS   : -113.771
 
 Type  : Slow 1100mV 0C Model Setup 'coin_100'
-Slack : -0.359
-TNS   : -1.838
+Slack : -0.338
+TNS   : -1.245
 
 Type  : Slow 1100mV 0C Model Setup 'coin_500'
-Slack : -0.347
-TNS   : -1.484
-
-Type  : Slow 1100mV 0C Model Hold 'coin_500'
-Slack : 0.304
-TNS   : 0.000
+Slack : -0.325
+TNS   : -2.073
 
 Type  : Slow 1100mV 0C Model Hold 'coin_100'
-Slack : 0.309
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'coin_500'
+Slack : 0.310
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'clock'
-Slack : 0.455
+Slack : 0.379
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : 0.833
+Slack : 0.644
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Recovery 'coin_500'
-Slack : -7.019
-TNS   : -35.077
+Slack : -6.951
+TNS   : -48.638
 
 Type  : Slow 1100mV 0C Model Recovery 'coin_100'
-Slack : -6.668
-TNS   : -39.994
+Slack : -6.713
+TNS   : -33.548
 
 Type  : Slow 1100mV 0C Model Removal 'coin_100'
-Slack : 0.666
+Slack : 0.620
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Removal 'coin_500'
-Slack : 0.760
+Slack : 0.773
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.485
-TNS   : -28.073
+Slack : -0.398
+TNS   : -25.968
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'new_clock_module:NEW_CLOCK|temp_new_clock'
 Slack : -0.394
-TNS   : -5.131
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'coin_100'
-Slack : -0.394
-TNS   : -3.372
+TNS   : -5.473
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'coin_500'
 Slack : -0.394
-TNS   : -2.704
+TNS   : -3.893
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'coin_100'
+Slack : -0.394
+TNS   : -2.788
 
 Type  : Fast 1100mV 85C Model Setup 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : -6.612
-TNS   : -24.452
+Slack : -6.252
+TNS   : -24.453
 
 Type  : Fast 1100mV 85C Model Setup 'clock'
-Slack : -3.575
-TNS   : -55.503
-
-Type  : Fast 1100mV 85C Model Setup 'coin_100'
-Slack : 0.238
-TNS   : 0.000
+Slack : -3.344
+TNS   : -47.377
 
 Type  : Fast 1100mV 85C Model Setup 'coin_500'
-Slack : 0.273
+Slack : 0.244
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'coin_100'
+Slack : 0.255
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'coin_100'
+Slack : 0.141
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'coin_500'
 Slack : 0.156
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Hold 'coin_100'
-Slack : 0.159
-TNS   : 0.000
-
 Type  : Fast 1100mV 85C Model Hold 'clock'
-Slack : 0.257
+Slack : 0.200
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : 0.449
+Slack : 0.349
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Recovery 'coin_500'
-Slack : -3.791
-TNS   : -18.949
+Slack : -3.809
+TNS   : -26.656
 
 Type  : Fast 1100mV 85C Model Recovery 'coin_100'
-Slack : -3.715
-TNS   : -22.285
-
-Type  : Fast 1100mV 85C Model Removal 'coin_100'
-Slack : 0.470
-TNS   : 0.000
+Slack : -3.644
+TNS   : -18.215
 
 Type  : Fast 1100mV 85C Model Removal 'coin_500'
-Slack : 0.565
+Slack : 0.490
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'coin_100'
+Slack : 0.493
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
-Slack : -0.506
-TNS   : -4.845
+Slack : -0.393
+TNS   : -4.389
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'coin_100'
-Slack : -0.320
-TNS   : -2.110
+Slack : -0.318
+TNS   : -1.784
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'coin_500'
-Slack : -0.296
-TNS   : -1.643
+Slack : -0.306
+TNS   : -2.303
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : 0.030
-TNS   : 0.000
+Slack : -0.033
+TNS   : -0.033
 
 Type  : Fast 1100mV 0C Model Setup 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : -6.307
-TNS   : -22.914
+Slack : -5.979
+TNS   : -22.963
 
 Type  : Fast 1100mV 0C Model Setup 'clock'
-Slack : -3.009
-TNS   : -47.929
+Slack : -3.016
+TNS   : -41.219
+
+Type  : Fast 1100mV 0C Model Setup 'coin_500'
+Slack : 0.287
+TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Setup 'coin_100'
 Slack : 0.308
 TNS   : 0.000
 
-Type  : Fast 1100mV 0C Model Setup 'coin_500'
-Slack : 0.310
+Type  : Fast 1100mV 0C Model Hold 'coin_100'
+Slack : 0.151
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'coin_500'
-Slack : 0.161
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'coin_100'
-Slack : 0.171
+Slack : 0.164
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'clock'
-Slack : 0.237
+Slack : 0.189
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : 0.393
+Slack : 0.314
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Recovery 'coin_500'
-Slack : -3.437
-TNS   : -17.179
+Slack : -3.443
+TNS   : -24.099
 
 Type  : Fast 1100mV 0C Model Recovery 'coin_100'
-Slack : -3.301
-TNS   : -19.806
+Slack : -3.270
+TNS   : -16.349
 
 Type  : Fast 1100mV 0C Model Removal 'coin_100'
-Slack : 0.268
+Slack : 0.278
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Removal 'coin_500'
-Slack : 0.413
+Slack : 0.371
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
-Slack : -0.502
-TNS   : -4.757
+Slack : -0.400
+TNS   : -4.325
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'coin_100'
-Slack : -0.315
-TNS   : -2.063
+Slack : -0.313
+TNS   : -1.733
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'coin_500'
-Slack : -0.299
-TNS   : -1.655
+Slack : -0.310
+TNS   : -2.323
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'new_clock_module:NEW_CLOCK|temp_new_clock'
-Slack : 0.061
+Slack : 0.016
 TNS   : 0.000
 
 ------------------------------------------------------------

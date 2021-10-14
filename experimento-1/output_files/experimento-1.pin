@@ -933,8 +933,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W15       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : W16       :        :                   :         : 4A        :                
 finished                     : W17       : output : 2.5 V             :         : 4A        : Y              
 GND                          : W18       : gnd    :                   :         :           :                
-sugar                        : W19       : output : 2.5 V             :         : 4A        : Y              
-milk                         : W20       : output : 2.5 V             :         : 5A        : Y              
+chocolate                    : W19       : output : 2.5 V             :         : 4A        : Y              
+sugar                        : W20       : output : 2.5 V             :         : 5A        : Y              
 coffee                       : W21       : output : 2.5 V             :         : 5A        : Y              
 zero4_display[3]             : W22       : output : 2.5 V             :         : 5A        : Y              
 VCCIO5A                      : W23       : power  :                   : 2.5V    : 5A        :                
@@ -963,7 +963,7 @@ GND                          : Y15       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y16       :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y17       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : Y18       :        :                   :         : 4A        :                
-chocolate                    : Y19       : output : 2.5 V             :         : 4A        : Y              
+milk                         : Y19       : output : 2.5 V             :         : 4A        : Y              
 GND                          : Y20       : gnd    :                   :         :           :                
 water                        : Y21       : output : 2.5 V             :         : 5A        : Y              
 VCCA_FPLL                    : Y22       : power  :                   : 2.5V    :           :                

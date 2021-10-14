@@ -85,9 +85,9 @@ set_location_assignment PIN_AF9 -to coffee_type[2]
 set_location_assignment PIN_AF14 -to clock
 set_location_assignment PIN_Y21 -to water
 set_location_assignment PIN_W21 -to coffee
-set_location_assignment PIN_W20 -to milk
-set_location_assignment PIN_Y19 -to chocolate
-set_location_assignment PIN_W19 -to sugar
+set_location_assignment PIN_Y19 -to milk
+set_location_assignment PIN_W19 -to chocolate
+set_location_assignment PIN_W20 -to sugar
 set_location_assignment PIN_W17 -to finished
 set_location_assignment PIN_AA14 -to coin_100
 set_location_assignment PIN_AC9 -to confirm

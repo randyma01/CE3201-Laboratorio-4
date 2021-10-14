@@ -1,5 +1,5 @@
 Fitter report for experimento-1
-Thu Oct 14 00:54:14 2021
+Thu Oct 14 11:06:45 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Thu Oct 14 00:54:14 2021       ;
+; Fitter Status                   ; Successful - Thu Oct 14 11:06:45 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; experimento-1                               ;
 ; Top-level Entity Name           ; coffee_machine                              ;
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; 66 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 69                                          ;
+; Total registers                 ; 67                                          ;
 ; Total pins                      ; 56 / 457 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
@@ -159,7 +159,7 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.4%      ;
-;     Processor 3            ;   0.3%      ;
+;     Processor 3            ;   0.4%      ;
 ;     Processor 4            ;   0.3%      ;
 ;     Processor 5            ;   0.3%      ;
 ;     Processor 6            ;   0.3%      ;
@@ -175,24 +175,22 @@ https://fpgasoftware.intel.com/eula.
 ; coin_100~inputCLKENA0                           ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                           ;                  ;                       ;
 ; coin_500~inputCLKENA0                           ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                           ;                  ;                       ;
 ; coin_500_counter_module:COIN_5COUNTER|number[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; coin_500_counter_module:COIN_5COUNTER|number[0]~DUPLICATE ;                  ;                       ;
+; coin_500_counter_module:COIN_5COUNTER|number[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; coin_500_counter_module:COIN_5COUNTER|number[1]~DUPLICATE ;                  ;                       ;
+; coin_500_counter_module:COIN_5COUNTER|number[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; coin_500_counter_module:COIN_5COUNTER|number[2]~DUPLICATE ;                  ;                       ;
 ; coin_counter_module:COIN_COUNTER|number[0]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; coin_counter_module:COIN_COUNTER|number[0]~DUPLICATE      ;                  ;                       ;
-; coin_counter_module:COIN_COUNTER|number[1]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; coin_counter_module:COIN_COUNTER|number[1]~DUPLICATE      ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[0]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[0]~DUPLICATE             ;                  ;                       ;
 ; new_clock_module:NEW_CLOCK|count[1]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[1]~DUPLICATE             ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[2]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[2]~DUPLICATE             ;                  ;                       ;
+; new_clock_module:NEW_CLOCK|count[3]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[3]~DUPLICATE             ;                  ;                       ;
 ; new_clock_module:NEW_CLOCK|count[4]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[4]~DUPLICATE             ;                  ;                       ;
+; new_clock_module:NEW_CLOCK|count[5]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[5]~DUPLICATE             ;                  ;                       ;
+; new_clock_module:NEW_CLOCK|count[6]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[6]~DUPLICATE             ;                  ;                       ;
+; new_clock_module:NEW_CLOCK|count[7]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[7]~DUPLICATE             ;                  ;                       ;
+; new_clock_module:NEW_CLOCK|count[8]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[8]~DUPLICATE             ;                  ;                       ;
 ; new_clock_module:NEW_CLOCK|count[9]             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[9]~DUPLICATE             ;                  ;                       ;
 ; new_clock_module:NEW_CLOCK|count[11]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[11]~DUPLICATE            ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[12]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[12]~DUPLICATE            ;                  ;                       ;
 ; new_clock_module:NEW_CLOCK|count[13]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[13]~DUPLICATE            ;                  ;                       ;
 ; new_clock_module:NEW_CLOCK|count[14]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[14]~DUPLICATE            ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[17]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[17]~DUPLICATE            ;                  ;                       ;
+; new_clock_module:NEW_CLOCK|count[18]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[18]~DUPLICATE            ;                  ;                       ;
 ; new_clock_module:NEW_CLOCK|count[19]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[19]~DUPLICATE            ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[20]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[20]~DUPLICATE            ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[23]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[23]~DUPLICATE            ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[25]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[25]~DUPLICATE            ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[28]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[28]~DUPLICATE            ;                  ;                       ;
-; new_clock_module:NEW_CLOCK|count[31]            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; new_clock_module:NEW_CLOCK|count[31]~DUPLICATE            ;                  ;                       ;
 +-------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+-----------------------------------------------------------+------------------+-----------------------+
 
 
@@ -244,12 +242,12 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 66 / 32,070        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 66                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 67 / 32,070        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 22                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 42                 ;       ;
-;         [c] ALMs used for registers                         ; 3                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 70 / 32,070        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 20                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 44                 ;       ;
+;         [c] ALMs used for registers                         ; 6                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -258,25 +256,25 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 11 / 3,207         ; < 1 % ;
-;     -- Logic LABs                                           ; 11                 ;       ;
+; Total LABs:  partially or completely used                   ; 9 / 3,207          ; < 1 % ;
+;     -- Logic LABs                                           ; 9                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 107                ;       ;
 ;     -- 7 input functions                                    ; 1                  ;       ;
 ;     -- 6 input functions                                    ; 24                 ;       ;
 ;     -- 5 input functions                                    ; 4                  ;       ;
-;     -- 4 input functions                                    ; 22                 ;       ;
-;     -- <=3 input functions                                  ; 56                 ;       ;
-; Combinational ALUT usage for route-throughs                 ; 1                  ;       ;
+;     -- 4 input functions                                    ; 21                 ;       ;
+;     -- <=3 input functions                                  ; 57                 ;       ;
+; Combinational ALUT usage for route-throughs                 ; 2                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 69                 ;       ;
+; Dedicated logic registers                                   ; 67                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 50 / 64,140        ; < 1 % ;
-;         -- Secondary logic registers                        ; 19 / 64,140        ; < 1 % ;
+;         -- Secondary logic registers                        ; 17 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 50                 ;       ;
-;         -- Routing optimization registers                   ; 19                 ;       ;
+;         -- Routing optimization registers                   ; 17                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 56 / 457           ; 12 %  ;
@@ -332,11 +330,11 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.9% / 0.9% / 0.8% ;       ;
-; Maximum fan-out                                             ; 48                 ;       ;
-; Highest non-global fan-out                                  ; 48                 ;       ;
-; Total fan-out                                               ; 660                ;       ;
-; Average fan-out                                             ; 2.26               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.6% / 1.7% / 1.1% ;       ;
+; Maximum fan-out                                             ; 46                 ;       ;
+; Highest non-global fan-out                                  ; 46                 ;       ;
+; Total fan-out                                               ; 655                ;       ;
+; Average fan-out                                             ; 2.25               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -347,12 +345,12 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 66 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 66                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 67 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 22                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 42                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 3                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 70 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 20                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 44                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 6                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -361,17 +359,17 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 11 / 3207 ( < 1 % )  ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 11                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 9 / 3207 ( < 1 % )   ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 9                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Combinational ALUT usage for logic                          ; 107                  ; 0                              ;
 ;     -- 7 input functions                                    ; 1                    ; 0                              ;
 ;     -- 6 input functions                                    ; 24                   ; 0                              ;
 ;     -- 5 input functions                                    ; 4                    ; 0                              ;
-;     -- 4 input functions                                    ; 22                   ; 0                              ;
-;     -- <=3 input functions                                  ; 56                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 1                    ; 0                              ;
+;     -- 4 input functions                                    ; 21                   ; 0                              ;
+;     -- <=3 input functions                                  ; 57                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 2                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
@@ -379,10 +377,10 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
 ;         -- Primary logic registers                          ; 50 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 19 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 17 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
 ;         -- Design implementation registers                  ; 50                   ; 0                              ;
-;         -- Routing optimization registers                   ; 19                   ; 0                              ;
+;         -- Routing optimization registers                   ; 17                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
 ; Virtual pins                                                ; 0                    ; 0                              ;
@@ -399,7 +397,7 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 660                  ; 0                              ;
+;     -- Total Connections                                    ; 655                  ; 0                              ;
 ;     -- Registered Connections                               ; 133                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -432,12 +430,12 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clock          ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 49                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clock          ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 46                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; coffee_type[0] ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 13                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; coffee_type[1] ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 14                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; coffee_type[2] ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 14                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; coin_100       ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 6                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; coin_500       ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 5                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; coin_100       ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 5                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; coin_500       ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 7                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; confirm        ; AC9   ; 3A       ; 4            ; 0            ; 0            ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; reset          ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
@@ -455,11 +453,11 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 ; change_display[4]      ; AD30  ; 5B       ; 89           ; 25           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; change_display[5]      ; AC29  ; 5B       ; 89           ; 20           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; change_display[6]      ; AC30  ; 5B       ; 89           ; 25           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; chocolate              ; Y19   ; 4A       ; 84           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; chocolate              ; W19   ; 4A       ; 80           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; coffee                 ; W21   ; 5A       ; 89           ; 8            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; finished               ; W17   ; 4A       ; 60           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; milk                   ; W20   ; 5A       ; 89           ; 6            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; sugar                  ; W19   ; 4A       ; 80           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; milk                   ; Y19   ; 4A       ; 84           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
+; sugar                  ; W20   ; 5A       ; 89           ; 6            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; total_coins_display[0] ; V25   ; 5B       ; 89           ; 20           ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; total_coins_display[1] ; AA28  ; 5B       ; 89           ; 21           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; total_coins_display[2] ; Y27   ; 5B       ; 89           ; 25           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -1380,8 +1378,8 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 ; W16      ; 136        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W17      ; 152        ; 4A             ; finished                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; W18      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; W19      ; 192        ; 4A             ; sugar                           ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; W20      ; 217        ; 5A             ; milk                            ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
+; W19      ; 192        ; 4A             ; chocolate                       ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; W20      ; 217        ; 5A             ; sugar                           ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; W21      ; 221        ; 5A             ; coffee                          ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; W22      ; 223        ; 5A             ; zero4_display[3]                ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; W23      ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1410,7 +1408,7 @@ The pin-out file can be found in C:/Users/kevin/Documents/TDD_Projects/Git/CE320
 ; Y16      ; 128        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y17      ; 170        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y18      ; 178        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; Y19      ; 202        ; 4A             ; chocolate                       ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
+; Y19      ; 202        ; 4A             ; milk                            ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; Y20      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y21      ; 219        ; 5A             ; water                           ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; Y22      ;            ; --             ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1495,17 +1493,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                   ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name             ; Library Name ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
-; |coffee_machine                              ; 65.5 (2.8)           ; 67.0 (2.8)                       ; 1.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 107 (6)             ; 69 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 56   ; 0            ; |coffee_machine                                         ; coffee_machine          ; work         ;
-;    |coin_500_counter_module:COIN_5COUNTER|   ; 2.3 (2.3)            ; 2.4 (2.4)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|coin_500_counter_module:COIN_5COUNTER   ; coin_500_counter_module ; work         ;
-;    |coin_counter_module:COIN_COUNTER|        ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|coin_counter_module:COIN_COUNTER        ; coin_counter_module     ; work         ;
+; |coffee_machine                              ; 65.5 (2.8)           ; 69.0 (2.8)                       ; 3.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 107 (6)             ; 67 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 56   ; 0            ; |coffee_machine                                         ; coffee_machine          ; work         ;
+;    |coin_500_counter_module:COIN_5COUNTER|   ; 2.0 (2.0)            ; 2.5 (2.5)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|coin_500_counter_module:COIN_5COUNTER   ; coin_500_counter_module ; work         ;
+;    |coin_counter_module:COIN_COUNTER|        ; 2.0 (2.0)            ; 2.0 (2.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|coin_counter_module:COIN_COUNTER        ; coin_counter_module     ; work         ;
 ;    |coin_display_module:CHANGE_DISPLAY|      ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:CHANGE_DISPLAY      ; coin_display_module     ; work         ;
 ;    |coin_display_module:COINS_DISPLAY|       ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:COINS_DISPLAY       ; coin_display_module     ; work         ;
-;    |fsm_module:FSM|                          ; 2.8 (2.8)            ; 3.8 (3.8)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|fsm_module:FSM                          ; fsm_module              ; work         ;
-;    |new_clock_module:NEW_CLOCK|              ; 23.5 (23.5)          ; 24.0 (24.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 49 (49)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|new_clock_module:NEW_CLOCK              ; new_clock_module        ; work         ;
-;    |substractor_module:COFEE_SELECTOR|       ; 16.8 (16.8)          ; 16.8 (16.8)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 24 (24)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|substractor_module:COFEE_SELECTOR       ; substractor_module      ; work         ;
-;    |time_comparator_module:TIMER_COMPARATOR| ; 1.3 (1.3)            ; 1.7 (1.7)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|time_comparator_module:TIMER_COMPARATOR ; time_comparator_module  ; work         ;
+;    |fsm_module:FSM|                          ; 2.8 (2.8)            ; 4.5 (4.5)                        ; 1.7 (1.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|fsm_module:FSM                          ; fsm_module              ; work         ;
+;    |new_clock_module:NEW_CLOCK|              ; 23.5 (23.5)          ; 25.5 (25.5)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 41 (41)             ; 46 (46)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|new_clock_module:NEW_CLOCK              ; new_clock_module        ; work         ;
+;    |substractor_module:COFEE_SELECTOR|       ; 17.6 (17.6)          ; 17.6 (17.6)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 24 (24)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|substractor_module:COFEE_SELECTOR       ; substractor_module      ; work         ;
+;    |time_comparator_module:TIMER_COMPARATOR| ; 1.7 (1.7)            ; 1.7 (1.7)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (2)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|time_comparator_module:TIMER_COMPARATOR ; time_comparator_module  ; work         ;
 ;    |time_per_coffee_module:COFFEE_TIMER|     ; 2.5 (2.5)            ; 2.5 (2.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|time_per_coffee_module:COFFEE_TIMER     ; time_per_coffee_module  ; work         ;
-;    |timer_module:GENERAL_TIMER|              ; 3.0 (3.0)            ; 4.0 (4.0)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|timer_module:GENERAL_TIMER              ; timer_module            ; work         ;
+;    |timer_module:GENERAL_TIMER|              ; 3.0 (3.0)            ; 3.0 (3.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |coffee_machine|timer_module:GENERAL_TIMER              ; timer_module            ; work         ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1563,14 +1561,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; milk                   ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; chocolate              ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; finished               ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; coffee_type[2]         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; coffee_type[2]         ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; coffee_type[0]         ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; coffee_type[1]         ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; coffee_type[1]         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; confirm                ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; reset                  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; reset                  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; coin_500               ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; coin_100               ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; clock                  ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; clock                  ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +------------------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1580,20 +1578,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                             ; Pad To Core Index ; Setting ;
 +-----------------------------------------------------------------+-------------------+---------+
 ; coffee_type[2]                                                  ;                   ;         ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~2            ; 0                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~3            ; 0                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[0]~4            ; 0                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~6            ; 0                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~7            ; 0                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[2]~9            ; 0                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~13           ; 0                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|enable~1               ; 0                 ; 0       ;
-;      - time_per_coffee_module:COFFEE_TIMER|ingredient_time[2]~1 ; 0                 ; 0       ;
-;      - time_per_coffee_module:COFFEE_TIMER|Mux0~1               ; 0                 ; 0       ;
-;      - time_comparator_module:TIMER_COMPARATOR|LessThan0~1      ; 0                 ; 0       ;
-;      - time_per_coffee_module:COFFEE_TIMER|Mux0~2               ; 0                 ; 0       ;
-;      - timer_module:GENERAL_TIMER|seconds[1]~1                  ; 0                 ; 0       ;
-;      - timer_module:GENERAL_TIMER|seconds[0]~2                  ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~2            ; 1                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~3            ; 1                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[0]~4            ; 1                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~6            ; 1                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~7            ; 1                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[2]~9            ; 1                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~13           ; 1                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|enable~1               ; 1                 ; 0       ;
+;      - time_per_coffee_module:COFFEE_TIMER|ingredient_time[2]~1 ; 1                 ; 0       ;
+;      - time_per_coffee_module:COFFEE_TIMER|Mux0~1               ; 1                 ; 0       ;
+;      - time_comparator_module:TIMER_COMPARATOR|LessThan0~1      ; 1                 ; 0       ;
+;      - time_per_coffee_module:COFFEE_TIMER|Mux0~2               ; 1                 ; 0       ;
+;      - timer_module:GENERAL_TIMER|seconds[1]~1                  ; 1                 ; 0       ;
+;      - timer_module:GENERAL_TIMER|seconds[0]~2                  ; 1                 ; 0       ;
 ; coffee_type[0]                                                  ;                   ;         ;
 ;      - substractor_module:COFEE_SELECTOR|enable~0               ; 1                 ; 0       ;
 ;      - substractor_module:COFEE_SELECTOR|change[1]~0            ; 1                 ; 0       ;
@@ -1609,20 +1607,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - time_comparator_module:TIMER_COMPARATOR|LessThan0~1      ; 1                 ; 0       ;
 ;      - time_per_coffee_module:COFFEE_TIMER|Mux0~2               ; 1                 ; 0       ;
 ; coffee_type[1]                                                  ;                   ;         ;
-;      - substractor_module:COFEE_SELECTOR|enable~0               ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~0            ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~1            ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~3            ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[0]~4            ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~6            ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~7            ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~10           ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~11           ; 1                 ; 0       ;
-;      - substractor_module:COFEE_SELECTOR|change[1]~12           ; 1                 ; 0       ;
-;      - time_per_coffee_module:COFFEE_TIMER|ingredient_time[2]~1 ; 1                 ; 0       ;
-;      - time_per_coffee_module:COFFEE_TIMER|Mux0~1               ; 1                 ; 0       ;
-;      - time_comparator_module:TIMER_COMPARATOR|LessThan0~1      ; 1                 ; 0       ;
-;      - time_per_coffee_module:COFFEE_TIMER|Mux0~2               ; 1                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|enable~0               ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~0            ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~1            ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~3            ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[0]~4            ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~6            ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~7            ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~10           ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~11           ; 0                 ; 0       ;
+;      - substractor_module:COFEE_SELECTOR|change[1]~12           ; 0                 ; 0       ;
+;      - time_per_coffee_module:COFFEE_TIMER|ingredient_time[2]~1 ; 0                 ; 0       ;
+;      - time_per_coffee_module:COFFEE_TIMER|Mux0~1               ; 0                 ; 0       ;
+;      - time_comparator_module:TIMER_COMPARATOR|LessThan0~1      ; 0                 ; 0       ;
+;      - time_per_coffee_module:COFFEE_TIMER|Mux0~2               ; 0                 ; 0       ;
 ; confirm                                                         ;                   ;         ;
 ;      - substractor_module:COFEE_SELECTOR|change[1]~3            ; 0                 ; 0       ;
 ;      - substractor_module:COFEE_SELECTOR|change[0]~4            ; 0                 ; 0       ;
@@ -1631,22 +1629,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - timer_module:GENERAL_TIMER|seconds[1]~1                  ; 0                 ; 0       ;
 ;      - timer_module:GENERAL_TIMER|seconds[0]~2                  ; 0                 ; 0       ;
 ; reset                                                           ;                   ;         ;
-;      - fsm_module:FSM|state.000                                 ; 1                 ; 0       ;
-;      - fsm_module:FSM|state.001                                 ; 1                 ; 0       ;
-;      - fsm_module:FSM|state.010                                 ; 1                 ; 0       ;
-;      - fsm_module:FSM|state.011                                 ; 1                 ; 0       ;
-;      - fsm_module:FSM|state.100                                 ; 1                 ; 0       ;
-;      - fsm_module:FSM|state.101                                 ; 1                 ; 0       ;
-;      - timer_module:GENERAL_TIMER|seconds[2]                    ; 1                 ; 0       ;
-;      - timer_module:GENERAL_TIMER|seconds[1]                    ; 1                 ; 0       ;
-;      - timer_module:GENERAL_TIMER|seconds[0]                    ; 1                 ; 0       ;
-;      - comb~0                                                   ; 1                 ; 0       ;
+;      - fsm_module:FSM|state.000                                 ; 0                 ; 0       ;
+;      - fsm_module:FSM|state.001                                 ; 0                 ; 0       ;
+;      - fsm_module:FSM|state.010                                 ; 0                 ; 0       ;
+;      - fsm_module:FSM|state.011                                 ; 0                 ; 0       ;
+;      - fsm_module:FSM|state.100                                 ; 0                 ; 0       ;
+;      - fsm_module:FSM|state.101                                 ; 0                 ; 0       ;
+;      - timer_module:GENERAL_TIMER|seconds[2]                    ; 0                 ; 0       ;
+;      - timer_module:GENERAL_TIMER|seconds[1]                    ; 0                 ; 0       ;
+;      - timer_module:GENERAL_TIMER|seconds[0]                    ; 0                 ; 0       ;
+;      - comb~0                                                   ; 0                 ; 0       ;
 ; coin_500                                                        ;                   ;         ;
 ;      - coin_500~inputCLKENA0                                    ; 0                 ; 0       ;
 ; coin_100                                                        ;                   ;         ;
 ;      - coin_100~inputCLKENA0                                    ; 0                 ; 0       ;
 ; clock                                                           ;                   ;         ;
-;      - new_clock_module:NEW_CLOCK|temp_new_clock                ; 0                 ; 0       ;
+;      - new_clock_module:NEW_CLOCK|temp_new_clock                ; 1                 ; 0       ;
 +-----------------------------------------------------------------+-------------------+---------+
 
 
@@ -1656,14 +1654,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; clock                                               ; PIN_AF14            ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clock                                               ; PIN_AF14            ; 48      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; coin_100                                            ; PIN_AA14            ; 6       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; coin_500                                            ; PIN_AA15            ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; comb~0                                              ; LABCELL_X74_Y12_N18 ; 11      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; new_clock_module:NEW_CLOCK|Equal0~6                 ; LABCELL_X81_Y6_N42  ; 48      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; new_clock_module:NEW_CLOCK|temp_new_clock           ; FF_X79_Y10_N2       ; 10      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clock                                               ; PIN_AF14            ; 45      ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; coin_100                                            ; PIN_AA14            ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; coin_500                                            ; PIN_AA15            ; 7       ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; comb~0                                              ; LABCELL_X51_Y2_N54  ; 12      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; new_clock_module:NEW_CLOCK|Equal0~6                 ; LABCELL_X46_Y6_N30  ; 46      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; new_clock_module:NEW_CLOCK|temp_new_clock           ; FF_X46_Y6_N53       ; 10      ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; reset                                               ; PIN_AE12            ; 10      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; time_comparator_module:TIMER_COMPARATOR|LessThan0~2 ; LABCELL_X75_Y12_N57 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; time_comparator_module:TIMER_COMPARATOR|LessThan0~2 ; MLABCELL_X52_Y2_N57 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1672,9 +1670,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------+----------+---------+----------------------+------------------+---------------------------+
 ; Name     ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
-; clock    ; PIN_AF14 ; 48      ; Global Clock         ; GCLK6            ; --                        ;
-; coin_100 ; PIN_AA14 ; 6       ; Global Clock         ; GCLK5            ; --                        ;
-; coin_500 ; PIN_AA15 ; 5       ; Global Clock         ; GCLK7            ; --                        ;
+; clock    ; PIN_AF14 ; 45      ; Global Clock         ; GCLK6            ; --                        ;
+; coin_100 ; PIN_AA14 ; 5       ; Global Clock         ; GCLK5            ; --                        ;
+; coin_500 ; PIN_AA15 ; 7       ; Global Clock         ; GCLK4            ; --                        ;
 +----------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1683,14 +1681,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 165 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 14 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 45 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 51 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 155 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 15 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 39 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 54 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 46 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 43 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 3 / 16 ( 19 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1746,12 +1744,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 55 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 67 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
 ; R14 interconnects                           ; 52 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 58 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 68 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 91 / 266,960 ( < 1 % )  ;
+; R14/C12 interconnect drivers                ; 57 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 62 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 121 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 3 / 360 ( < 1 % )       ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1923,79 +1921,79 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------+-----------------------------------------------------------------+-------------------+
 ; Source Clock(s)                           ; Destination Clock(s)                                            ; Delay Added in ns ;
 +-------------------------------------------+-----------------------------------------------------------------+-------------------+
-; clock                                     ; clock                                                           ; 8.8               ;
-; new_clock_module:NEW_CLOCK|temp_new_clock ; new_clock_module:NEW_CLOCK|temp_new_clock                       ; 4.9               ;
-; coin_100                                  ; coin_100,coin_500,new_clock_module:NEW_CLOCK|temp_new_clock,I/O ; 4.5               ;
+; clock                                     ; clock                                                           ; 6.5               ;
+; new_clock_module:NEW_CLOCK|temp_new_clock ; new_clock_module:NEW_CLOCK|temp_new_clock                       ; 5.6               ;
+; coin_100                                  ; coin_100,coin_500,new_clock_module:NEW_CLOCK|temp_new_clock,I/O ; 4.1               ;
 ; coin_500                                  ; coin_100,coin_500,new_clock_module:NEW_CLOCK|temp_new_clock,I/O ; 3.9               ;
-; coin_100,coin_500                         ; coin_100,coin_500                                               ; 3.0               ;
+; coin_100                                  ; coin_100                                                        ; 2.0               ;
+; coin_100,coin_500                         ; coin_100,coin_500                                               ; 1.9               ;
 ; coin_500                                  ; coin_500                                                        ; 1.9               ;
-; coin_100                                  ; coin_100                                                        ; 1.9               ;
-; coin_100,coin_500,I/O                     ; coin_100                                                        ; 1.0               ;
+; coin_100,coin_500,I/O                     ; coin_500                                                        ; 1.0               ;
 +-------------------------------------------+-----------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                    ;
-+-------------------------------------------------+--------------------------------------------+-------------------+
-; Source Register                                 ; Destination Register                       ; Delay Added in ns ;
-+-------------------------------------------------+--------------------------------------------+-------------------+
-; new_clock_module:NEW_CLOCK|temp_new_clock       ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 6.135             ;
-; coin_counter_module:COIN_COUNTER|number[3]      ; coin_counter_module:COIN_COUNTER|number[0] ; 3.383             ;
-; coin_counter_module:COIN_COUNTER|number[2]      ; coin_counter_module:COIN_COUNTER|number[0] ; 3.342             ;
-; coin_counter_module:COIN_COUNTER|number[1]      ; coin_counter_module:COIN_COUNTER|number[0] ; 3.245             ;
-; coin_500_counter_module:COIN_5COUNTER|number[3] ; coin_counter_module:COIN_COUNTER|number[0] ; 3.148             ;
-; coin_500_counter_module:COIN_5COUNTER|number[2] ; coin_counter_module:COIN_COUNTER|number[0] ; 3.145             ;
-; coin_500_counter_module:COIN_5COUNTER|number[1] ; coin_counter_module:COIN_COUNTER|number[0] ; 3.046             ;
-; coin_counter_module:COIN_COUNTER|number[0]      ; coin_counter_module:COIN_COUNTER|number[0] ; 2.915             ;
-; coin_500_counter_module:COIN_5COUNTER|number[0] ; coin_counter_module:COIN_COUNTER|number[0] ; 2.913             ;
-; new_clock_module:NEW_CLOCK|count[30]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.723             ;
-; new_clock_module:NEW_CLOCK|count[31]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.689             ;
-; new_clock_module:NEW_CLOCK|count[22]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.530             ;
-; new_clock_module:NEW_CLOCK|count[28]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[27]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[26]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[25]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[24]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[23]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[21]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[20]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[19]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[18]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[16]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[15]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[14]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[13]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[12]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[11]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[10]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[9]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[8]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[7]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[6]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[5]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[4]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[3]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[2]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[1]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[0]             ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[29]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; new_clock_module:NEW_CLOCK|count[17]            ; new_clock_module:NEW_CLOCK|temp_new_clock  ; 2.494             ;
-; reset                                           ; coin_counter_module:COIN_COUNTER|number[0] ; 1.024             ;
-; fsm_module:FSM|state.000                        ; fsm_module:FSM|state.001                   ; 0.925             ;
-; fsm_module:FSM|state.011                        ; fsm_module:FSM|state.100                   ; 0.591             ;
-; fsm_module:FSM|state.001                        ; fsm_module:FSM|state.010                   ; 0.572             ;
-; fsm_module:FSM|state.010                        ; fsm_module:FSM|state.011                   ; 0.572             ;
-; timer_module:GENERAL_TIMER|seconds[2]           ; fsm_module:FSM|state.000                   ; 0.547             ;
-; timer_module:GENERAL_TIMER|seconds[1]           ; fsm_module:FSM|state.101                   ; 0.393             ;
-; timer_module:GENERAL_TIMER|seconds[0]           ; fsm_module:FSM|state.101                   ; 0.393             ;
-; fsm_module:FSM|state.101                        ; fsm_module:FSM|state.101                   ; 0.393             ;
-; fsm_module:FSM|state.100                        ; fsm_module:FSM|state.101                   ; 0.393             ;
-; coffee_type[2]                                  ; fsm_module:FSM|state.101                   ; 0.393             ;
-; coffee_type[0]                                  ; fsm_module:FSM|state.101                   ; 0.393             ;
-; coffee_type[1]                                  ; fsm_module:FSM|state.101                   ; 0.393             ;
-+-------------------------------------------------+--------------------------------------------+-------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                         ;
++-------------------------------------------------+-------------------------------------------------+-------------------+
+; Source Register                                 ; Destination Register                            ; Delay Added in ns ;
++-------------------------------------------------+-------------------------------------------------+-------------------+
+; new_clock_module:NEW_CLOCK|temp_new_clock       ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 5.415             ;
+; coin_counter_module:COIN_COUNTER|number[3]      ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 3.327             ;
+; coin_counter_module:COIN_COUNTER|number[2]      ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 3.290             ;
+; coin_500_counter_module:COIN_5COUNTER|number[2] ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 3.181             ;
+; coin_500_counter_module:COIN_5COUNTER|number[3] ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 3.122             ;
+; coin_500_counter_module:COIN_5COUNTER|number[1] ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 2.975             ;
+; coin_counter_module:COIN_COUNTER|number[1]      ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 2.924             ;
+; coin_500_counter_module:COIN_5COUNTER|number[0] ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 2.895             ;
+; coin_counter_module:COIN_COUNTER|number[0]      ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 2.852             ;
+; new_clock_module:NEW_CLOCK|count[13]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.351             ;
+; new_clock_module:NEW_CLOCK|count[10]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.350             ;
+; new_clock_module:NEW_CLOCK|count[8]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.343             ;
+; new_clock_module:NEW_CLOCK|count[12]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.322             ;
+; new_clock_module:NEW_CLOCK|count[1]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.284             ;
+; new_clock_module:NEW_CLOCK|count[17]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.281             ;
+; new_clock_module:NEW_CLOCK|count[0]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.275             ;
+; new_clock_module:NEW_CLOCK|count[30]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.273             ;
+; new_clock_module:NEW_CLOCK|count[31]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.273             ;
+; new_clock_module:NEW_CLOCK|count[14]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.273             ;
+; new_clock_module:NEW_CLOCK|count[11]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.273             ;
+; new_clock_module:NEW_CLOCK|count[26]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.267             ;
+; new_clock_module:NEW_CLOCK|count[9]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.267             ;
+; new_clock_module:NEW_CLOCK|count[7]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.267             ;
+; new_clock_module:NEW_CLOCK|count[6]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.267             ;
+; new_clock_module:NEW_CLOCK|count[18]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.256             ;
+; new_clock_module:NEW_CLOCK|count[16]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.245             ;
+; new_clock_module:NEW_CLOCK|count[15]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.245             ;
+; new_clock_module:NEW_CLOCK|count[4]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.245             ;
+; new_clock_module:NEW_CLOCK|count[3]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.245             ;
+; new_clock_module:NEW_CLOCK|count[2]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.245             ;
+; new_clock_module:NEW_CLOCK|count[28]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[27]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[25]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[24]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[23]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[22]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[21]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[20]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[19]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[5]             ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; new_clock_module:NEW_CLOCK|count[29]            ; new_clock_module:NEW_CLOCK|temp_new_clock       ; 2.231             ;
+; reset                                           ; coin_500_counter_module:COIN_5COUNTER|number[0] ; 1.042             ;
+; fsm_module:FSM|state.000                        ; fsm_module:FSM|state.001                        ; 0.911             ;
+; fsm_module:FSM|state.001                        ; fsm_module:FSM|state.010                        ; 0.730             ;
+; fsm_module:FSM|state.011                        ; fsm_module:FSM|state.100                        ; 0.616             ;
+; timer_module:GENERAL_TIMER|seconds[1]           ; fsm_module:FSM|state.000                        ; 0.577             ;
+; fsm_module:FSM|state.010                        ; fsm_module:FSM|state.011                        ; 0.573             ;
+; timer_module:GENERAL_TIMER|seconds[0]           ; fsm_module:FSM|state.000                        ; 0.473             ;
+; fsm_module:FSM|state.101                        ; fsm_module:FSM|state.000                        ; 0.344             ;
+; fsm_module:FSM|state.100                        ; fsm_module:FSM|state.000                        ; 0.258             ;
+; timer_module:GENERAL_TIMER|seconds[2]           ; fsm_module:FSM|state.101                        ; 0.176             ;
+; coffee_type[2]                                  ; fsm_module:FSM|state.000                        ; 0.172             ;
+; coffee_type[0]                                  ; fsm_module:FSM|state.000                        ; 0.172             ;
+; coffee_type[1]                                  ; fsm_module:FSM|state.000                        ; 0.172             ;
++-------------------------------------------------+-------------------------------------------------+-------------------+
 Note: This table only shows the top 54 path(s) that have the largest delay added for hold.
 
 
@@ -2037,14 +2035,14 @@ Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X67_Y11 to location X77_Y22
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X45_Y0 to location X55_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.47 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.48 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2052,10 +2050,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/output_files/experimento-1.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6760 megabytes
-    Info: Processing ended: Thu Oct 14 00:54:14 2021
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:01:11
+    Info: Peak virtual memory: 6764 megabytes
+    Info: Processing ended: Thu Oct 14 11:06:46 2021
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:01:13
 
 
 +----------------------------+
