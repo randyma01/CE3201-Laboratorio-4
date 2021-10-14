@@ -100,10 +100,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock",
-					"strict" : false
-				},
-				{
 					"name" : "reset",
 					"strict" : false
 				},
@@ -113,6 +109,10 @@
 				},
 				{
 					"name" : "coin_100",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
 					"strict" : false
 				}
 			]

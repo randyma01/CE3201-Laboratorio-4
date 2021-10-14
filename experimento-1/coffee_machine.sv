@@ -35,7 +35,11 @@ module coffee_machine
 	logic [1:0] ingredient_time;
 	logic comparator_result;
 	logic [2:0] state;
+	logic new_clock;
 	
+	
+	//Forcing the clock to go slower.
+	new_clock_module NEW_CLOCK(clock, new_clock);
 	
 	// verify if total coins is equal or bigger then 100
 	coin_counter_module COIN_COUNTER(coin_100, reset | coins_reset, total_1coins);
@@ -67,7 +71,7 @@ module coffee_machine
 	
 	
 	// general timer
-	timer_module GENERAL_TIMER(clock, reset, enable, seconds);
+	timer_module GENERAL_TIMER(new_clock, reset , enable, seconds);
 	
 	
 	// timer for each ingredient in for a coffee
@@ -79,6 +83,6 @@ module coffee_machine
 	
 	
 	// fsm module 
-	fsm_module FSM(clock, reset, comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
+	fsm_module FSM(new_clock, reset, comparator_result, water, coffee, sugar, milk, chocolate, finished, state);
 	
 endmodule 
