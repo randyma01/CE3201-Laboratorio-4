@@ -13,7 +13,7 @@ module time_per_coffee_module
 			case(coffee_type)
 				
 				//expreso //
-				0:
+				1:
 					begin
 						case(state)
 						//Water
@@ -31,7 +31,7 @@ module time_per_coffee_module
 					 end
 				 
 				//W. milk //
-				1:
+				2:
 					begin
 						case(state)
 						//Water
@@ -49,7 +49,7 @@ module time_per_coffee_module
 					 end
 					 
 				// capuccino //
-				2:
+				3:
 					begin
 						case(state)
 						//Water
@@ -67,7 +67,7 @@ module time_per_coffee_module
 					 end
 		
 				// mocaccino //
-				3:
+				4:
 					 begin
 						case(state)
 						//Water

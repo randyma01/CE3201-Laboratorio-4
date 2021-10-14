@@ -15,9 +15,9 @@ vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Lab
 vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/timer_module.sv}
 vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv}
 
-vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/general_tb.sv}
+vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  general_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  coffee_machine_tb
 
 add wave *
 view structure

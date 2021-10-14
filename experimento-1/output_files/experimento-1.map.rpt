@@ -1,5 +1,5 @@
 Analysis & Synthesis report for experimento-1
-Wed Oct 13 17:38:56 2021
+Wed Oct 13 22:21:25 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,10 +17,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+ 12. Port Connectivity Checks: "coin_display_module:ZERO4_DISPLAY"
+ 13. Port Connectivity Checks: "coin_display_module:ZERO3_DISPLAY"
+ 14. Port Connectivity Checks: "coin_display_module:ZERO2_DISPLAY"
+ 15. Port Connectivity Checks: "coin_display_module:ZERO1_DISPLAY"
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+ 19. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,14 +51,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 13 17:38:56 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 13 22:21:25 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; experimento-1                               ;
 ; Top-level Entity Name           ; coffee_machine                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 12                                          ;
-; Total pins                      ; 28                                          ;
+; Total pins                      ; 55                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -188,31 +192,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                     ;
-+---------------------------------------------+---------------------------------------------------+
-; Resource                                    ; Usage                                             ;
-+---------------------------------------------+---------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 36                                                ;
-;                                             ;                                                   ;
-; Combinational ALUT usage for logic          ; 59                                                ;
-;     -- 7 input functions                    ; 0                                                 ;
-;     -- 6 input functions                    ; 11                                                ;
-;     -- 5 input functions                    ; 10                                                ;
-;     -- 4 input functions                    ; 25                                                ;
-;     -- <=3 input functions                  ; 13                                                ;
-;                                             ;                                                   ;
-; Dedicated logic registers                   ; 12                                                ;
-;                                             ;                                                   ;
-; I/O pins                                    ; 28                                                ;
-;                                             ;                                                   ;
-; Total DSP Blocks                            ; 0                                                 ;
-;                                             ;                                                   ;
-; Maximum fan-out node                        ; coin_counter_module:COIN_COUNTER|total_coins[0]~2 ;
-; Maximum fan-out                             ; 19                                                ;
-; Total fan-out                               ; 332                                               ;
-; Average fan-out                             ; 2.61                                              ;
-+---------------------------------------------+---------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                              ;
++---------------------------------------------+--------------------------------------------+
+; Resource                                    ; Usage                                      ;
++---------------------------------------------+--------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 31                                         ;
+;                                             ;                                            ;
+; Combinational ALUT usage for logic          ; 46                                         ;
+;     -- 7 input functions                    ; 1                                          ;
+;     -- 6 input functions                    ; 14                                         ;
+;     -- 5 input functions                    ; 7                                          ;
+;     -- 4 input functions                    ; 17                                         ;
+;     -- <=3 input functions                  ; 7                                          ;
+;                                             ;                                            ;
+; Dedicated logic registers                   ; 12                                         ;
+;                                             ;                                            ;
+; I/O pins                                    ; 55                                         ;
+;                                             ;                                            ;
+; Total DSP Blocks                            ; 0                                          ;
+;                                             ;                                            ;
+; Maximum fan-out node                        ; coin_counter_module:COIN_COUNTER|number[0] ;
+; Maximum fan-out                             ; 19                                         ;
+; Total fan-out                               ; 324                                        ;
+; Average fan-out                             ; 1.93                                       ;
++---------------------------------------------+--------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -220,14 +224,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Entity Name            ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+------------------------+--------------+
-; |coffee_machine                              ; 59 (1)              ; 12 (0)                    ; 0                 ; 0          ; 28   ; 0            ; |coffee_machine                                         ; coffee_machine         ; work         ;
-;    |coin_counter_module:COIN_COUNTER|        ; 14 (14)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_counter_module:COIN_COUNTER        ; coin_counter_module    ; work         ;
+; |coffee_machine                              ; 46 (1)              ; 12 (0)                    ; 0                 ; 0          ; 55   ; 0            ; |coffee_machine                                         ; coffee_machine         ; work         ;
+;    |coin_counter_module:COIN_COUNTER|        ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_counter_module:COIN_COUNTER        ; coin_counter_module    ; work         ;
 ;    |coin_display_module:CHANGE_DISPLAY|      ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:CHANGE_DISPLAY      ; coin_display_module    ; work         ;
 ;    |coin_display_module:COINS_DISPLAY|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|coin_display_module:COINS_DISPLAY       ; coin_display_module    ; work         ;
-;    |fsm_module:FSM|                          ; 3 (3)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|fsm_module:FSM                          ; fsm_module             ; work         ;
-;    |substractor_module:COFEE_SELECTOR|       ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|substractor_module:COFEE_SELECTOR       ; substractor_module     ; work         ;
-;    |time_comparator_module:TIMER_COMPARATOR| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_comparator_module:TIMER_COMPARATOR ; time_comparator_module ; work         ;
-;    |time_per_coffee_module:COFFEE_TIMER|     ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_per_coffee_module:COFFEE_TIMER     ; time_per_coffee_module ; work         ;
+;    |fsm_module:FSM|                          ; 2 (2)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|fsm_module:FSM                          ; fsm_module             ; work         ;
+;    |substractor_module:COFEE_SELECTOR|       ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|substractor_module:COFEE_SELECTOR       ; substractor_module     ; work         ;
+;    |time_comparator_module:TIMER_COMPARATOR| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_comparator_module:TIMER_COMPARATOR ; time_comparator_module ; work         ;
+;    |time_per_coffee_module:COFFEE_TIMER|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|time_per_coffee_module:COFFEE_TIMER     ; time_per_coffee_module ; work         ;
 ;    |timer_module:GENERAL_TIMER|              ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |coffee_machine|timer_module:GENERAL_TIMER              ; timer_module           ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -280,8 +284,48 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
-; 13:1               ; 3 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; No         ; |coffee_machine|substractor_module:COFEE_SELECTOR|change[1] ;
+; 13:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |coffee_machine|substractor_module:COFEE_SELECTOR|change[1] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "coin_display_module:ZERO4_DISPLAY"                                                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; total       ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; total[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "coin_display_module:ZERO3_DISPLAY"                                                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; total       ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; total[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "coin_display_module:ZERO2_DISPLAY"                                                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; total       ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; total[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "coin_display_module:ZERO1_DISPLAY"                                                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                          ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; total       ; Input ; Warning  ; Input port expression (7 bits) is wider than the input port (4 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; total[3..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -292,18 +336,21 @@ Encoding Type:  One-Hot
 ; arriav_ff             ; 12                          ;
 ;     CLR               ; 7                           ;
 ;     ENA CLR           ; 5                           ;
-; arriav_lcell_comb     ; 62                          ;
-;     normal            ; 62                          ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 9                           ;
+; arriav_lcell_comb     ; 51                          ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 50                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 3                           ;
-;         4 data inputs ; 25                          ;
-;         5 data inputs ; 10                          ;
-;         6 data inputs ; 11                          ;
-; boundary_port         ; 28                          ;
+;         4 data inputs ; 17                          ;
+;         5 data inputs ; 7                           ;
+;         6 data inputs ; 14                          ;
+; boundary_port         ; 55                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.66                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -312,7 +359,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -322,7 +369,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 13 17:38:30 2021
+    Info: Processing started: Wed Oct 13 22:21:17 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off experimento-1 -c experimento-1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -349,35 +396,61 @@ Info (12021): Found 1 design units, including 1 entities, in source file coffee_
 Info (12021): Found 1 design units, including 1 entities, in source file general_tb.sv
     Info (12023): Found entity 1: general_tb File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/general_tb.sv Line: 1
 Info (12127): Elaborating entity "coffee_machine" for the top level hierarchy
-Info (12128): Elaborating entity "coin_counter_module" for hierarchy "coin_counter_module:COIN_COUNTER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 36
-Info (12128): Elaborating entity "coin_comparator_module" for hierarchy "coin_comparator_module:COIN_COMPRATOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 40
-Info (12128): Elaborating entity "coin_display_module" for hierarchy "coin_display_module:COINS_DISPLAY" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 44
-Info (12128): Elaborating entity "substractor_module" for hierarchy "substractor_module:COFEE_SELECTOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 48
+Info (12128): Elaborating entity "coin_counter_module" for hierarchy "coin_counter_module:COIN_COUNTER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 41
+Warning (10230): Verilog HDL assignment warning at coin_counter_module.sv(18): truncated value with size 32 to match size of target (4) File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv Line: 18
+Info (12128): Elaborating entity "coin_comparator_module" for hierarchy "coin_comparator_module:COIN_COMPRATOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 46
+Info (12128): Elaborating entity "coin_display_module" for hierarchy "coin_display_module:COINS_DISPLAY" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 50
+Info (12128): Elaborating entity "substractor_module" for hierarchy "substractor_module:COFEE_SELECTOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 54
 Warning (10235): Verilog HDL Always Construct warning at substractor_module.sv(91): variable "temp_change" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv Line: 91
 Warning (10235): Verilog HDL Always Construct warning at substractor_module.sv(92): variable "temp_et" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv Line: 92
-Info (12128): Elaborating entity "timer_module" for hierarchy "timer_module:GENERAL_TIMER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 56
-Info (12128): Elaborating entity "time_per_coffee_module" for hierarchy "time_per_coffee_module:COFFEE_TIMER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 60
-Info (12128): Elaborating entity "time_comparator_module" for hierarchy "time_comparator_module:TIMER_COMPARATOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 64
-Info (12128): Elaborating entity "fsm_module" for hierarchy "fsm_module:FSM" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 68
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "coin_counter_module:COIN_COUNTER|total_coins[0]" is converted into an equivalent circuit using register "coin_counter_module:COIN_COUNTER|total_coins[0]~_emulated" and latch "coin_counter_module:COIN_COUNTER|total_coins[0]~1" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv Line: 16
-    Warning (13310): Register "coin_counter_module:COIN_COUNTER|total_coins[1]" is converted into an equivalent circuit using register "coin_counter_module:COIN_COUNTER|total_coins[1]~_emulated" and latch "coin_counter_module:COIN_COUNTER|total_coins[1]~5" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv Line: 16
-    Warning (13310): Register "coin_counter_module:COIN_COUNTER|total_coins[2]" is converted into an equivalent circuit using register "coin_counter_module:COIN_COUNTER|total_coins[2]~_emulated" and latch "coin_counter_module:COIN_COUNTER|total_coins[2]~9" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv Line: 16
-    Warning (13310): Register "coin_counter_module:COIN_COUNTER|total_coins[3]" is converted into an equivalent circuit using register "coin_counter_module:COIN_COUNTER|total_coins[3]~_emulated" and latch "coin_counter_module:COIN_COUNTER|total_coins[3]~13" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv Line: 16
+Info (12128): Elaborating entity "timer_module" for hierarchy "timer_module:GENERAL_TIMER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 68
+Info (12128): Elaborating entity "time_per_coffee_module" for hierarchy "time_per_coffee_module:COFFEE_TIMER" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 72
+Info (12128): Elaborating entity "time_comparator_module" for hierarchy "time_comparator_module:TIMER_COMPARATOR" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 76
+Info (12128): Elaborating entity "fsm_module" for hierarchy "fsm_module:FSM" File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 80
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "zero1_display[0]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
+    Warning (13410): Pin "zero1_display[1]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
+    Warning (13410): Pin "zero1_display[2]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
+    Warning (13410): Pin "zero1_display[3]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
+    Warning (13410): Pin "zero1_display[4]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
+    Warning (13410): Pin "zero1_display[5]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
+    Warning (13410): Pin "zero1_display[6]" is stuck at VCC File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 16
+    Warning (13410): Pin "zero2_display[0]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 17
+    Warning (13410): Pin "zero2_display[1]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 17
+    Warning (13410): Pin "zero2_display[2]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 17
+    Warning (13410): Pin "zero2_display[3]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 17
+    Warning (13410): Pin "zero2_display[4]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 17
+    Warning (13410): Pin "zero2_display[5]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 17
+    Warning (13410): Pin "zero2_display[6]" is stuck at VCC File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 17
+    Warning (13410): Pin "zero3_display[0]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 18
+    Warning (13410): Pin "zero3_display[1]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 18
+    Warning (13410): Pin "zero3_display[2]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 18
+    Warning (13410): Pin "zero3_display[3]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 18
+    Warning (13410): Pin "zero3_display[4]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 18
+    Warning (13410): Pin "zero3_display[5]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 18
+    Warning (13410): Pin "zero3_display[6]" is stuck at VCC File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 18
+    Warning (13410): Pin "zero4_display[0]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 19
+    Warning (13410): Pin "zero4_display[1]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 19
+    Warning (13410): Pin "zero4_display[2]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 19
+    Warning (13410): Pin "zero4_display[3]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 19
+    Warning (13410): Pin "zero4_display[4]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 19
+    Warning (13410): Pin "zero4_display[5]" is stuck at GND File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 19
+    Warning (13410): Pin "zero4_display[6]" is stuck at VCC File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 19
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/output_files/experimento-1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 91 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 63 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4840 megabytes
-    Info: Processing ended: Wed Oct 13 17:38:56 2021
-    Info: Elapsed time: 00:00:26
-    Info: Total CPU time (on all processors): 00:01:07
+Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 48 output pins
+    Info (21061): Implemented 51 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Wed Oct 13 22:21:25 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+

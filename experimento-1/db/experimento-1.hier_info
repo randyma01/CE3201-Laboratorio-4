@@ -2,7 +2,6 @@
 clock => clock.IN2
 reset => reset.IN2
 coin_100 => coin_100.IN1
-coin_500 => coin_500.IN1
 coffee_type[0] => coffee_type[0].IN2
 coffee_type[1] => coffee_type[1].IN2
 coffee_type[2] => coffee_type[2].IN2
@@ -21,6 +20,34 @@ change_display[3] << coin_display_module:CHANGE_DISPLAY.port1
 change_display[4] << coin_display_module:CHANGE_DISPLAY.port1
 change_display[5] << coin_display_module:CHANGE_DISPLAY.port1
 change_display[6] << coin_display_module:CHANGE_DISPLAY.port1
+zero1_display[0] << coin_display_module:ZERO1_DISPLAY.port1
+zero1_display[1] << coin_display_module:ZERO1_DISPLAY.port1
+zero1_display[2] << coin_display_module:ZERO1_DISPLAY.port1
+zero1_display[3] << coin_display_module:ZERO1_DISPLAY.port1
+zero1_display[4] << coin_display_module:ZERO1_DISPLAY.port1
+zero1_display[5] << coin_display_module:ZERO1_DISPLAY.port1
+zero1_display[6] << coin_display_module:ZERO1_DISPLAY.port1
+zero2_display[0] << coin_display_module:ZERO2_DISPLAY.port1
+zero2_display[1] << coin_display_module:ZERO2_DISPLAY.port1
+zero2_display[2] << coin_display_module:ZERO2_DISPLAY.port1
+zero2_display[3] << coin_display_module:ZERO2_DISPLAY.port1
+zero2_display[4] << coin_display_module:ZERO2_DISPLAY.port1
+zero2_display[5] << coin_display_module:ZERO2_DISPLAY.port1
+zero2_display[6] << coin_display_module:ZERO2_DISPLAY.port1
+zero3_display[0] << coin_display_module:ZERO3_DISPLAY.port1
+zero3_display[1] << coin_display_module:ZERO3_DISPLAY.port1
+zero3_display[2] << coin_display_module:ZERO3_DISPLAY.port1
+zero3_display[3] << coin_display_module:ZERO3_DISPLAY.port1
+zero3_display[4] << coin_display_module:ZERO3_DISPLAY.port1
+zero3_display[5] << coin_display_module:ZERO3_DISPLAY.port1
+zero3_display[6] << coin_display_module:ZERO3_DISPLAY.port1
+zero4_display[0] << coin_display_module:ZERO4_DISPLAY.port1
+zero4_display[1] << coin_display_module:ZERO4_DISPLAY.port1
+zero4_display[2] << coin_display_module:ZERO4_DISPLAY.port1
+zero4_display[3] << coin_display_module:ZERO4_DISPLAY.port1
+zero4_display[4] << coin_display_module:ZERO4_DISPLAY.port1
+zero4_display[5] << coin_display_module:ZERO4_DISPLAY.port1
+zero4_display[6] << coin_display_module:ZERO4_DISPLAY.port1
 water << fsm_module:FSM.port3
 coffee << fsm_module:FSM.port4
 sugar << fsm_module:FSM.port5
@@ -30,20 +57,18 @@ finished << fsm_module:FSM.port8
 
 
 |coffee_machine|coin_counter_module:COIN_COUNTER
-coin_100 => total_coins[3].IN0
-coin_500 => total_coins[0]~reg0.CLK
-coin_500 => total_coins[1]~reg0.CLK
-coin_500 => total_coins[2]~reg0.CLK
-coin_500 => total_coins[3]~reg0.CLK
-reset => total_coins[0]~reg0.ACLR
-reset => total_coins[1]~reg0.ACLR
-reset => total_coins[2]~reg0.ACLR
-reset => total_coins[3]~reg0.ACLR
-reset => total_coins[3].IN1
-total_coins[0] <= total_coins[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-total_coins[1] <= total_coins[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-total_coins[2] <= total_coins[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-total_coins[3] <= total_coins[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_100 => number[0].CLK
+coin_100 => number[1].CLK
+coin_100 => number[2].CLK
+coin_100 => number[3].CLK
+reset => number[0].ACLR
+reset => number[1].ACLR
+reset => number[2].ACLR
+reset => number[3].ACLR
+total_coins[0] <= number[0].DB_MAX_OUTPUT_PORT_TYPE
+total_coins[1] <= number[1].DB_MAX_OUTPUT_PORT_TYPE
+total_coins[2] <= number[2].DB_MAX_OUTPUT_PORT_TYPE
+total_coins[3] <= number[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |coffee_machine|coin_comparator_module:COIN_COMPRATOR
@@ -129,6 +154,62 @@ enable <= enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |coffee_machine|coin_display_module:CHANGE_DISPLAY
+total[0] => Decoder0.IN3
+total[1] => Decoder0.IN2
+total[2] => Decoder0.IN1
+total[3] => Decoder0.IN0
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|coin_display_module:ZERO1_DISPLAY
+total[0] => Decoder0.IN3
+total[1] => Decoder0.IN2
+total[2] => Decoder0.IN1
+total[3] => Decoder0.IN0
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|coin_display_module:ZERO2_DISPLAY
+total[0] => Decoder0.IN3
+total[1] => Decoder0.IN2
+total[2] => Decoder0.IN1
+total[3] => Decoder0.IN0
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|coin_display_module:ZERO3_DISPLAY
+total[0] => Decoder0.IN3
+total[1] => Decoder0.IN2
+total[2] => Decoder0.IN1
+total[3] => Decoder0.IN0
+display[0] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[1] <= display.DB_MAX_OUTPUT_PORT_TYPE
+display[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+display[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+display[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|coffee_machine|coin_display_module:ZERO4_DISPLAY
 total[0] => Decoder0.IN3
 total[1] => Decoder0.IN2
 total[2] => Decoder0.IN1

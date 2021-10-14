@@ -84,7 +84,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "coffee_type[1]",
+					"name" : "confirm",
 					"strict" : false
 				},
 				{
@@ -96,11 +96,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "confirm",
+					"name" : "coffee_type[1]",
 					"strict" : false
 				},
 				{
-					"name" : "clock",
+					"name" : "coin_100",
 					"strict" : false
 				},
 				{
@@ -108,11 +108,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "coin_500",
-					"strict" : false
-				},
-				{
-					"name" : "coin_100",
+					"name" : "clock",
 					"strict" : false
 				}
 			]

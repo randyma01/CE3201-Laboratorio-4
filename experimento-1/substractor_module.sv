@@ -16,7 +16,7 @@ module substractor_module
 			case (coffee_type)
 			
 				// expresso //
-				0 : 
+				1 : 
 					begin
 						if (total_coins >= 4'd3)
 							begin
@@ -31,7 +31,7 @@ module substractor_module
 					end
 			
 				// coffee & milk //		
-				1 : 
+				2 : 
 					begin
 						if (total_coins >= 4'd4)
 							begin
@@ -46,7 +46,7 @@ module substractor_module
 					end
 				
 				// capuccino //		
-				2 : 
+				3 : 
 					begin
 						if (total_coins >= 4'd5)
 							begin
@@ -61,7 +61,7 @@ module substractor_module
 					end
 					
 				// mocaccino //		
-				3 : 
+				4 : 
 					begin
 						if (total_coins >= 4'd7)
 							begin

@@ -5,6 +5,6 @@ module time_comparator_module
 	output logic comparator_result
 );
 
-	assign comparator_result = (timer_count > ingredient_time);
+	assign comparator_result = (timer_count >= ingredient_time);
 	 
 endmodule 

@@ -6,7 +6,7 @@ module general_tb();
 	
 	// user inputs
 	logic coin_100;
-	logic coin_500;
+	//logic coin_500;
 	logic [2:0] coffee_type;
 	logic confirm;
 	
@@ -32,8 +32,9 @@ module general_tb();
 	
 	
 	//  counts total coins inserted verify
-	coin_counter_module DUT_COIN_COUNTER(coin_100, coin_500, reset, total_coins);
-	
+	coin_counter_module DUT_COIN_COUNTER(coin_100, reset, total_coins);
+	//coin_counter_module DUT_COIN_COUNTER(coin_100, coin_500, reset, total_coins);
+
 	
 	// if total coins is equal or bigger than 1000
 	coin_comparator_module DUT_COIN_COMPRATOR(total_coins, coins_reset);
@@ -52,7 +53,7 @@ module general_tb();
 	
 
 	// general timer 
-	timer_module DUT_GENERAL_TIMER(clock, reset, enable, seconds);
+	//timer_module DUT_GENERAL_TIMER(clock, reset, enable, seconds);
 	
 	
 	// timer for each ingredient in for a coffee
@@ -99,65 +100,65 @@ module general_tb();
 
 		reset = 1;
 		coin_100 = 1;
-		coin_500 = 1;
+		//coin_500 = 1;
 		coffee_type = 3'b011;
 		confirm=0;
 		#40;
 		
 		reset = 0 | coins_reset;
 		coin_100 = 0;
-		coin_500 = 1;
+		//coin_500 = 1;
 		//coffee_type = 3'b000;
 		#40;
 		
 		reset = 0 | coins_reset;
 		coin_100 = 1;
-		coin_500 = 1;
+		//coin_500 = 1;
 		//coffee_type = 3'b000;
 		#40;
 		
 		reset = 0 | coins_reset;
 		coin_100 = 0;
-		coin_500 = 1;
+		//coin_500 = 1;
 		//coffee_type = 3'b000;
 		#40;
 		
 		reset = 0 | coins_reset;
 		coin_100 = 1;
-		coin_500 = 1;
+		//coin_500 = 1;
 		//coffee_type = 3'b011;
 		#40;
 		
 				reset = 1 && coins_reset;
 		coin_100 = 0;
-		coin_500 = 1;
+		//coin_500 = 1;
 		//coffee_type = 3'b011;
 		#40;
 		
 		
 		reset = 0 | coins_reset;
 		coin_100 = 1;
-		coin_500 = 1;
+		//coin_500 = 1;
 		#40;
 		
 		reset = 0 | coins_reset;
 		coin_100 = 0;
-		coin_500 = 1;
+		//coin_500 = 1;
 		#40;
 		
 				reset = 0 | coins_reset;
 		coin_100 = 1;
-		coin_500 = 1;
+		//coin_500 = 1;
 		#40;
 		
 		reset = 0 | coins_reset;
 		coin_100 = 1;
-		coin_500 = 0;
+		//coin_500 = 0;
 		#40;
 		
 		reset = 0 | coins_reset;
 		coin_100 = 1;
-		coin_500 = 1;
+		//coin_500 = 1;
 		confirm=1;
 		
 

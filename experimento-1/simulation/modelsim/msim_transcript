@@ -12,111 +12,112 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/fsm_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:56 on Oct 13,2021
+# Start time: 22:18:02 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/fsm_module.sv 
 # -- Compiling module fsm_module
 # 
 # Top level modules:
 # 	fsm_module
-# End time: 17:28:56 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:18:02 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:56 on Oct 13,2021
+# Start time: 22:18:02 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_counter_module.sv 
 # -- Compiling module coin_counter_module
 # 
 # Top level modules:
 # 	coin_counter_module
-# End time: 17:28:56 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:18:02 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:57 on Oct 13,2021
+# Start time: 22:18:02 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/substractor_module.sv 
 # -- Compiling module substractor_module
 # 
 # Top level modules:
 # 	substractor_module
-# End time: 17:28:57 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:18:02 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:57 on Oct 13,2021
+# Start time: 22:18:02 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_comparator_module.sv 
 # -- Compiling module coin_comparator_module
 # 
 # Top level modules:
 # 	coin_comparator_module
-# End time: 17:28:57 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:18:02 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:57 on Oct 13,2021
+# Start time: 22:18:02 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_per_coffee_module.sv 
 # -- Compiling module time_per_coffee_module
 # 
 # Top level modules:
 # 	time_per_coffee_module
-# End time: 17:28:58 on Oct 13,2021, Elapsed time: 0:00:01
+# End time: 22:18:02 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:58 on Oct 13,2021
+# Start time: 22:18:03 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/time_comparator_module.sv 
 # -- Compiling module time_comparator_module
 # 
 # Top level modules:
 # 	time_comparator_module
-# End time: 17:28:58 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:18:03 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:58 on Oct 13,2021
+# Start time: 22:18:03 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv 
 # -- Compiling module coffee_machine
 # 
 # Top level modules:
 # 	coffee_machine
-# End time: 17:28:58 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:18:03 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/timer_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:58 on Oct 13,2021
+# Start time: 22:18:03 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/timer_module.sv 
 # -- Compiling module timer_module
 # 
 # Top level modules:
 # 	timer_module
-# End time: 17:28:59 on Oct 13,2021, Elapsed time: 0:00:01
+# End time: 22:18:03 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:59 on Oct 13,2021
+# Start time: 22:18:03 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv 
 # -- Compiling module coin_display_module
 # 
 # Top level modules:
 # 	coin_display_module
-# End time: 17:28:59 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 22:18:03 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/general_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1 {C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:28:59 on Oct 13,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/general_tb.sv 
-# -- Compiling module general_tb
+# Start time: 22:18:03 on Oct 13,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1" C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv 
+# -- Compiling module coffee_machine_tb
 # 
 # Top level modules:
-# 	general_tb
-# End time: 17:28:59 on Oct 13,2021, Elapsed time: 0:00:00
+# 	coffee_machine_tb
+# End time: 22:18:03 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  general_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" general_tb 
-# Start time: 17:29:00 on Oct 13,2021
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  coffee_machine_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" coffee_machine_tb 
+# Start time: 22:18:03 on Oct 13,2021
 # Loading sv_std.std
-# Loading work.general_tb
+# Loading work.coffee_machine_tb
+# Loading work.coffee_machine
 # Loading work.coin_counter_module
 # Loading work.coin_comparator_module
 # Loading work.coin_display_module
@@ -125,19 +126,41 @@
 # Loading work.time_per_coffee_module
 # Loading work.time_comparator_module
 # Loading work.fsm_module
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DUT'.  Expected 17, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'zero1_display'. The port definition is at: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'zero2_display'. The port definition is at: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv(17).
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'zero3_display'. The port definition is at: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv Line: 24
+# ** Warning: (vsim-3015) [PCDPC] - Port size (7) does not match connection size (1) for port 'zero4_display'. The port definition is at: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv(19).
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv Line: 24
+# ** Warning: (vsim-3722) C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv(24): [TFMPC] - Missing connection for port 'sugar'.
+# ** Warning: (vsim-3722) C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv(24): [TFMPC] - Missing connection for port 'milk'.
+# ** Warning: (vsim-3722) C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv(24): [TFMPC] - Missing connection for port 'chocolate'.
+# ** Warning: (vsim-3722) C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine_tb.sv(24): [TFMPC] - Missing connection for port 'finished'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (7) for port 'total'. The port definition is at: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT/ZERO1_DISPLAY File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 60
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (7) for port 'total'. The port definition is at: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT/ZERO2_DISPLAY File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 61
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (7) for port 'total'. The port definition is at: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT/ZERO3_DISPLAY File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 62
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (7) for port 'total'. The port definition is at: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coin_display_module.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /coffee_machine_tb/DUT/ZERO4_DISPLAY File: C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/coffee_machine.sv Line: 63
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: ranmsy  Hostname: RANDYMARTINC4C4  ProcessID: 1404
-#           Attempting to use alternate WLF file "./wlftg0qvrr".
+#           Attempting to use alternate WLF file "./wlfty1bcx5".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftg0qvrr
+#           Using alternate file: ./wlfty1bcx5
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Break key hit
-# Break in Module general_tb at C:/Users/kevin/Documents/TDD_Projects/Git/CE3201-Laboratorio-4/experimento-1/general_tb.sv line 74
-# End time: 17:30:19 on Oct 13,2021, Elapsed time: 0:01:19
-# Errors: 0, Warnings: 2
+# Simulation stop requested.
+# End time: 22:20:56 on Oct 13,2021, Elapsed time: 0:02:53
+# Errors: 0, Warnings: 15
